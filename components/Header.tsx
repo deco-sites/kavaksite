@@ -1,0 +1,276 @@
+import { useEffect, useState } from "preact/hooks";
+import { useSignal } from "@preact/signals";
+import Icon from "deco-sites/kavaksite/components/Icon.tsx";
+import type { AvailableIcons } from "deco-sites/kavaksite/components/Icon.tsx";
+
+export interface Link {
+  href: string;
+  label?: string;
+  icon?: AvailableIcons;
+  children?: { href: string; label: string }[];
+}
+
+export interface Country {
+  icon?: AvailableIcons;
+  label?: string;
+  href?: string;
+}
+export interface Props {
+  /** @description label or icon must be declared */
+  links: Link[];
+  popupIdiomas: {
+    titlePopup: string;
+    Countries: Country[];
+    labelButton: string;
+    /**@default false */
+    abrirEmNovaAba?: boolean;
+  };
+}
+
+export default function Header(props: Props) {
+  const [linkHref, setLinkHref] = useState("#");
+  const [checkValidate, setCheckValidate] = useState("");
+
+  const isMenuOpen = useSignal(false);
+  const toggleMenu = () => (isMenuOpen.value = !isMenuOpen.value);
+
+  useEffect(() => {
+    const scroll = isMenuOpen.value ? "hidden" : "auto";
+    document.body.style.overflow = scroll;
+  }, [isMenuOpen.value]);
+
+  const isPopupOpen = useSignal(true);
+  const togglePopup = () => (isPopupOpen.value = !isPopupOpen.value);
+
+  useEffect(() => {
+    const scroll = isPopupOpen.value ? "auto" : "hidden";
+    document.body.style.overflow = scroll;
+  }, [isPopupOpen.value]);
+
+  return (
+    <>
+      <div
+        class={`${
+          isPopupOpen.value ? "hidden" : "flex z-50"
+        } fixed bg-[#00000096] items-end w-full h-[100vh] md:items-center md:justify-center`}
+        onClick={togglePopup}
+      >
+        <div class="flex w-full h-[60vh] max-h-[400px] bg-white rounded-t-2xl md:w-[464px] md:rounded-lg md:max-h-[425px]">
+          <div class="flex p-4 pt-6 flex-col md:py-6 md:px-6 md:justify-evenly">
+            <h2 class="font-body font-black text-base-light text-[calc(1.2975rem+0.57vw)] text-center md:leading-[1.31] xl:text-[1.725rem]">
+              {props.popupIdiomas?.titlePopup}
+            </h2>
+            <ul
+              class={`h-[210px] overflow-y-scroll flex flex-col px-4 mt-[22px] mb-[14px]`}
+            >
+              {props.popupIdiomas?.Countries.map((Country) => (
+                <li
+                  class="flex items-center h-[52px] flex gap-2 border-b border-gray relative"
+                  onClick={setHref}
+                >
+                  {Country.icon && (
+                    <Icon
+                      width={20}
+                      height={20}
+                      id={Country.icon}
+                    />
+                  )}
+                  <span
+                    data-href={Country.href}
+                    class={`w-full py-4 flex items-center mb-[-5px] text-base-light`}
+                  >
+                    {Country.label}
+                  </span>
+                  <div
+                    class={`text-primary absolute right-0 top-4 ${
+                      Country.label == checkValidate ? "" : "hidden"
+                    }`}
+                  >
+                    <Icon id="Check" width={16} height={16} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={linkHref}
+              target={`${props.popupIdiomas?.abrirEmNovaAba ? "_blank" : ""}`}
+              class={`flex items-center justify-center h-[46px] py-2 bg-primary-dark text-white rounded-lg`}
+            >
+              <span>
+                {props.popupIdiomas?.labelButton}
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="h-[56px] lg:h-[84px] flex justify-center bg-primary-light w-full shadow-base">
+        <div class="w-full max-w-[1320px] flex flex-row items-center justify-between px-4">
+          <a href="/" alt="Kavak" title="Kavak" class="hidden lg:block">
+            <Icon id="Logo" width={112} height={30} />
+          </a>
+
+          <a href="/" alt="Kavak" title="Kavak" class="block lg:hidden">
+            <Icon id="Logo" width={76} height={20} />
+          </a>
+
+          {/** DESKTOP MENU */}
+          <ul class="hidden lg:flex flex-row gap-7">
+            {props.links.map((link, index) => (
+              <li class="flex flex-row gap-2 items-center group text-[#333] hover:text-primary-dark relative">
+                {index == props.links.length - 2 && (
+                  <a
+                    href={link.href}
+                    onClick={togglePopup}
+                    class="flex flex-row gap-2 items-center text-red"
+                  >
+                    {link.icon && (
+                      <Icon
+                        width={20}
+                        height={20}
+                        id={link.icon}
+                      />
+                    )}
+
+                    {link.label}
+                  </a>
+                )}
+                {index != props.links.length - 2 && (
+                  <a href={link.href} class="flex flex-row gap-2 items-center">
+                    {link.icon && (
+                      <Icon
+                        width={20}
+                        height={20}
+                        id={link.icon}
+                      />
+                    )}
+
+                    {link.label}
+                  </a>
+                )}
+
+                {link.children && (
+                  <Icon
+                    width={16}
+                    height={16}
+                    strokeWidth={3}
+                    id="ChevronDown"
+                    class="text-primary group-hover:rotate-180"
+                  />
+                )}
+
+                {link.children && (
+                  <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">
+                    {link.children.map((child) => (
+                      <li>
+                        <a
+                          href={child.href}
+                          class="block px-2 py-1 whitespace-nowrap hover:bg-primary hover:text-primary-light rounded-lg"
+                        >
+                          {child.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          {/** MOBILE MENU */}
+          <Icon
+            width={24}
+            height={24}
+            onClick={toggleMenu}
+            id={isMenuOpen.value ? "XMark" : "Bars3"}
+            strokeWidth={isMenuOpen.value ? 3 : 0.1}
+            class="block lg:hidden text-primary cursor-pointer"
+          />
+        </div>
+
+        {isMenuOpen.value && (
+          <div class="block lg:hidden h-[calc(100vh-56px)] bg-primary-light w-full fixed z-50 bottom-0">
+            <ul class="flex flex-col gap-7 p-4">
+              {props.links.map((link, index) => (
+                <li class="flex flex-row gap-2 items-center group text-[#333] hover:text-primary-dark relative">
+                  {index == props.links.length - 2 && (
+                    <a
+                      href={link.href}
+                      onClick={() => {
+                        if (isMenuOpen) {
+                          toggleMenu();
+                          togglePopup();
+                        }
+                      }}
+                      class="flex flex-row gap-2 items-center text-red"
+                    >
+                      {link.icon && (
+                        <Icon
+                          width={20}
+                          height={20}
+                          id={link.icon}
+                        />
+                      )}
+
+                      {link.label}
+                    </a>
+                  )}
+                  {index != props.links.length - 2 && (
+                    <a
+                      href={link.href}
+                      class="flex flex-row gap-2 items-center"
+                    >
+                      {link.icon && (
+                        <Icon
+                          width={20}
+                          height={20}
+                          id={link.icon}
+                        />
+                      )}
+
+                      {link.label}
+                    </a>
+                  )}
+
+                  {link.children && (
+                    <Icon
+                      width={16}
+                      height={16}
+                      strokeWidth={3}
+                      id="ChevronDown"
+                      class="text-primary group-hover:rotate-180"
+                    />
+                  )}
+
+                  {link.children && (
+                    <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">
+                      {link.children.map((child) => (
+                        <li>
+                          <a
+                            href={child.href}
+                            class="block px-2 py-1 whitespace-nowrap hover:bg-primary hover:text-primary-light rounded-lg"
+                          >
+                            {child.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </>
+  );
+  function setHref(event: Event) {
+    event.stopPropagation();
+    const href = (event?.target as HTMLAnchorElement).getAttribute("data-href");
+    console.log("href:", href);
+
+    if (href) {
+      setLinkHref(href);
+    }
+    setCheckValidate((event?.target as HTMLElement).innerText);
+  }
+}
