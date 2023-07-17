@@ -1,7 +1,10 @@
 import type { LoaderReturnType } from "$live/types.ts";
 import { Container } from "deco-sites/kavaksite/components/ui/Container.tsx";
 import { SectionTitle } from "deco-sites/kavaksite/components/ui/SectionTitle.tsx";
-import type { BlogPage, Category } from "deco-sites/std/commerce/butterCMS/types.ts";
+import type {
+  BlogPage,
+  Category,
+} from "deco-sites/std/commerce/butterCMS/types.ts";
 import { BlogBreadcrumb } from "./BlogBreadcrumb.tsx";
 
 export interface Props {
