@@ -8,7 +8,7 @@ import type {
   BlogPost,
   BlogSectionPlaces,
   BlogSectionPosts,
-} from "../../std/commerce/butterCMS/types.ts";
+} from "deco-sites/std/commerce/butterCMS/types.ts";
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import { useId } from "preact/hooks";
 import { SectionContent } from "./BlogSection.tsx";

@@ -1,5 +1,5 @@
 import { AuthorLabel } from "deco-sites/kavaksite/components/ui/AuthorLabel.tsx";
-import type { BlogPostPreview } from "../../../std/commerce/butterCMS/types.ts";
+import type { BlogPostPreview } from "deco-sites/std/commerce/butterCMS/types.ts";
 import { CardImage } from "./CardImage.tsx";
 
 export interface Props {

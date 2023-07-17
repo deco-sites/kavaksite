@@ -1,4 +1,4 @@
-import { Category } from "../../std/commerce/butterCMS/types.ts";
+import { Category } from "deco-sites/std/commerce/butterCMS/types.ts";
 
 export interface Props {
   categories?: Category[];

@@ -1,5 +1,5 @@
 import type { LoaderReturnType } from "$live/types.ts";
-import type { BlogSectionPlaces } from "../../std/commerce/butterCMS/types.ts";
+import type { BlogSectionPlaces } from "deco-sites/std/commerce/butterCMS/types.ts";
 import { BlogPlaces } from "./sections/BlogPlaces.tsx";
 import { Container } from "deco-sites/kavaksite/components/ui/Container.tsx";
 
