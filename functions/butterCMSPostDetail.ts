@@ -1,7 +1,10 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
 import { toBlogPost } from "../butterCMS/transform.ts";
-import type { BlogPost, StateButterCMS } from "deco-sites/std/commerce/butterCMS/types.ts";
+import type {
+  BlogPost,
+  StateButterCMS,
+} from "deco-sites/std/commerce/butterCMS/types.ts";
 
 /**
  * @title [Local]-Butter CMS Post Detail Loader
