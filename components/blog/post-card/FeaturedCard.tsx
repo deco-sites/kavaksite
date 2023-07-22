@@ -1,4 +1,4 @@
-import type { BlogPostPreview } from "deco-sites/std/commerce/butterCMS/types.ts";
+import type { BlogPostPreview } from "deco-sites/kavaksite/std/butterCMS/types.ts";
 import { CardImage } from "./CardImage.tsx";
 
 export interface Props {

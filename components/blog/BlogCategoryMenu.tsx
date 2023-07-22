@@ -4,7 +4,7 @@ import { SectionTitle } from "deco-sites/kavaksite/components/ui/SectionTitle.ts
 import type {
   BlogPage,
   Category,
-} from "deco-sites/std/commerce/butterCMS/types.ts";
+} from "deco-sites/kavaksite/std/butterCMS/types.ts";
 import { BlogBreadcrumb } from "./BlogBreadcrumb.tsx";
 
 export interface Props {

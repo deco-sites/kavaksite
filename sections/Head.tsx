@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import type { LoaderReturnType } from "$live/types.ts";
-import type { BlogPage } from "deco-sites/std/commerce/butterCMS/types.ts";
+import type { BlogPage } from "deco-sites/kavaksite/std/butterCMS/types.ts";
 
 export interface Props {
   page?: LoaderReturnType<BlogPage>;

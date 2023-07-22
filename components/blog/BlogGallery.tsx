@@ -1,7 +1,7 @@
 import type { LoaderReturnType } from "$live/types.ts";
 import { Container } from "deco-sites/kavaksite/components/ui/Container.tsx";
 import { SectionTitle } from "deco-sites/kavaksite/components/ui/SectionTitle.tsx";
-import type { BlogPostList } from "deco-sites/std/commerce/butterCMS/types.ts";
+import type { BlogPostList } from "deco-sites/kavaksite/std/butterCMS/types.ts";
 import GalleryPagination from "./gallery/GalleryPagination.tsx";
 import PostCard from "./post-card/PostCard.tsx";
 import { useId } from "preact/compat";
