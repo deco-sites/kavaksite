@@ -1,10 +1,7 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
 import { toPostsPreview } from "../butterCMS/transform.ts";
-import type {
-  BlogPostList,
-  StateButterCMS,
-} from "../butterCMS/types.ts";
+import type { BlogPostList, StateButterCMS } from "../butterCMS/types.ts";
 
 export interface Props {
   /**
