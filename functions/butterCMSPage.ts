@@ -1,9 +1,9 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
-import type { BlogPage, StateButterCMS } from "../butterCMS/types.ts";
+import type { BlogPage, StateButterCMS } from "deco-sites/std/commerce/butterCMS/types.ts";
 
 /**
- * @title Butter CMS Page Loader
+ * @title [Local]-Butter CMS Page Loader
  * @description Works com any page to retrive page informations like title or breadcrumb
  */
 const blogPageLoader: LoaderFunction<

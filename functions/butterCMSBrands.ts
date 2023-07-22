@@ -1,13 +1,13 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
 import { toFeaturedPlaces } from "../butterCMS/transform.ts";
-import type { BlogSectionPlaces, StateButterCMS } from "../butterCMS/types.ts";
+import type { BlogSectionPlaces, StateButterCMS } from "deco-sites/std/commerce/butterCMS/types.ts";
 
 /**
- * @title Butter CMS Featured Places Loader
- * @description Useful for listing places
+ * @title [Local]-Butter CMS Featured Brands Loader
+ * @description Useful for list featured blog's brands.
  */
-const featuredPlacesLoader: LoaderFunction<
+const featuredBrandsLoader: LoaderFunction<
   null,
   BlogSectionPlaces,
   StateButterCMS
@@ -21,10 +21,10 @@ const featuredPlacesLoader: LoaderFunction<
   const { data } = await client.pages();
 
   const section =
-    data.fields.sections.find((section) => section.type === "featured_places")!
+    data.fields.sections.find((section) => section.type === "featured_brands")!
       .fields;
 
   return { data: toFeaturedPlaces(section) as BlogSectionPlaces };
 };
 
-export default featuredPlacesLoader;
+export default featuredBrandsLoader;

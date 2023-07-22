@@ -1,13 +1,13 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
-import { toFeaturedPosts } from "../butterCMS/transform.ts";
-import type { BlogSectionPosts, StateButterCMS } from "../butterCMS/types.ts";
+import { toFeaturedAds } from "../butterCMS/transform.ts";
+import type { BlogSectionPosts, StateButterCMS } from "deco-sites/std/commerce/butterCMS/types.ts";
 
 /**
- * @title Butter CMS Featured Posts Loader
+ * @title [Local]-Butter CMS Featured Ads Loader
  * @description Useful for shelves and static galleries.
  */
-const featuredPostsLoader: LoaderFunction<
+const featuredAdsLoader: LoaderFunction<
   null,
   BlogSectionPosts,
   StateButterCMS
@@ -21,10 +21,10 @@ const featuredPostsLoader: LoaderFunction<
   const { data } = await client.pages();
 
   const section =
-    data.fields.sections.find((section) => section.type === "featured_posts")!
+    data.fields.sections.find((section) => section.type === "featured_ads")!
       .fields;
 
-  return { data: toFeaturedPosts(section) as BlogSectionPosts };
+  return { data: toFeaturedAds(section) as BlogSectionPosts };
 };
 
-export default featuredPostsLoader;
+export default featuredAdsLoader;

@@ -1,4 +1,4 @@
-import { BlogPostPreview } from "deco-sites/kavaksite/std/butterCMS/types.ts";
+import { BlogPostPreview } from "deco-sites/kavaksite/butterCMS/types.ts";
 import type { JSX } from "preact";
 import FeaturedCard from "../post-card/FeaturedCard.tsx";
 

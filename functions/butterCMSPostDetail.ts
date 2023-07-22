@@ -1,10 +1,10 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
 import { toBlogPost } from "../butterCMS/transform.ts";
-import type { BlogPost, StateButterCMS } from "../butterCMS/types.ts";
+import type { BlogPost, StateButterCMS } from "deco-sites/std/commerce/butterCMS/types.ts";
 
 /**
- * @title Butter CMS Post Detail Loader
+ * @title [Local]-Butter CMS Post Detail Loader
  * @description Works on routes of type /blog/:slug
  */
 const postDetailLoader: LoaderFunction<

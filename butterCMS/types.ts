@@ -1,5 +1,5 @@
 import { LiveState } from "$live/types.ts";
-import { ConfigButterCMS } from "deco-sites/kavaksite/std/butterCMS/client.ts";
+import { ConfigButterCMS } from "deco-sites/kavaksite/butterCMS/client.ts";
 
 export type StateButterCMS = LiveState<{ configButterCMS?: ConfigButterCMS }>;
 

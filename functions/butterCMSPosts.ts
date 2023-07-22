@@ -1,7 +1,7 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
 import { toPostsPreview } from "../butterCMS/transform.ts";
-import type { BlogPostList, StateButterCMS } from "../butterCMS/types.ts";
+import type { BlogPostList, StateButterCMS } from "deco-sites/std/commerce/butterCMS/types.ts";
 
 export interface Props {
   /**
@@ -11,7 +11,7 @@ export interface Props {
 }
 
 /**
- * @title Butter CMS Posts Loader
+ * @title [Local]-Butter CMS Posts Loader
  * @description Useful for paginated galleries.
  */
 const postsLoader: LoaderFunction<
