@@ -1,7 +1,10 @@
 import type { LoaderFunction } from "$live/types.ts";
 import { createClient } from "../butterCMS/client.ts";
 import { toFeaturedPlaces } from "../butterCMS/transform.ts";
-import type { BlogSectionPlaces, StateButterCMS } from "../butterCMS/types.ts";
+import type {
+  BlogSectionPlaces,
+  StateButterCMS,
+} from "../butterCMS/types.ts";
 
 /**
  * @title Butter CMS Featured Brands Loader
