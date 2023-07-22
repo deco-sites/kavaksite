@@ -1,6 +1,6 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import Icon from "../../../components/Icon.tsx";
-import { Pagination } from "deco-sites/kavaksite/std/butterCMS/types.ts";
+import { Pagination } from "deco-sites/std/commerce/butterCMS/types.ts";
 import { useLayoutEffect } from "preact/compat";
 
 export interface Props {
