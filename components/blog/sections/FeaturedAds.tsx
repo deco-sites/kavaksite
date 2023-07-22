@@ -1,4 +1,5 @@
 import { BlogPostPreview } from "deco-sites/kavaksite/butterCMS/types.ts";
+
 import type { JSX } from "preact";
 import AdCard from "../post-card/AdCard.tsx";
 

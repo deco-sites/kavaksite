@@ -1,5 +1,6 @@
 import { Category } from "deco-sites/kavaksite/butterCMS/types.ts";
 
+
 export interface Props {
   categories?: Category[];
 }

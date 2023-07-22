@@ -2,6 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import type { LoaderReturnType } from "$live/types.ts";
 import type { BlogPage } from "deco-sites/kavaksite/butterCMS/types.ts";
 
+
 export interface Props {
   page?: LoaderReturnType<BlogPage>;
   /**
