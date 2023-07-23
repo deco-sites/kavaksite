@@ -9,6 +9,7 @@ import type {
   Place,
   Post,
   Preview,
+  Testimonial,
 } from "./types.ts";
 
 const getFieldValue = ({ ...fields }: OmitedFields) => {
@@ -138,6 +139,34 @@ export const toFeaturedPlaces = (
       ...rest
     }: Place) => ({
       slug: catalogue_slug,
+      ...rest,
+    })),
+  };
+};
+
+export const toFeaturedTestimonials = (
+  { title, ...fields }: Fields,
+): BlogSectionPosts => {
+  const transformedFields = getFieldValue(fields);
+
+  return {
+    title,
+    posts: transformedFields.map(({
+      customer_location,
+      customer_name,
+      image,
+      image_alt,
+      summary,
+      meta: _,
+      ...rest
+    }: Testimonial) => ({
+      image: image,
+      imageAlt: image_alt,
+      summary: summary,
+      category: {
+        name: customer_name,
+        slug: customer_location,
+      },
       ...rest,
     })),
   };
