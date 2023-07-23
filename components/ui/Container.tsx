@@ -10,7 +10,7 @@ export function Container({ class: _class, id, children }: Props) {
   return (
     <div
       id={id}
-      class={`${_class} 2xl:max-w-[1320px] xl:max-w-[1180px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full mx-auto px-4`}
+      class={`${_class} 1.5xl:max-w-[1320px] 2lg:max-w-[1180px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full mx-auto px-4`}
     >
       {children}
     </div>
