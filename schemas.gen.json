@@ -21,6 +21,7 @@
               "deco-sites/kavaksite/functions/butterCMSPostDetail.ts",
               "deco-sites/kavaksite/functions/butterCMSPosts.ts",
               "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts",
+              "deco-sites/kavaksite/functions/butterCMSTestimonials.ts",
               "deco-sites/std/functions/butterCMSAds.ts",
               "deco-sites/std/functions/butterCMSBrands.ts",
               "deco-sites/std/functions/butterCMSCategories.ts",
@@ -99,6 +100,7 @@
               "deco-sites/kavaksite/sections/BlogPostDetail.tsx",
               "deco-sites/kavaksite/sections/BlogPosts.tsx",
               "deco-sites/kavaksite/sections/BlogSection.tsx",
+              "deco-sites/kavaksite/sections/BlogTestimonials.tsx",
               "deco-sites/kavaksite/sections/BlogTopPlaces.tsx",
               "deco-sites/kavaksite/sections/Faq.tsx",
               "deco-sites/kavaksite/sections/Features.tsx",
@@ -309,6 +311,23 @@
                 "deco-sites/kavaksite/functions/butterCMSFeaturedPosts.ts"
               ],
               "default": "deco-sites/kavaksite/functions/butterCMSFeaturedPosts.ts"
+            }
+          }
+        },
+        {
+          "title": "[Local]-Butter CMS Featured Testimonials Loader",
+          "description": "Useful for shelves and static galleries.",
+          "type": "object",
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/kavaksite/functions/butterCMSTestimonials.ts"
+              ],
+              "default": "deco-sites/kavaksite/functions/butterCMSTestimonials.ts"
             }
           }
         },
@@ -8193,6 +8212,11 @@
             },
             {
               "type": "string",
+              "const": "Pin",
+              "default": "Pin"
+            },
+            {
+              "type": "string",
               "const": "Check",
               "default": "Check"
             }
@@ -8308,6 +8332,11 @@
               "type": "string",
               "const": "Linkedin",
               "default": "Linkedin"
+            },
+            {
+              "type": "string",
+              "const": "Pin",
+              "default": "Pin"
             },
             {
               "type": "string",
@@ -9098,6 +9127,97 @@
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogSection.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dUZXN0aW1vbmlhbHMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "starsAvaliantion": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Stars Avaliantion"
+        },
+        "altImage": {
+          "type": "string",
+          "title": "Alt Image"
+        },
+        "numberRating": {
+          "type": "string",
+          "title": "Number Rating"
+        },
+        "section": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogSectionPosts",
+          "title": "Section"
+        },
+        "variant": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "featured_posts",
+              "default": "featured_posts"
+            },
+            {
+              "type": "string",
+              "const": "featured_places",
+              "default": "featured_places"
+            },
+            {
+              "type": "string",
+              "const": "featured_brands",
+              "default": "featured_brands"
+            },
+            {
+              "type": "string",
+              "const": "featured_ads",
+              "default": "featured_ads"
+            },
+            {
+              "type": "string",
+              "const": "featured_articles",
+              "default": "featured_articles"
+            },
+            {
+              "type": "string",
+              "const": "featured_testimonials",
+              "default": "featured_testimonials"
+            }
+          ],
+          "type": "string",
+          "title": "Variant"
+        },
+        "Cta": {
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string",
+              "title": "Href"
+            },
+            "label": {
+              "type": "string",
+              "title": "Label"
+            }
+          },
+          "required": [
+            "href",
+            "label"
+          ],
+          "title": " Cta"
+        }
+      },
+      "required": [
+        "starsAvaliantion",
+        "altImage",
+        "numberRating",
+        "section",
+        "variant",
+        "Cta"
+      ],
+      "title": "deco-sites/kavaksite/components/blog/BlogTestimonials.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dUb3BQbGFjZXMudHN4@Props": {
       "type": "object",
       "properties": {
@@ -9370,6 +9490,11 @@
                     "type": "string",
                     "const": "Linkedin",
                     "default": "Linkedin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Pin",
+                    "default": "Pin"
                   },
                   {
                     "type": "string",
@@ -12008,6 +12133,23 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1Rlc3RpbW9uaWFscy50cw==": {
+      "title": "[Local]-Butter CMS Featured Testimonials Loader",
+      "description": "Useful for shelves and static galleries.",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kavaksite/functions/butterCMSTestimonials.ts"
+          ],
+          "default": "deco-sites/kavaksite/functions/butterCMSTestimonials.ts"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0Fkcy50cw==": {
       "title": "Butter CMS Featured Ads Loader",
       "description": "Useful for shelves and static galleries.",
@@ -13612,6 +13754,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1Rlc3RpbW9uaWFscy50c3g=": {
+      "title": "deco-sites/kavaksite/sections/BlogTestimonials.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dUZXN0aW1vbmlhbHMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kavaksite/sections/BlogTestimonials.tsx"
+          ],
+          "default": "deco-sites/kavaksite/sections/BlogTestimonials.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1RvcFBsYWNlcy50c3g=": {
       "title": "deco-sites/kavaksite/sections/BlogTopPlaces.tsx",
       "type": "object",
@@ -14823,6 +14986,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw=="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1Rlc3RpbW9uaWFscy50cw=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0Fkcy50cw=="
         },
         {
@@ -15107,6 +15273,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1NlY3Rpb24udHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1Rlc3RpbW9uaWFscy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1RvcFBsYWNlcy50c3g="

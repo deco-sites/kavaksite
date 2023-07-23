@@ -25,14 +25,16 @@ export type Section =
   | PlacesSection
   | BrandSection
   | AdSection
-  | ArticleSection;
+  | ArticleSection
+  | TestimonialSection;
 
 export type Fields =
   | PostFields
   | PlacesFields
   | BrandFields
   | AdFields
-  | ArticleFields;
+  | ArticleFields
+  | TestimonialFields;
 
 export enum FieldTypesEnum {
   Posts = "featured_posts",
@@ -40,6 +42,7 @@ export enum FieldTypesEnum {
   Brands = "featured_brands",
   Ads = "featured_ads",
   Articles = "featured_articles",
+  Testimonials = "featured_testimonials",
 }
 
 export type FieldTypes =
@@ -47,7 +50,8 @@ export type FieldTypes =
   | "featured_places"
   | "featured_brands"
   | "featured_ads"
-  | "featured_articles";
+  | "featured_articles"
+  | "featured_testimonials";
 
 export interface PostsSection {
   type: FieldTypesEnum.Posts;
@@ -85,6 +89,27 @@ export interface AdFields {
   ads: AdField[];
 }
 
+export interface TestimonialSection {
+  type: FieldTypesEnum.Testimonials;
+  fields: TestimonialFields;
+}
+export interface TestimonialFields {
+  title: string;
+  testimonials: TestimonialField[];
+}
+
+export interface TestimonialField {
+  testimonial: Testimonial;
+}
+
+export interface Testimonial {
+  meta: Meta;
+  customer_location: string;
+  customer_name: string;
+  image: string;
+  image_alt: string;
+  summary: string;
+}
 export interface ArticleSection {
   type: FieldTypesEnum.Articles;
   fields: ArticleFields;
@@ -247,6 +272,8 @@ export type OmitedFields = {
   ads: AdField[];
 } | {
   articles?: ArticleField[];
+} | {
+  testimonials?: TestimonialField[];
 };
 
 export interface BlogPost {
