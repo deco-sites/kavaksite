@@ -9,7 +9,7 @@ interface Props {
 
 const typeClasses: Record<Props["type"], string> = {
   primary:
-    "bg-primary-dark text-primary-light border-transparent hover:bg-primary-light hover:text-primary-dark hover:border-primary-dark",
+    "bg-[#000] text-[#fff] border-transparent hover:bg-[#fff] hover:text-[#000] hover:border-[#000]",
   secondary:
     "bg-primary-light text-primary-dark border-transparent hover:bg-primary-dark hover:text-primary-light",
   tertiary:
