@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         primary: "#3374db",
+        'gray-light': "#5B5B5B",
       },
       screens: {
         "2lg": "1200px",
