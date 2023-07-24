@@ -39,7 +39,7 @@ export function CardImage({ image, alt, sizes: { mobile, desktop } }: Props) {
         height="100%"
         src={image}
         alt={alt}
-        class={`lg:(h-[${desktop.height}px]) w-auto h-[${mobile.height}px] object-cover`}
+        class={`lg:h-[${desktop.height}px] w-auto h-[165px] object-cover`}
       />
     </Picture>
   );

@@ -43,13 +43,17 @@ function FeaturedPosts({ posts }: Props) {
   );
 
   const sideClasses =
-    `flex flex-row w-auto min-w-max gap-6 flex-nowrap lg:(w-full min-w-[24%] flex-col gap-4)`;
+    `flex flex-row w-auto min-w-max gap-4 flex-nowrap lg:min-w-[200px] lg:flex-col`;
 
   return (
-    <section class="flex gap-x-6 flex-nowrap w-full overflow-auto pb-4">
-      <div class={sideClasses}>{left}</div>
-      <div class="flex min-w-max lg:(flex-1 min-w-[45%])">{center}</div>
-      <div class={sideClasses}>{right}</div>
+    <section class="flex gap-x-4 flex-nowrap w-full overflow-auto pb-4 lg:gap-x-6">
+      <div class={`lg:w-[200px] 2lg:w-[251px] 1.5xl:w-[285px] ${sideClasses} `}>
+        {left}
+      </div>
+      <div class="flex min-w-max lg:flex-1 lg:min-w-[45%]">{center}</div>
+      <div class={`lg:w-[222px] 2lg:w-[275px] 1.5xl:w-[309px] ${sideClasses} `}>
+        {right}
+      </div>
     </section>
   );
 }

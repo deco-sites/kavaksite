@@ -12,9 +12,9 @@ export function BlogBreadcrumb({ categories = [] }: Props) {
   const list = [{ name: "Blog", slug: "" }, ...categories];
 
   return (
-    <ul class="flex uppercase text-xs font-bold tracking-wider leading-3">
+    <ul class="hidden md:flex uppercase text-xs font-bold tracking-wider leading-3">
       {list.map(({ name, slug }, index, array) => (
-        <li class="first:(hidden lg:block text-primary) text-base-lighter last:(hidden lg:block font-normal)">
+        <li class="first:text-primary text-base-lighter last:font-normal)">
           {index > 0 ? <Slash /> : null}
           <a
             href={slug ? `/blog-category/${slug}` : "/blog"}
