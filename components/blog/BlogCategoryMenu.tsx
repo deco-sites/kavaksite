@@ -20,13 +20,13 @@ function BlogCategoryMenu({ categories, page, hideTitle }: Props) {
     <Container class="mb-6 mt-7">
       {!hideTitle
         ? (
-          <SectionTitle class="override:text-[calc(1.425rem+2.1vw)]">
+          <SectionTitle class="text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem]">
             {page?.title}
           </SectionTitle>
         )
         : null}
-      <nav class="mb-2 overflow-auto">
-        <ul class="flex sm:flex-wrap gap-x-4 pb-2">
+      <nav class="mb-[50px] overflow-auto md:mb-4">
+        <ul class="flex sm:flex-wrap gap-x-4 pb-2 md:gap-x-6 md:pb-[2px]">
           {categoriesList.map((category, index) => (
             <li key={index}>
               <a
