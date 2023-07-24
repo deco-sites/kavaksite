@@ -4,7 +4,9 @@ import { SectionTitle } from "deco-sites/kavaksite/components/ui/SectionTitle.ts
 export function BlogPlaces({ title, places }: BlogSectionPlaces) {
   return (
     <>
-      <SectionTitle class="text-xl text-black leading-[1]">{title}</SectionTitle>
+      <SectionTitle class="text-xl text-black leading-[1]">
+        {title}
+      </SectionTitle>
       <ul class="flex flex-wrap gap-1">
         {places.map((place, index) => (
           <li class="" key={index}>
