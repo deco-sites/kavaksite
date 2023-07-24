@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: "#3374db",
         "gray-light": "#5B5B5B",
+        gray: "#c7c7c7"
       },
       screens: {
         "2lg": "1200px",
