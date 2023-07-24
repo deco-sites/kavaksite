@@ -23,7 +23,7 @@ export default function GalleryPagination({ pagination, containerId }: Props) {
   const disableNextBtn = !pagination.nextPage;
 
   const btnClasses =
-    `relative w-10 h-10 flex justify-center items-center cursor-pointer disabled:(opacity-[10%] cursor-default)`;
+    `relative w-10 h-10 flex justify-center items-center cursor-pointer`;
   const blackBtnClasses = `bg-black rounded text-white`;
 
   const iconsClasses = `absolute left-[0.15rem]`;
@@ -33,7 +33,7 @@ export default function GalleryPagination({ pagination, containerId }: Props) {
   };
 
   return (
-    <nav class="flex flex-row flex-nowrap justify-end">
+    <nav class="flex flex-row flex-nowrap justify-end nav-container mt-11">
       <a
         class={btnClasses}
         disabled={disablePreviousBtn}
@@ -51,7 +51,7 @@ export default function GalleryPagination({ pagination, containerId }: Props) {
       >
         <Icon id="ChevronLeft" {...iconsParams} />
       </a>
-      <p class="px-4 my-2">
+      <p class="px-4 my-2 text-black font-black">
         {pagination.currentPage} de {lastPage}
       </p>
       <a

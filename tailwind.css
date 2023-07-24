@@ -44,6 +44,11 @@
   .h-webkit{
     height: -webkit-fill-available;
   }
+  .nav-container a[disabled="true"]{
+    opacity: 10%;
+    cursor: none;
+    pointer-events: none;
+  }
 }
 
 

@@ -5,7 +5,7 @@ export interface IAuthorLabelProps {
 
 export function AuthorLabel({ author, publishedDate }: IAuthorLabelProps) {
   return (
-    <p class="text-sm text-primary">
+    <p class="text-xs leading-[1] mb-4 text-primary">
       {author}, {new Date(publishedDate).toLocaleString("pt-br", {
         dateStyle: "medium",
       })}

@@ -28,17 +28,19 @@ function PostCard({ post }: Props) {
           />
         </div>
         <div class="flex flex-col justify-between">
-          <div class="flex flex-col justify-center h-full py-4 gap-2 flex-1">
-            <p class="uppercase text-primary text-xs font-bold tracking-wider leading-3">
+          <div class="flex flex-col justify-center h-full py-4 flex-1">
+            <p class="uppercase text-primary text-xs font-bold tracking-wider mb-4 leading-3">
               {post.category.name}
             </p>
-            <h3 class="text-2xl font-bold">{post.title}</h3>
+            <h3 class="text-[calc(1.275rem+0.3vw)] leading-[1.25] font-bold mb-2 2lg:text-2xl">
+              {post.title.substring(0, 55) + `...`}
+            </h3>
             <AuthorLabel
               publishedDate={post.publishedAt}
               author={post.author}
             />
-            <p class="line-clamp-5 leading-4 text-base-lighter pt-2">
-              {post.summary}
+            <p class="line-clamp-5 leading-4 text-base-lighter text-gray-light lg:leading-[1.25]">
+              {post.summary.substring(0, 125) + `...`}
             </p>
           </div>
         </div>
