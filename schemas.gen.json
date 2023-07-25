@@ -101,6 +101,7 @@
               "deco-sites/kavaksite/sections/BlogPosts.tsx",
               "deco-sites/kavaksite/sections/BlogSection.tsx",
               "deco-sites/kavaksite/sections/BlogTestimonials.tsx",
+              "deco-sites/kavaksite/sections/BlogTopBanner.tsx",
               "deco-sites/kavaksite/sections/BlogTopPlaces.tsx",
               "deco-sites/kavaksite/sections/Faq.tsx",
               "deco-sites/kavaksite/sections/Features.tsx",
@@ -9218,6 +9219,39 @@
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogTestimonials.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dUb3BCYW5uZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "title": "Text"
+        },
+        "buttonText": {
+          "type": "string",
+          "title": "Button Text"
+        },
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "imageMobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image Mobile"
+        },
+        "arrowICon": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Arrow I Con"
+        }
+      },
+      "required": [
+        "text",
+        "buttonText",
+        "image",
+        "imageMobile",
+        "arrowICon"
+      ],
+      "title": "deco-sites/kavaksite/components/blog/BlogTopBanner.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dUb3BQbGFjZXMudHN4@Props": {
       "type": "object",
       "properties": {
@@ -13775,6 +13809,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1RvcEJhbm5lci50c3g=": {
+      "title": "deco-sites/kavaksite/sections/BlogTopBanner.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dUb3BCYW5uZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kavaksite/sections/BlogTopBanner.tsx"
+          ],
+          "default": "deco-sites/kavaksite/sections/BlogTopBanner.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1RvcFBsYWNlcy50c3g=": {
       "title": "deco-sites/kavaksite/sections/BlogTopPlaces.tsx",
       "type": "object",
@@ -15276,6 +15331,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1Rlc3RpbW9uaWFscy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1RvcEJhbm5lci50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1RvcFBsYWNlcy50c3g="
