@@ -40,7 +40,7 @@ function AdCard({ post }: Props) {
             ? (
               <a
                 href={`/${post.slug}`}
-                class="h-[48px] mt-4 bg-black p-3 text-center text-white rounded"
+                class="h-[48px] my-4 bg-black p-3 text-center text-white rounded"
               >
                 {post.ctaText}
               </a>
