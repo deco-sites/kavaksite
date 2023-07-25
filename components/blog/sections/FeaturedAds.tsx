@@ -15,7 +15,7 @@ function FeaturedAds({ posts, direction = "row" }: Props) {
 
   return (
     <section
-      class={`${directionClasses} flex overflow-visible gap-5 flex-nowrap w-full pb-4`}
+      class={`flex flex-col overflow-visible gap-5 flex-nowrap w-full pb-4 md:flex-row md:overflow-x-scroll lg:overflow-hidden`}
     >
       {posts.map<JSX.Element>(
         (post, index) => <AdCard key={index} post={post} />,

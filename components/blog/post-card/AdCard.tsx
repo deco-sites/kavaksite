@@ -8,7 +8,7 @@ export interface Props {
 
 function AdCard({ post }: Props) {
   return (
-    <article class="md:(max-w-[328px] first:ml-1 last:mr-1) lg:(flex-value-[auto] mx-0 max-w-[33%]) flex-value-[0_0_50%] overflow-hidden rounded-md shadow-base flex w-full">
+    <article class="shadow-card md:(w-full min-w-[328px] first:ml-1 last:mr-1) lg:(flex-value-[auto] mx-0 max-w-[33%]) flex-value-[0_0_50%] overflow-hidden rounded-md shadow-base flex w-full">
       <div href={`/blog/${post.slug}`} class="flex flex-col">
         <div class="hidden md:flex items-center justify-center relative border-b-1 border-base-gray">
           <CardImage
@@ -32,7 +32,7 @@ function AdCard({ post }: Props) {
               {post.category.name}
             </p>
             <h3 class="text-xl leading-5 font-bold">{post.title}</h3>
-            <p class="leading-4 line-clamp-5 text-base-lighter">
+            <p class="leading-4 line-clamp-5 text-base-lighter my-4">
               {post.summary}
             </p>
           </div>
@@ -40,7 +40,7 @@ function AdCard({ post }: Props) {
             ? (
               <a
                 href={`/${post.slug}`}
-                class="mt-4 bg-black p-4 text-center text-white rounded"
+                class="h-[48px] mt-4 bg-black p-3 text-center text-white rounded"
               >
                 {post.ctaText}
               </a>
