@@ -9,6 +9,7 @@ import type {
   Place,
   Post,
   Preview,
+  Social,
   Testimonial,
 } from "./types.ts";
 
@@ -166,6 +167,32 @@ export const toFeaturedTestimonials = (
       category: {
         name: customer_name,
         slug: customer_location,
+      },
+      ...rest,
+    })),
+  };
+};
+
+export const toFeaturedSocial = (
+  { title, ...fields }: Fields,
+): BlogSectionPosts => {
+  const transformedFields = getFieldValue(fields);
+
+  return {
+    title,
+    posts: transformedFields.map(({
+      id,
+      title,
+      url,
+      value,
+      meta: _,
+      ...rest
+    }: Social) => ({
+      imageAlt: url,
+      summary: title,
+      category: {
+        name: id,
+        slug: value,
       },
       ...rest,
     })),

@@ -17,7 +17,12 @@ export type AvailableIcons =
   | "DoubleChevron"
   | "Linkedin"
   | "Pin"
-  | "Check";
+  | "Check"
+  | "instagramIcon"
+  | "facebookIcon"
+  | "linkedinIcon"
+  | "youtubeIcon"
+  | "twitterIcon";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
