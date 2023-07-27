@@ -7,12 +7,13 @@ import * as $0 from "./functions/butterCMSAds.ts";
 import * as $1 from "./functions/butterCMSBrands.ts";
 import * as $2 from "./functions/butterCMSCategories.ts";
 import * as $3 from "./functions/butterCMSFeaturedPosts.ts";
-import * as $4 from "./functions/butterCMSPage.ts";
-import * as $5 from "./functions/butterCMSPlaces.ts";
-import * as $6 from "./functions/butterCMSPostDetail.ts";
-import * as $7 from "./functions/butterCMSPosts.ts";
-import * as $8 from "./functions/butterCMSRelatedPosts.ts";
-import * as $9 from "./functions/butterCMSTestimonials.ts";
+import * as $4 from "./functions/butterCMSFeaturedSocial.ts";
+import * as $5 from "./functions/butterCMSPage.ts";
+import * as $6 from "./functions/butterCMSPlaces.ts";
+import * as $7 from "./functions/butterCMSPostDetail.ts";
+import * as $8 from "./functions/butterCMSPosts.ts";
+import * as $9 from "./functions/butterCMSRelatedPosts.ts";
+import * as $10 from "./functions/butterCMSTestimonials.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/GalleryPagination.tsx";
@@ -25,18 +26,19 @@ import * as $$$$$$$$2 from "./sections/BlogGallery.tsx";
 import * as $$$$$$$$3 from "./sections/BlogPostDetail.tsx";
 import * as $$$$$$$$4 from "./sections/BlogPosts.tsx";
 import * as $$$$$$$$5 from "./sections/BlogSection.tsx";
-import * as $$$$$$$$6 from "./sections/BlogTestimonials.tsx";
-import * as $$$$$$$$7 from "./sections/BlogTopBanner.tsx";
-import * as $$$$$$$$8 from "./sections/BlogTopPlaces.tsx";
-import * as $$$$$$$$9 from "./sections/Faq.tsx";
-import * as $$$$$$$$10 from "./sections/Features.tsx";
-import * as $$$$$$$$11 from "./sections/Footer.tsx";
-import * as $$$$$$$$12 from "./sections/Head.tsx";
-import * as $$$$$$$$13 from "./sections/Header.tsx";
-import * as $$$$$$$$14 from "./sections/Hero.tsx";
-import * as $$$$$$$$15 from "./sections/HeroSellCar.tsx";
-import * as $$$$$$$$16 from "./sections/StoreCards.tsx";
-import * as $$$$$$$$17 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$$$6 from "./sections/BlogSocial.tsx";
+import * as $$$$$$$$7 from "./sections/BlogTestimonials.tsx";
+import * as $$$$$$$$8 from "./sections/BlogTopBanner.tsx";
+import * as $$$$$$$$9 from "./sections/BlogTopPlaces.tsx";
+import * as $$$$$$$$10 from "./sections/Faq.tsx";
+import * as $$$$$$$$11 from "./sections/Features.tsx";
+import * as $$$$$$$$12 from "./sections/Footer.tsx";
+import * as $$$$$$$$13 from "./sections/Head.tsx";
+import * as $$$$$$$$14 from "./sections/Header.tsx";
+import * as $$$$$$$$15 from "./sections/Hero.tsx";
+import * as $$$$$$$$16 from "./sections/HeroSellCar.tsx";
+import * as $$$$$$$$17 from "./sections/StoreCards.tsx";
+import * as $$$$$$$$18 from "./sections/Theme/Theme.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -170,12 +172,13 @@ const manifest = {
     "deco-sites/kavaksite/functions/butterCMSBrands.ts": $1,
     "deco-sites/kavaksite/functions/butterCMSCategories.ts": $2,
     "deco-sites/kavaksite/functions/butterCMSFeaturedPosts.ts": $3,
-    "deco-sites/kavaksite/functions/butterCMSPage.ts": $4,
-    "deco-sites/kavaksite/functions/butterCMSPlaces.ts": $5,
-    "deco-sites/kavaksite/functions/butterCMSPostDetail.ts": $6,
-    "deco-sites/kavaksite/functions/butterCMSPosts.ts": $7,
-    "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts": $8,
-    "deco-sites/kavaksite/functions/butterCMSTestimonials.ts": $9,
+    "deco-sites/kavaksite/functions/butterCMSFeaturedSocial.ts": $4,
+    "deco-sites/kavaksite/functions/butterCMSPage.ts": $5,
+    "deco-sites/kavaksite/functions/butterCMSPlaces.ts": $6,
+    "deco-sites/kavaksite/functions/butterCMSPostDetail.ts": $7,
+    "deco-sites/kavaksite/functions/butterCMSPosts.ts": $8,
+    "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts": $9,
+    "deco-sites/kavaksite/functions/butterCMSTestimonials.ts": $10,
     "deco-sites/std/functions/butterCMSAds.ts": i2$0,
     "deco-sites/std/functions/butterCMSBrands.ts": i2$1,
     "deco-sites/std/functions/butterCMSCategories.ts": i2$2,
@@ -239,18 +242,19 @@ const manifest = {
     "deco-sites/kavaksite/sections/BlogPostDetail.tsx": $$$$$$$$3,
     "deco-sites/kavaksite/sections/BlogPosts.tsx": $$$$$$$$4,
     "deco-sites/kavaksite/sections/BlogSection.tsx": $$$$$$$$5,
-    "deco-sites/kavaksite/sections/BlogTestimonials.tsx": $$$$$$$$6,
-    "deco-sites/kavaksite/sections/BlogTopBanner.tsx": $$$$$$$$7,
-    "deco-sites/kavaksite/sections/BlogTopPlaces.tsx": $$$$$$$$8,
-    "deco-sites/kavaksite/sections/Faq.tsx": $$$$$$$$9,
-    "deco-sites/kavaksite/sections/Features.tsx": $$$$$$$$10,
-    "deco-sites/kavaksite/sections/Footer.tsx": $$$$$$$$11,
-    "deco-sites/kavaksite/sections/Head.tsx": $$$$$$$$12,
-    "deco-sites/kavaksite/sections/Header.tsx": $$$$$$$$13,
-    "deco-sites/kavaksite/sections/Hero.tsx": $$$$$$$$14,
-    "deco-sites/kavaksite/sections/HeroSellCar.tsx": $$$$$$$$15,
-    "deco-sites/kavaksite/sections/StoreCards.tsx": $$$$$$$$16,
-    "deco-sites/kavaksite/sections/Theme/Theme.tsx": $$$$$$$$17,
+    "deco-sites/kavaksite/sections/BlogSocial.tsx": $$$$$$$$6,
+    "deco-sites/kavaksite/sections/BlogTestimonials.tsx": $$$$$$$$7,
+    "deco-sites/kavaksite/sections/BlogTopBanner.tsx": $$$$$$$$8,
+    "deco-sites/kavaksite/sections/BlogTopPlaces.tsx": $$$$$$$$9,
+    "deco-sites/kavaksite/sections/Faq.tsx": $$$$$$$$10,
+    "deco-sites/kavaksite/sections/Features.tsx": $$$$$$$$11,
+    "deco-sites/kavaksite/sections/Footer.tsx": $$$$$$$$12,
+    "deco-sites/kavaksite/sections/Head.tsx": $$$$$$$$13,
+    "deco-sites/kavaksite/sections/Header.tsx": $$$$$$$$14,
+    "deco-sites/kavaksite/sections/Hero.tsx": $$$$$$$$15,
+    "deco-sites/kavaksite/sections/HeroSellCar.tsx": $$$$$$$$16,
+    "deco-sites/kavaksite/sections/StoreCards.tsx": $$$$$$$$17,
+    "deco-sites/kavaksite/sections/Theme/Theme.tsx": $$$$$$$$18,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configNuvemShop.tsx": i2$$$$$7,
