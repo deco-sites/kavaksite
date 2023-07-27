@@ -8,13 +8,12 @@ export interface Props {
 }
 
 function FeaturedSocial({ posts }: Props) {
-
   return (
     <section
       class={`flex flex-row flex-wrap justify-between gap-6 pl-10 pb-4 mt-4 mb-6 2lg:justify-center`}
     >
       {posts.map<JSX.Element>(
-        (post, index) => <SocialCard key={index} post={post}/>,
+        (post, index) => <SocialCard key={index} post={post} />,
       )}
     </section>
   );

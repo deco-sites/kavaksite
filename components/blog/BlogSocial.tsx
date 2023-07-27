@@ -28,8 +28,7 @@ export function SectionContent(
 }
 
 function BlogSection(
-  { section, variant }:
-    Props,
+  { section, variant }: Props,
 ) {
   return (
     <>

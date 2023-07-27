@@ -9,8 +9,8 @@ import type {
   Place,
   Post,
   Preview,
-  Testimonial,
   Social,
+  Testimonial,
 } from "./types.ts";
 
 const getFieldValue = ({ ...fields }: OmitedFields) => {

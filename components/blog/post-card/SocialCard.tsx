@@ -10,26 +10,37 @@ const iconInstagram = `
 `;
 
 function SocialCard({ post }: Props) {
-
   function formatPrice(value: number) {
-    return value.toLocaleString('pt-br', {
+    return value.toLocaleString("pt-br", {
       maximumFractionDigits: 3,
-    })
+    });
   }
 
-  const socialCardIcon = post.category.name == "instagram" ? "instagramIcon" : 
-                        post.category.name == "facebook" ? "facebookIcon" :
-                        post.category.name == "linkedin"? "linkedinIcon" :
-                        post.category.name == "youtube" ? "youtubeIcon" : "twitterIcon"
-  
+  const socialCardIcon = post.category.name == "instagram"
+    ? "instagramIcon"
+    : post.category.name == "facebook"
+    ? "facebookIcon"
+    : post.category.name == "linkedin"
+    ? "linkedinIcon"
+    : post.category.name == "youtube"
+    ? "youtubeIcon"
+    : "twitterIcon";
+
   return (
-    <a href={post.imageAlt} class={`w-[200px] flex justify-start items-center gap-3`}>
-      <div class={`w-[35px] h-[35px] bg-black rounded-[50%] flex justify-center items-center`}>
+    <a
+      href={post.imageAlt}
+      class={`w-[200px] flex justify-start items-center gap-3`}
+    >
+      <div
+        class={`w-[35px] h-[35px] bg-black rounded-[50%] flex justify-center items-center`}
+      >
         {/* <div dangerouslySetInnerHTML={{ __html: socialCardIcon }}></div> */}
-        <Icon id={socialCardIcon} style={"width:28px; height:28px;"}/>
+        <Icon id={socialCardIcon} style={"width:28px; height:28px;"} />
       </div>
       <div class={`flex flex-col justify-center items-start`}>
-        <p class={`text-sm font-semibold`}>{formatPrice(parseInt(post.category.slug))}</p>
+        <p class={`text-sm font-semibold`}>
+          {formatPrice(parseInt(post.category.slug))}
+        </p>
         <span>{post.summary}</span>
       </div>
     </a>

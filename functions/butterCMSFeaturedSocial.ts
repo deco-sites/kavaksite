@@ -24,9 +24,7 @@ const featuredSocialLoader: LoaderFunction<
   const { data } = await client.pages();
 
   const section =
-    data.fields.sections.find((section) =>
-      section.type === "featured_social"
-    )!
+    data.fields.sections.find((section) => section.type === "featured_social")!
       .fields;
 
   return { data: toFeaturedSocial(section) as BlogSectionPosts };
