@@ -23,22 +23,23 @@ import * as $$$$$3 from "./islands/SliderJS.tsx";
 import * as $$$$$$$$0 from "./sections/BannerInfo.tsx";
 import * as $$$$$$$$1 from "./sections/BlogCategoryMenu.tsx";
 import * as $$$$$$$$2 from "./sections/BlogGallery.tsx";
-import * as $$$$$$$$3 from "./sections/BlogPostDetail.tsx";
-import * as $$$$$$$$4 from "./sections/BlogPosts.tsx";
-import * as $$$$$$$$5 from "./sections/BlogSection.tsx";
-import * as $$$$$$$$6 from "./sections/BlogSocial.tsx";
-import * as $$$$$$$$7 from "./sections/BlogTestimonials.tsx";
-import * as $$$$$$$$8 from "./sections/BlogTopBanner.tsx";
-import * as $$$$$$$$9 from "./sections/BlogTopPlaces.tsx";
-import * as $$$$$$$$10 from "./sections/Faq.tsx";
-import * as $$$$$$$$11 from "./sections/Features.tsx";
-import * as $$$$$$$$12 from "./sections/Footer.tsx";
-import * as $$$$$$$$13 from "./sections/Head.tsx";
-import * as $$$$$$$$14 from "./sections/Header.tsx";
-import * as $$$$$$$$15 from "./sections/Hero.tsx";
-import * as $$$$$$$$16 from "./sections/HeroSellCar.tsx";
-import * as $$$$$$$$17 from "./sections/StoreCards.tsx";
-import * as $$$$$$$$18 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$$$3 from "./sections/BlogNewsletter.tsx";
+import * as $$$$$$$$4 from "./sections/BlogPostDetail.tsx";
+import * as $$$$$$$$5 from "./sections/BlogPosts.tsx";
+import * as $$$$$$$$6 from "./sections/BlogSection.tsx";
+import * as $$$$$$$$7 from "./sections/BlogSocial.tsx";
+import * as $$$$$$$$8 from "./sections/BlogTestimonials.tsx";
+import * as $$$$$$$$9 from "./sections/BlogTopBanner.tsx";
+import * as $$$$$$$$10 from "./sections/BlogTopPlaces.tsx";
+import * as $$$$$$$$11 from "./sections/Faq.tsx";
+import * as $$$$$$$$12 from "./sections/Features.tsx";
+import * as $$$$$$$$13 from "./sections/Footer.tsx";
+import * as $$$$$$$$14 from "./sections/Head.tsx";
+import * as $$$$$$$$15 from "./sections/Header.tsx";
+import * as $$$$$$$$16 from "./sections/Hero.tsx";
+import * as $$$$$$$$17 from "./sections/HeroSellCar.tsx";
+import * as $$$$$$$$18 from "./sections/StoreCards.tsx";
+import * as $$$$$$$$19 from "./sections/Theme/Theme.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -239,22 +240,23 @@ const manifest = {
     "deco-sites/kavaksite/sections/BannerInfo.tsx": $$$$$$$$0,
     "deco-sites/kavaksite/sections/BlogCategoryMenu.tsx": $$$$$$$$1,
     "deco-sites/kavaksite/sections/BlogGallery.tsx": $$$$$$$$2,
-    "deco-sites/kavaksite/sections/BlogPostDetail.tsx": $$$$$$$$3,
-    "deco-sites/kavaksite/sections/BlogPosts.tsx": $$$$$$$$4,
-    "deco-sites/kavaksite/sections/BlogSection.tsx": $$$$$$$$5,
-    "deco-sites/kavaksite/sections/BlogSocial.tsx": $$$$$$$$6,
-    "deco-sites/kavaksite/sections/BlogTestimonials.tsx": $$$$$$$$7,
-    "deco-sites/kavaksite/sections/BlogTopBanner.tsx": $$$$$$$$8,
-    "deco-sites/kavaksite/sections/BlogTopPlaces.tsx": $$$$$$$$9,
-    "deco-sites/kavaksite/sections/Faq.tsx": $$$$$$$$10,
-    "deco-sites/kavaksite/sections/Features.tsx": $$$$$$$$11,
-    "deco-sites/kavaksite/sections/Footer.tsx": $$$$$$$$12,
-    "deco-sites/kavaksite/sections/Head.tsx": $$$$$$$$13,
-    "deco-sites/kavaksite/sections/Header.tsx": $$$$$$$$14,
-    "deco-sites/kavaksite/sections/Hero.tsx": $$$$$$$$15,
-    "deco-sites/kavaksite/sections/HeroSellCar.tsx": $$$$$$$$16,
-    "deco-sites/kavaksite/sections/StoreCards.tsx": $$$$$$$$17,
-    "deco-sites/kavaksite/sections/Theme/Theme.tsx": $$$$$$$$18,
+    "deco-sites/kavaksite/sections/BlogNewsletter.tsx": $$$$$$$$3,
+    "deco-sites/kavaksite/sections/BlogPostDetail.tsx": $$$$$$$$4,
+    "deco-sites/kavaksite/sections/BlogPosts.tsx": $$$$$$$$5,
+    "deco-sites/kavaksite/sections/BlogSection.tsx": $$$$$$$$6,
+    "deco-sites/kavaksite/sections/BlogSocial.tsx": $$$$$$$$7,
+    "deco-sites/kavaksite/sections/BlogTestimonials.tsx": $$$$$$$$8,
+    "deco-sites/kavaksite/sections/BlogTopBanner.tsx": $$$$$$$$9,
+    "deco-sites/kavaksite/sections/BlogTopPlaces.tsx": $$$$$$$$10,
+    "deco-sites/kavaksite/sections/Faq.tsx": $$$$$$$$11,
+    "deco-sites/kavaksite/sections/Features.tsx": $$$$$$$$12,
+    "deco-sites/kavaksite/sections/Footer.tsx": $$$$$$$$13,
+    "deco-sites/kavaksite/sections/Head.tsx": $$$$$$$$14,
+    "deco-sites/kavaksite/sections/Header.tsx": $$$$$$$$15,
+    "deco-sites/kavaksite/sections/Hero.tsx": $$$$$$$$16,
+    "deco-sites/kavaksite/sections/HeroSellCar.tsx": $$$$$$$$17,
+    "deco-sites/kavaksite/sections/StoreCards.tsx": $$$$$$$$18,
+    "deco-sites/kavaksite/sections/Theme/Theme.tsx": $$$$$$$$19,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configNuvemShop.tsx": i2$$$$$7,

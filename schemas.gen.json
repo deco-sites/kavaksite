@@ -98,6 +98,7 @@
               "deco-sites/kavaksite/sections/BannerInfo.tsx",
               "deco-sites/kavaksite/sections/BlogCategoryMenu.tsx",
               "deco-sites/kavaksite/sections/BlogGallery.tsx",
+              "deco-sites/kavaksite/sections/BlogNewsletter.tsx",
               "deco-sites/kavaksite/sections/BlogPostDetail.tsx",
               "deco-sites/kavaksite/sections/BlogPosts.tsx",
               "deco-sites/kavaksite/sections/BlogSection.tsx",
@@ -9060,6 +9061,36 @@
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogGallery.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dOZXdzbGV0dGVyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "title": "Title"
+        },
+        "inputPlaceholder": {
+          "type": "string",
+          "title": "Input Placeholder"
+        },
+        "textButton": {
+          "type": "string",
+          "title": "Text Button"
+        },
+        "backgroundColor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Background Color"
+        }
+      },
+      "required": [
+        "title",
+        "inputPlaceholder",
+        "textButton"
+      ],
+      "title": "deco-sites/kavaksite/components/blog/BlogNewsletter.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dQb3N0RGV0YWlsLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -13896,6 +13927,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ05ld3NsZXR0ZXIudHN4": {
+      "title": "deco-sites/kavaksite/sections/BlogNewsletter.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dOZXdzbGV0dGVyLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kavaksite/sections/BlogNewsletter.tsx"
+          ],
+          "default": "deco-sites/kavaksite/sections/BlogNewsletter.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1Bvc3REZXRhaWwudHN4": {
       "title": "deco-sites/kavaksite/sections/BlogPostDetail.tsx",
       "type": "object",
@@ -15514,6 +15566,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ0dhbGxlcnkudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ05ld3NsZXR0ZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ1Bvc3REZXRhaWwudHN4"
