@@ -23,7 +23,10 @@ function BlogNewsletter(
           </div>
         </div>
         <div class={`w-full flex justify-center items-center`}>
-          <form action="" class={`w-full flex flex-col justify-center items-center gap-2 lg:flex-row`}>
+          <form
+            action=""
+            class={`w-full flex flex-col justify-center items-center gap-2 lg:flex-row`}
+          >
             <input
               type="text"
               placeholder={inputPlaceholder}
