@@ -15,7 +15,7 @@ function BlogNewsletter(
     <Container class={` mb-6 mt-7`}>
       <div
         class={`w-full flex flex-col justify-center items-center p-4 gap-2 ${
-          backgroundColor ? backgroundColor : "bg-primary"
+          backgroundColor ? `bg-[${backgroundColor}]` : "bg-primary"
         } lg:flex-row`}
       >
         <div class={`w-full`}>
