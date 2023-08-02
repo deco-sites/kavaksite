@@ -9142,6 +9142,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogSectionPosts",
           "title": "Ads"
         },
+        "social": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogSectionPosts",
+          "title": "Social"
+        },
         "categories": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogSectionPlaces",
           "title": "Categories"
@@ -9154,6 +9158,7 @@
       "required": [
         "post",
         "ads",
+        "social",
         "categories",
         "searchTerms"
       ],
