@@ -119,7 +119,9 @@ export default function Header(props: Props) {
               <li
                 class={`flex flex-row gap-2 items-center ${
                   link.children?.length ? "group" : ""
-                } hover:text-black relative ${index != props.links.length - 2 ? "svg-none" : ""}`}
+                } hover:text-black relative ${
+                  index != props.links.length - 2 ? "svg-none" : ""
+                }`}
               >
                 {index == props.links.length - 2 && (
                   <a
@@ -197,7 +199,9 @@ export default function Header(props: Props) {
           <div class="block lg:hidden h-[calc(100vh-56px)] bg-white w-full fixed z-50 bottom-0">
             <ul class="flex flex-col gap-7 p-4">
               {props.links.map((link, index) => (
-                <li class={`flex flex-row gap-2 items-center text-black relative`}>
+                <li
+                  class={`flex flex-row gap-2 items-center text-black relative`}
+                >
                   {index == props.links.length - 2 && (
                     <a
                       href={link.href}
@@ -215,8 +219,7 @@ export default function Header(props: Props) {
                           height={20}
                           id={link.icon}
                         />
-                      )
-                      } 
+                      )}
                       {link.label}
                     </a>
                   )}
@@ -231,22 +234,23 @@ export default function Header(props: Props) {
                           height={20}
                           id={link.icon}
                         />
-                      )
-                      }
+                      )}
 
                       {link.label}
                     </a>
                   )}
 
-                  {link.children?.length ? (
-                    <Icon
-                      width={16}
-                      height={16}
-                      strokeWidth={3}
-                      id="ChevronDown"
-                      class="text-primary group-hover:rotate-180"
-                    />
-                  ): <></>}
+                  {link.children?.length
+                    ? (
+                      <Icon
+                        width={16}
+                        height={16}
+                        strokeWidth={3}
+                        id="ChevronDown"
+                        class="text-primary group-hover:rotate-180"
+                      />
+                    )
+                    : <></>}
 
                   {link.children && (
                     <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">
