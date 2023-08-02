@@ -12,16 +12,18 @@ import type {
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import { useId } from "preact/hooks";
 import { SectionContent } from "./BlogSection.tsx";
+import { SectionContent as SectionContentSocial } from "./BlogSocial.tsx";
 import { BlogPlaces } from "./sections/BlogPlaces.tsx";
 
 export interface Props {
   post: LoaderReturnType<BlogPost>;
   ads: LoaderReturnType<BlogSectionPosts>;
+  social: LoaderReturnType<BlogSectionPosts>;
   categories: LoaderReturnType<BlogSectionPlaces>;
   searchTerms: LoaderReturnType<BlogSectionPlaces>;
 }
 
-function BlogPostDetail({ post, ads, categories, searchTerms }: Props) {
+function BlogPostDetail({ post, ads, social, categories, searchTerms }: Props) {
   const articleId = useId();
   return (
     <Container>
@@ -88,12 +90,17 @@ function BlogPostDetail({ post, ads, categories, searchTerms }: Props) {
               dangerouslySetInnerHTML={{ __html: post.body }}
             />
           </article>
-          <aside class="lg:min-w-[33%] w-full pt-4">
+          <aside class="lg:min-w-[33%] w-full pt-4 px-4">
             <SectionContent
               type="featured_ads"
               direction="column"
               posts={ads.posts}
             />
+            <SectionContentSocial
+              type="featured_social"
+              arrangementType="grid"
+              posts={social.posts}
+              />
             <section class="flex lg:flex-col sm:(flex-row flex) flex-col gap-4 mt-8">
               <article class="lg:w-full sm:w-1/2 w-full">
                 <BlogPlaces

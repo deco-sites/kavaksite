@@ -15,13 +15,14 @@ export interface Props {
 export interface SectionContentProps {
   type: FieldTypes;
   posts: BlogPostPreview[];
+  arrangementType?: "flex" | "grid";
 }
 
 export function SectionContent(
-  { type, posts }: SectionContentProps,
+  { type, posts, arrangementType = "flex" }: SectionContentProps,
 ) {
   if (type === "featured_social") {
-    return <FeaturedSocial posts={posts} />;
+    return <FeaturedSocial posts={posts} arrangementType={arrangementType} />;
   }
 
   return <p>For other variants you must use other sections</p>;

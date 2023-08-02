@@ -10,12 +10,12 @@ export interface Props {
 
 function FeaturedAds({ posts, direction = "row" }: Props) {
   const directionClasses = direction === "column"
-    ? "lg:(flex-col overflow-visible) md:(flex-row overflow-auto) flex-col override:children:lg:(max-w-full w-full)"
-    : "md:(flex-row overflow-auto) flex-col";
+    ? "flex flex-col overflow-visible gap-5 flex-nowrap w-full pb-4"
+    : "flex flex-col overflow-visible gap-5 flex-nowrap w-full pb-4 md:flex-row md:overflow-x-scroll lg:overflow-hidden";
 
   return (
     <section
-      class={`flex flex-col overflow-visible gap-5 flex-nowrap w-full pb-4 md:flex-row md:overflow-x-scroll lg:overflow-hidden`}
+      class={directionClasses}
     >
       {posts.map<JSX.Element>(
         (post, index) => <AdCard key={index} post={post} />,
