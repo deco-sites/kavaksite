@@ -8167,6 +8167,11 @@
           "anyOf": [
             {
               "type": "string",
+              "const": "NoIcon",
+              "default": "NoIcon"
+            },
+            {
+              "type": "string",
               "const": "ChevronLeft",
               "default": "ChevronLeft"
             },
@@ -8264,6 +8269,21 @@
               "type": "string",
               "const": "Check",
               "default": "Check"
+            },
+            {
+              "type": "string",
+              "const": "Moeda",
+              "default": "Moeda"
+            },
+            {
+              "type": "string",
+              "const": "Carro",
+              "default": "Carro"
+            },
+            {
+              "type": "string",
+              "const": "Sale",
+              "default": "Sale"
             },
             {
               "type": "string",
@@ -8292,7 +8312,6 @@
             }
           ],
           "type": "string",
-          "default": "Selecione:",
           "title": "Icon"
         },
         "children": {
@@ -8317,7 +8336,9 @@
           "title": "Children"
         }
       },
-      "required": [],
+      "required": [
+        "icon"
+      ],
       "title": "Link"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9IZWFkZXIudHN4@Link[]": {
@@ -8332,6 +8353,11 @@
       "properties": {
         "icon": {
           "anyOf": [
+            {
+              "type": "string",
+              "const": "NoIcon",
+              "default": "NoIcon"
+            },
             {
               "type": "string",
               "const": "ChevronLeft",
@@ -8431,6 +8457,21 @@
               "type": "string",
               "const": "Check",
               "default": "Check"
+            },
+            {
+              "type": "string",
+              "const": "Moeda",
+              "default": "Moeda"
+            },
+            {
+              "type": "string",
+              "const": "Carro",
+              "default": "Carro"
+            },
+            {
+              "type": "string",
+              "const": "Sale",
+              "default": "Sale"
             },
             {
               "type": "string",
@@ -9684,6 +9725,11 @@
                 "anyOf": [
                   {
                     "type": "string",
+                    "const": "NoIcon",
+                    "default": "NoIcon"
+                  },
+                  {
+                    "type": "string",
                     "const": "ChevronLeft",
                     "default": "ChevronLeft"
                   },
@@ -9781,6 +9827,21 @@
                     "type": "string",
                     "const": "Check",
                     "default": "Check"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Moeda",
+                    "default": "Moeda"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Carro",
+                    "default": "Carro"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Sale",
+                    "default": "Sale"
                   },
                   {
                     "type": "string",

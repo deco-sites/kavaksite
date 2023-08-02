@@ -49,6 +49,9 @@
     cursor: none;
     pointer-events: none;
   }
+  .svg-none:not(:last-child) a svg{
+    display: none;
+  }
 }
 
 

@@ -6,8 +6,7 @@ import type { AvailableIcons } from "deco-sites/kavaksite/components/Icon.tsx";
 export interface Link {
   href?: string;
   label?: string;
-  /** @default Selecione:*/
-  icon?: AvailableIcons;
+  icon: AvailableIcons;
   children?: { href: string; label: string }[];
 }
 
@@ -120,7 +119,7 @@ export default function Header(props: Props) {
               <li
                 class={`flex flex-row gap-2 items-center ${
                   link.children?.length ? "group" : ""
-                } hover:text-black relative`}
+                } hover:text-black relative ${index != props.links.length - 2 ? "svg-none" : ""}`}
               >
                 {index == props.links.length - 2 && (
                   <a
@@ -166,12 +165,12 @@ export default function Header(props: Props) {
                   : <></>}
 
                 {link.children && (
-                  <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">
+                  <ul class="hidden group-hover:block absolute top-[100%] right-0 z-50 bg-primary-light p-3 rounded-lg shadow-md">
                     {link.children.map((child) => (
                       <li>
                         <a
                           href={child.href}
-                          class="block px-2 py-1 whitespace-nowrap hover:bg-primary hover:text-primary-light rounded-lg"
+                          class="block px-2 py-1 whitespace-nowrap hover:bg-primary hover:text-white rounded-lg"
                         >
                           {child.label}
                         </a>
@@ -195,10 +194,10 @@ export default function Header(props: Props) {
         </div>
 
         {isMenuOpen.value && (
-          <div class="block lg:hidden h-[calc(100vh-56px)] bg-primary-light w-full fixed z-50 bottom-0">
+          <div class="block lg:hidden h-[calc(100vh-56px)] bg-white w-full fixed z-50 bottom-0">
             <ul class="flex flex-col gap-7 p-4">
               {props.links.map((link, index) => (
-                <li class="flex flex-row gap-2 items-center group text-[#333] hover:text-primary-dark relative">
+                <li class={`flex flex-row gap-2 items-center text-black relative`}>
                   {index == props.links.length - 2 && (
                     <a
                       href={link.href}
@@ -210,14 +209,14 @@ export default function Header(props: Props) {
                       }}
                       class="flex flex-row gap-2 items-center text-red"
                     >
-                      {link.icon && (
+                      {link.icon != "NoIcon" && (
                         <Icon
                           width={20}
                           height={20}
                           id={link.icon}
                         />
-                      )}
-
+                      )
+                      } 
                       {link.label}
                     </a>
                   )}
@@ -226,19 +225,20 @@ export default function Header(props: Props) {
                       href={link.href}
                       class="flex flex-row gap-2 items-center"
                     >
-                      {link.icon && (
+                      {link.icon != "NoIcon" && (
                         <Icon
                           width={20}
                           height={20}
                           id={link.icon}
                         />
-                      )}
+                      )
+                      }
 
                       {link.label}
                     </a>
                   )}
 
-                  {link.children && (
+                  {link.children?.length ? (
                     <Icon
                       width={16}
                       height={16}
@@ -246,7 +246,7 @@ export default function Header(props: Props) {
                       id="ChevronDown"
                       class="text-primary group-hover:rotate-180"
                     />
-                  )}
+                  ): <></>}
 
                   {link.children && (
                     <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">

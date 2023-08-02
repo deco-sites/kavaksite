@@ -2,6 +2,7 @@ import { asset } from "$fresh/runtime.ts";
 import type { JSX } from "preact";
 
 export type AvailableIcons =
+  | "NoIcon"
   | "ChevronLeft"
   | "ChevronRight"
   | "ChevronUp"
@@ -22,6 +23,9 @@ export type AvailableIcons =
   | "DoubleChevron"
   | "Pin"
   | "Check"
+  | "Moeda"
+  | "Carro"
+  | "Sale"
   | "instagramIcon"
   | "facebookIcon"
   | "linkedinIcon"
@@ -31,8 +35,8 @@ export type AvailableIcons =
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
    * Symbol id from element to render. Take a look at `/static/icons.svg`.
-   *
-   * Example: <Icon id="Bell" />
+  *
+  * Example: <Icon id="Bell" />
    */
   id: AvailableIcons;
   size?: number;
