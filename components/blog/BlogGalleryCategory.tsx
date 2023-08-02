@@ -11,7 +11,6 @@ export interface Props {
 }
 
 function BlogGalleryCategory({ title, list: { posts } }: Props) {
-
   if (!posts?.length) {
     return <div class="hidden" aria-hidden="true" />;
   }
