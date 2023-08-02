@@ -8150,7 +8150,10 @@
       "type": "object",
       "properties": {
         "href": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Href"
         },
         "label": {
@@ -8289,6 +8292,7 @@
             }
           ],
           "type": "string",
+          "default": "Selecione:",
           "title": "Icon"
         },
         "children": {
@@ -8313,9 +8317,7 @@
           "title": "Children"
         }
       },
-      "required": [
-        "href"
-      ],
+      "required": [],
       "title": "Link"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9IZWFkZXIudHN4@Link[]": {

@@ -4,8 +4,9 @@ import Icon from "deco-sites/kavaksite/components/Icon.tsx";
 import type { AvailableIcons } from "deco-sites/kavaksite/components/Icon.tsx";
 
 export interface Link {
-  href: string;
+  href?: string;
   label?: string;
+  /** @default Selecione:*/
   icon?: AvailableIcons;
   children?: { href: string; label: string }[];
 }
@@ -65,7 +66,7 @@ export default function Header(props: Props) {
             >
               {props.popupIdiomas?.Countries.map((Country) => (
                 <li
-                  class="flex items-center h-[52px] flex gap-2 border-b border-gray relative"
+                  class="items-center h-[52px] flex gap-2 border-b border-gray relative"
                   onClick={setHref}
                 >
                   {Country.icon && (
@@ -116,12 +117,12 @@ export default function Header(props: Props) {
           {/** DESKTOP MENU */}
           <ul class="hidden lg:flex flex-row gap-7">
             {props.links.map((link, index) => (
-              <li class="flex flex-row gap-2 items-center group text-[#333] hover:text-primary-dark relative">
+              <li class={`flex flex-row gap-2 items-center ${link.children?.length ? "group" : ""} hover:text-black relative`}>
                 {index == props.links.length - 2 && (
                   <a
                     href={link.href}
                     onClick={togglePopup}
-                    class="flex flex-row gap-2 items-center text-red"
+                    class="flex flex-row gap-2 items-center"
                   >
                     {link.icon && (
                       <Icon
@@ -148,7 +149,7 @@ export default function Header(props: Props) {
                   </a>
                 )}
 
-                {link.children && (
+                {link.children?.length ?  (
                   <Icon
                     width={16}
                     height={16}
@@ -156,7 +157,7 @@ export default function Header(props: Props) {
                     id="ChevronDown"
                     class="text-primary group-hover:rotate-180"
                   />
-                )}
+                ): <></>}
 
                 {link.children && (
                   <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">
