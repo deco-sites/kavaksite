@@ -100,7 +100,7 @@ function BlogPostDetail({ post, ads, social, categories, searchTerms }: Props) {
               type="featured_social"
               arrangementType="grid"
               posts={social.posts}
-              />
+            />
             <section class="flex lg:flex-col sm:(flex-row flex) flex-col gap-4 mt-8">
               <article class="lg:w-full sm:w-1/2 w-full">
                 <BlogPlaces

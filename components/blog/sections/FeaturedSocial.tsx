@@ -16,7 +16,13 @@ function FeaturedSocial({ posts, arrangementType = "flex" }: Props) {
       class={arrangementTypeClasses}
     >
       {posts.map<JSX.Element>(
-        (post, index) => <SocialCard key={index} post={post} arrangementType={arrangementType}/>,
+        (post, index) => (
+          <SocialCard
+            key={index}
+            post={post}
+            arrangementType={arrangementType}
+          />
+        ),
       )}
     </section>
   );

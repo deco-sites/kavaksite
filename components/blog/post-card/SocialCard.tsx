@@ -26,7 +26,9 @@ function SocialCard({ post, arrangementType = "flex" }: Props) {
   return (
     <a
       href={post.imageAlt}
-      class={`${arrangementType == "grid" ? "w-full" : "w-[200px]"} max-w-[200px] flex justify-start items-center gap-3`}
+      class={`${
+        arrangementType == "grid" ? "w-full" : "w-[200px]"
+      } max-w-[200px] flex justify-start items-center gap-3`}
     >
       <div
         class={`w-[35px] h-[35px] bg-black rounded-[50%] flex justify-center items-center`}
