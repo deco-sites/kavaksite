@@ -8,7 +8,12 @@ export interface Props {
     { icon: AvailableIcons; href: string; openNewTab?: boolean }
   >;
   mobileStoreLinks: Array<
-    { imageUrl: LiveImage; imageTitle: string; href: string; openNewTab?: boolean }
+    {
+      imageUrl: LiveImage;
+      imageTitle: string;
+      href: string;
+      openNewTab?: boolean;
+    }
   >;
   copyLinks: Array<{ label: string; href?: string; openNewTab?: boolean }>;
   address: string;
@@ -60,7 +65,9 @@ export default function Footer(props: Props) {
             ))}
           </div>
           <div class="flex items-center flex-row  flex-wrap mx-4 my-4 gap-5">
-            {mobileStoreLinks?.map(({ imageUrl, imageTitle, href, openNewTab }) => (
+            {mobileStoreLinks?.map((
+              { imageUrl, imageTitle, href, openNewTab },
+            ) => (
               <a
                 href={href}
                 class="flex justify-center items-center rounded-[8px]"
