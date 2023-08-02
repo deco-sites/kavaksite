@@ -8218,6 +8218,31 @@
             },
             {
               "type": "string",
+              "const": "Youtube",
+              "default": "Youtube"
+            },
+            {
+              "type": "string",
+              "const": "Twitter",
+              "default": "Twitter"
+            },
+            {
+              "type": "string",
+              "const": "Linkedin",
+              "default": "Linkedin"
+            },
+            {
+              "type": "string",
+              "const": "TikTok",
+              "default": "TikTok"
+            },
+            {
+              "type": "string",
+              "const": "Pinterest",
+              "default": "Pinterest"
+            },
+            {
+              "type": "string",
               "const": "Share",
               "default": "Share"
             },
@@ -8225,11 +8250,6 @@
               "type": "string",
               "const": "DoubleChevron",
               "default": "DoubleChevron"
-            },
-            {
-              "type": "string",
-              "const": "Linkedin",
-              "default": "Linkedin"
             },
             {
               "type": "string",
@@ -8366,6 +8386,31 @@
             },
             {
               "type": "string",
+              "const": "Youtube",
+              "default": "Youtube"
+            },
+            {
+              "type": "string",
+              "const": "Twitter",
+              "default": "Twitter"
+            },
+            {
+              "type": "string",
+              "const": "Linkedin",
+              "default": "Linkedin"
+            },
+            {
+              "type": "string",
+              "const": "TikTok",
+              "default": "TikTok"
+            },
+            {
+              "type": "string",
+              "const": "Pinterest",
+              "default": "Pinterest"
+            },
+            {
+              "type": "string",
               "const": "Share",
               "default": "Share"
             },
@@ -8373,11 +8418,6 @@
               "type": "string",
               "const": "DoubleChevron",
               "default": "DoubleChevron"
-            },
-            {
-              "type": "string",
-              "const": "Linkedin",
-              "default": "Linkedin"
             },
             {
               "type": "string",
@@ -9672,6 +9712,31 @@
                   },
                   {
                     "type": "string",
+                    "const": "Youtube",
+                    "default": "Youtube"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Twitter",
+                    "default": "Twitter"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Linkedin",
+                    "default": "Linkedin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "TikTok",
+                    "default": "TikTok"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Pinterest",
+                    "default": "Pinterest"
+                  },
+                  {
+                    "type": "string",
                     "const": "Share",
                     "default": "Share"
                   },
@@ -9679,11 +9744,6 @@
                     "type": "string",
                     "const": "DoubleChevron",
                     "default": "DoubleChevron"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Linkedin",
-                    "default": "Linkedin"
                   },
                   {
                     "type": "string",
@@ -9752,6 +9812,10 @@
                 "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
                 "title": "Image Url"
               },
+              "imageTitle": {
+                "type": "string",
+                "title": "Image Title"
+              },
               "href": {
                 "type": "string",
                 "title": "Href"
@@ -9766,6 +9830,7 @@
             },
             "required": [
               "imageUrl",
+              "imageTitle",
               "href"
             ]
           },

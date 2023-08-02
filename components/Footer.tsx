@@ -8,7 +8,7 @@ export interface Props {
     { icon: AvailableIcons; href: string; openNewTab?: boolean }
   >;
   mobileStoreLinks: Array<
-    { imageUrl: LiveImage; href: string; openNewTab?: boolean }
+    { imageUrl: LiveImage; imageTitle: string; href: string; openNewTab?: boolean }
   >;
   copyLinks: Array<{ label: string; href?: string; openNewTab?: boolean }>;
   address: string;
@@ -47,7 +47,7 @@ export default function Footer(props: Props) {
         </div>
 
         <div class="flex flex-wrap -m-4 mb-6">
-          <div class="flex items-center flex-row flex-wrap mx-4 my-4 gap-2">
+          <div class="flex items-center flex-row flex-wrap mx-4 my-4 gap-5">
             {socialLinks.map(({ href, icon, openNewTab }) => (
               <a
                 href={href}
@@ -59,8 +59,8 @@ export default function Footer(props: Props) {
               </a>
             ))}
           </div>
-          <div class="flex items-center flex-row  flex-wrap mx-4 my-4 gap-2">
-            {mobileStoreLinks?.map(({ imageUrl, href, openNewTab }) => (
+          <div class="flex items-center flex-row  flex-wrap mx-4 my-4 gap-5">
+            {mobileStoreLinks?.map(({ imageUrl, imageTitle, href, openNewTab }) => (
               <a
                 href={href}
                 class="flex justify-center items-center rounded-[8px]"
@@ -69,7 +69,9 @@ export default function Footer(props: Props) {
                 <Image
                   src={imageUrl}
                   sizes="(max-width: 640px) 100vw, 50vw"
-                  width={110}
+                  width={imageTitle != "Profeco" ? 120 : 290}
+                  title={imageTitle}
+                  alt={imageTitle}
                   height={35}
                   loading="eager"
                   decoding="async"
