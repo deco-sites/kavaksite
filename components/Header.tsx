@@ -117,7 +117,11 @@ export default function Header(props: Props) {
           {/** DESKTOP MENU */}
           <ul class="hidden lg:flex flex-row gap-7">
             {props.links.map((link, index) => (
-              <li class={`flex flex-row gap-2 items-center ${link.children?.length ? "group" : ""} hover:text-black relative`}>
+              <li
+                class={`flex flex-row gap-2 items-center ${
+                  link.children?.length ? "group" : ""
+                } hover:text-black relative`}
+              >
                 {index == props.links.length - 2 && (
                   <a
                     href={link.href}
@@ -149,15 +153,17 @@ export default function Header(props: Props) {
                   </a>
                 )}
 
-                {link.children?.length ?  (
-                  <Icon
-                    width={16}
-                    height={16}
-                    strokeWidth={3}
-                    id="ChevronDown"
-                    class="text-primary group-hover:rotate-180"
-                  />
-                ): <></>}
+                {link.children?.length
+                  ? (
+                    <Icon
+                      width={16}
+                      height={16}
+                      strokeWidth={3}
+                      id="ChevronDown"
+                      class="text-primary group-hover:rotate-180"
+                    />
+                  )
+                  : <></>}
 
                 {link.children && (
                   <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">
