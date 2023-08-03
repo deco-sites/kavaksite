@@ -8144,10 +8144,15 @@
             "null"
           ],
           "title": "Hide Title"
+        },
+        "searchPlaceholder": {
+          "type": "string",
+          "title": "Search Placeholder"
         }
       },
       "required": [
-        "categories"
+        "categories",
+        "searchPlaceholder"
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogCategoryMenu.tsx@Props"
     },
