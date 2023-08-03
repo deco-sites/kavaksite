@@ -78,6 +78,7 @@
               "deco-sites/std/loaders/vtex/proxy.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
+              "./islands/BlogCategoryMenu.tsx",
               "./islands/GalleryPagination.tsx",
               "./islands/Header.tsx",
               "./islands/ShareLinkButton.tsx",
@@ -8126,6 +8127,30 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dDYXRlZ29yeU1lbnUudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "categories": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Category[]",
+          "title": "Categories"
+        },
+        "page": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogPage",
+          "title": "Page"
+        },
+        "hideTitle": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Hide Title"
+        }
+      },
+      "required": [
+        "categories"
+      ],
+      "title": "deco-sites/kavaksite/components/blog/BlogCategoryMenu.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination": {
       "type": "object",
       "properties": {
@@ -8207,6 +8232,11 @@
               "type": "string",
               "const": "NoIcon",
               "default": "NoIcon"
+            },
+            {
+              "type": "string",
+              "const": "Search",
+              "default": "Search"
             },
             {
               "type": "string",
@@ -8395,6 +8425,11 @@
               "type": "string",
               "const": "NoIcon",
               "default": "NoIcon"
+            },
+            {
+              "type": "string",
+              "const": "Search",
+              "default": "Search"
             },
             {
               "type": "string",
@@ -9141,30 +9176,6 @@
       ],
       "title": "deco-sites/kavaksite/components/BannerInfo.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dDYXRlZ29yeU1lbnUudHN4@Props": {
-      "type": "object",
-      "properties": {
-        "categories": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Category[]",
-          "title": "Categories"
-        },
-        "page": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogPage",
-          "title": "Page"
-        },
-        "hideTitle": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Hide Title"
-        }
-      },
-      "required": [
-        "categories"
-      ],
-      "title": "deco-sites/kavaksite/components/blog/BlogCategoryMenu.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dHYWxsZXJ5LnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -9783,6 +9794,11 @@
                     "type": "string",
                     "const": "NoIcon",
                     "default": "NoIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Search",
+                    "default": "Search"
                   },
                   {
                     "type": "string",
@@ -13728,6 +13744,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Jsb2dDYXRlZ29yeU1lbnUudHN4": {
+      "title": "./islands/BlogCategoryMenu.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dDYXRlZ29yeU1lbnUudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/BlogCategoryMenu.tsx"
+          ],
+          "default": "./islands/BlogCategoryMenu.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA==": {
       "title": "./islands/GalleryPagination.tsx",
       "type": "object",
@@ -15755,6 +15792,9 @@
       "anyOf": [
         {
           "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Jsb2dDYXRlZ29yeU1lbnUudHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA=="

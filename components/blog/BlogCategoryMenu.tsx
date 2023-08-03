@@ -1,6 +1,8 @@
 import type { LoaderReturnType } from "$live/types.ts";
+import { useState } from "preact/hooks";
 import { Container } from "deco-sites/kavaksite/components/ui/Container.tsx";
 import { SectionTitle } from "deco-sites/kavaksite/components/ui/SectionTitle.tsx";
+import Icon from "deco-sites/kavaksite/components/Icon.tsx";
 import type {
   BlogPage,
   Category,
@@ -16,15 +18,50 @@ export interface Props {
 function BlogCategoryMenu({ categories, page, hideTitle }: Props) {
   const categoriesList = [{ name: "Tudo", slug: "" }, ...categories];
 
+  const [searchOpen, setSearchOpen] = useState(false);
+
   return (
     <Container class="mb-6 mt-7">
-      {!hideTitle
-        ? (
-          <SectionTitle class="text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem]">
-            {page?.title}
-          </SectionTitle>
-        )
-        : null}
+      <div class={`w-full flex flex-col justify-center items-center`}>
+        <div class={`w-full flex justify-between items-center`}>
+          {!hideTitle
+            ? (
+              <SectionTitle class="text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem]">
+                {page?.title}
+              </SectionTitle>
+            )
+            : null}
+          <Icon
+            size={24}
+            id="Search"
+            class={`text-[#5b5b5b] mb-4 cursor-pointer ${searchOpen ? "hidden" : "block"}`}
+            strokeWidth={3}
+            onClick={() => setSearchOpen(true)}
+          />
+        </div>
+        <div
+          class={`w-full h-0 flex justify-end items-center gap-4 mb-4 px-1 overflow-hidden ${searchOpen ? "animate-open-search" : null}`}
+        >
+          <input
+            type="text"
+            class={`w-full h-[35px] px-4 border border-[#5b5b5b] rounded-lg`}
+          />
+          <Icon
+            size={24}
+            id="Search"
+            class="text-[#5b5b5b] cursor-pointer"
+            strokeWidth={3}
+            // onClick={()} QUERY
+          />
+          <Icon
+            size={24}
+            id="XMark"
+            class="text-[#5b5b5b] cursor-pointer"
+            strokeWidth={3}
+            onClick={() => setSearchOpen(false)}
+          />
+        </div>
+      </div>
       <nav class="mb-[50px] overflow-auto md:mb-4">
         <ul class="flex sm:flex-wrap gap-x-4 pb-2 md:gap-x-6 md:pb-[2px]">
           {categoriesList.map((category, index) => (
