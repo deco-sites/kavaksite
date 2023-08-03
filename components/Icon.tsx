@@ -35,8 +35,8 @@ export type AvailableIcons =
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
    * Symbol id from element to render. Take a look at `/static/icons.svg`.
-  *
-  * Example: <Icon id="Bell" />
+   *
+   * Example: <Icon id="Bell" />
    */
   id: AvailableIcons;
   size?: number;

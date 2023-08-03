@@ -31,8 +31,8 @@ function BlogPostDetail({ post, ads, social, categories, searchTerms }: Props) {
         <meta name="description" content={post.seo.description} />
       </Head>
       <section>
-        <div class="flex flex-nowrap items-end mb-4">
-          <SectionTitle class="text-2xl w-full mb-0">{post.title}</SectionTitle>
+        <div class="flex flex-wrap justify-end items-end mb-0 lg:flex-nowrap">
+          <h1 class={`text-2xl font-semibold w-full mb-0`}>{post.title}</h1>
           <ShareLinkButton
             clippedText={`/blog/${post.slug}`}
             withDomain
