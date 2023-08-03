@@ -12,6 +12,7 @@ export default {
         gray: "#c7c7c7",
       },
       screens: {
+        "xs": "490px",
         "sm": "576px",
         "md": "768px",
         "lg": "992px",

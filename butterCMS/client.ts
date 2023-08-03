@@ -86,6 +86,26 @@ export const createClient = (
     return fetchAPI<PostsData>(url);
   };
 
+  const search = (
+    page: number,
+    pageSize: number,
+    query: string,
+  ) => {
+    const params = new URLSearchParams({
+      auth_token: authToken,
+      page: page.toString(),
+      page_size: pageSize.toString(),
+      query: query ?? "",
+    });
+
+    const url = new URL(
+      `/${apiVersion}/search?${params.toString()}`,
+      BASE_URL,
+    );
+
+    return fetchAPI<PostsData>(url);
+  };
+
   const pages = (locale = defaultLocale) => {
     const params = new URLSearchParams({
       auth_token: authToken,
@@ -108,5 +128,6 @@ export const createClient = (
     posts,
     post,
     pages,
+    search,
   };
 };
