@@ -19,7 +19,9 @@ function BlogGallery({ title, list: { posts } }: Props) {
   return (
     <Container id={id} class="my-8">
       <section>
-        <h3 class="text-black text-[1.17em] font-title mb-2 text-base-light">{title}</h3>
+        <h3 class="text-black text-[1.17em] font-title mb-2 text-base-light">
+          {title}
+        </h3>
         <div class="flex flex-row overflow-x-scroll lg:overflow-x-visible gap-y-10 -mx-4 2lg:gap-y-8">
           {posts.map((post) => <SearchCard post={post} />)}
         </div>

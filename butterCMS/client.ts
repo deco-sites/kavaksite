@@ -128,6 +128,6 @@ export const createClient = (
     posts,
     post,
     pages,
-    search
+    search,
   };
 };

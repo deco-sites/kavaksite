@@ -30,11 +30,11 @@ const postsLoader: LoaderFunction<
   const client = createClient(configButterCMS);
   const url = new URL(req.url);
   const page = Number(url.searchParams.get("page")) || 1;
-  const query = "carro"
+  const query = "carro";
   const { data, meta } = await client.search(
     page,
     pageSize,
-    query
+    query,
   );
 
   return {
