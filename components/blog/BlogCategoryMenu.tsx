@@ -34,13 +34,17 @@ function BlogCategoryMenu({ categories, page, hideTitle }: Props) {
           <Icon
             size={24}
             id="Search"
-            class={`text-[#5b5b5b] mb-4 cursor-pointer ${searchOpen ? "hidden" : "block"}`}
+            class={`text-[#5b5b5b] mb-4 cursor-pointer ${
+              searchOpen ? "hidden" : "block"
+            }`}
             strokeWidth={3}
             onClick={() => setSearchOpen(true)}
           />
         </div>
         <div
-          class={`w-full h-0 flex justify-end items-center gap-4 mb-4 px-1 overflow-hidden ${searchOpen ? "animate-open-search" : null}`}
+          class={`w-full h-0 flex justify-end items-center gap-4 mb-4 px-1 overflow-hidden ${
+            searchOpen ? "animate-open-search" : null
+          }`}
         >
           <input
             type="text"
