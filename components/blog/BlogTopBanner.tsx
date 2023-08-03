@@ -30,6 +30,8 @@ function BlogTopBanner(
             decoding="async"
             fetchPriority="high"
             class="lg:h-[72px]"
+            title={text}
+            alt={text}
             preload
           />
         </div>
@@ -43,6 +45,8 @@ function BlogTopBanner(
           decoding="async"
           fetchPriority="high"
           class="flex lg:hidden"
+          title={text}
+          alt={text}
           preload
         />
         <Image
@@ -53,6 +57,8 @@ function BlogTopBanner(
           decoding="async"
           fetchPriority="high"
           class="hidden lg:flex"
+          title={text}
+          alt={text}
           preload
         />
       </div>

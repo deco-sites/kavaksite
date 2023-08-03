@@ -13,9 +13,10 @@ export interface Props {
   categories: LoaderReturnType<Category[]>;
   page?: LoaderReturnType<BlogPage>;
   hideTitle?: boolean;
+  searchPlaceholder: string;
 }
 
-function BlogCategoryMenu({ categories, page, hideTitle }: Props) {
+function BlogCategoryMenu({ categories, page, hideTitle, searchPlaceholder }: Props) {
   const categoriesList = [{ name: "Tudo", slug: "" }, ...categories];
 
   const [searchOpen, setSearchOpen] = useState(false);
@@ -48,6 +49,8 @@ function BlogCategoryMenu({ categories, page, hideTitle }: Props) {
         >
           <input
             type="text"
+            name="search"
+            placeholder={searchPlaceholder}
             class={`w-full h-[35px] px-4 border border-[#5b5b5b] rounded-lg`}
           />
           <Icon
