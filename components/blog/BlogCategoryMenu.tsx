@@ -16,7 +16,9 @@ export interface Props {
   searchPlaceholder: string;
 }
 
-function BlogCategoryMenu({ categories, page, hideTitle, searchPlaceholder }: Props) {
+function BlogCategoryMenu(
+  { categories, page, hideTitle, searchPlaceholder }: Props,
+) {
   const categoriesList = [{ name: "Tudo", slug: "" }, ...categories];
 
   const [searchOpen, setSearchOpen] = useState(false);
