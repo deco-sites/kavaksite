@@ -16,6 +16,31 @@ export interface Props {
   searchPlaceholder: string;
 }
 
+function setURL(value: string) {
+  let currentURL = window.location.href;
+
+  currentURL = currentURL.split("?")[0];
+
+  window.location.href = `${currentURL}?query=${value}`;
+}
+
+function getValueSearch() {
+  const inputElement = document.getElementById(
+    "search-bar",
+  ) as HTMLInputElement;
+
+  const valorDoInput = inputElement ? inputElement.value : "";
+
+  setURL(valorDoInput);
+}
+
+// deno-lint-ignore no-explicit-any
+const handleKeyPress = (event: any) => {
+  if (event.key === "Enter") {
+    getValueSearch();
+  }
+};
+
 function BlogCategoryMenu(
   { categories, page, hideTitle, searchPlaceholder }: Props,
 ) {
@@ -54,13 +79,17 @@ function BlogCategoryMenu(
             name="search"
             placeholder={searchPlaceholder}
             class={`w-full h-[35px] px-4 border border-[#5b5b5b] rounded-lg`}
+            id={"search-bar"}
+            onKeyDown={handleKeyPress}
           />
           <Icon
             size={24}
             id="Search"
             class="text-[#5b5b5b] cursor-pointer"
             strokeWidth={3}
-            // onClick={()} QUERY
+            onClick={() => {
+              getValueSearch();
+            }}
           />
           <Icon
             size={24}
