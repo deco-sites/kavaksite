@@ -16,24 +16,26 @@ export interface Props {
 }
 
 function setURL(value: string) {
-    let currentURL = window.location.href; 
-    
-    currentURL = currentURL.split("?")[0];
+  let currentURL = window.location.href;
 
-    window.location.href = `${currentURL}?query=${value}`
+  currentURL = currentURL.split("?")[0];
+
+  window.location.href = `${currentURL}?query=${value}`;
 }
 
 function getValueSearch() {
-  const inputElement = document.getElementById('search-bar') as HTMLInputElement;
+  const inputElement = document.getElementById(
+    "search-bar",
+  ) as HTMLInputElement;
 
   const valorDoInput = inputElement ? inputElement.value : "";
 
-  setURL(valorDoInput)
+  setURL(valorDoInput);
 }
 
 // deno-lint-ignore no-explicit-any
-const handleKeyPress = (event:any) => {
-  if (event.key === 'Enter') {
+const handleKeyPress = (event: any) => {
+  if (event.key === "Enter") {
     getValueSearch();
   }
 };
@@ -80,7 +82,9 @@ function BlogCategoryMenu({ categories, page, hideTitle }: Props) {
             id="Search"
             class="text-[#5b5b5b] cursor-pointer"
             strokeWidth={3}
-            onClick={() => {getValueSearch()}}
+            onClick={() => {
+              getValueSearch();
+            }}
           />
           <Icon
             size={24}

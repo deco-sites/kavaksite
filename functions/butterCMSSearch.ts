@@ -35,7 +35,7 @@ const postsLoader: LoaderFunction<
     pageSize,
     req?.url?.split("?")[1]?.split("=")[1],
   );
-    
+
   return {
     data: {
       posts: toPostsPreview(data),
