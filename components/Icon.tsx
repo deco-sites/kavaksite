@@ -4,6 +4,10 @@ import type { JSX } from "preact";
 export type AvailableIcons =
   | "NoIcon"
   | "Search"
+  | "InfoIcon"
+  | "QuestionMark"
+  | "ChatIcon"
+  | "XIcon"
   | "ChevronLeft"
   | "ChevronRight"
   | "ChevronUp"

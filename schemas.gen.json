@@ -79,6 +79,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/BlogCategoryMenu.tsx",
+              "./islands/BlogHelp.tsx",
               "./islands/GalleryPagination.tsx",
               "./islands/Header.tsx",
               "./islands/ShareLinkButton.tsx",
@@ -102,6 +103,7 @@
               "deco-sites/kavaksite/sections/BlogGallery.tsx",
               "deco-sites/kavaksite/sections/BlogGalleryCategory.tsx",
               "deco-sites/kavaksite/sections/BlogGallerySearch.tsx",
+              "deco-sites/kavaksite/sections/BlogHelp.tsx",
               "deco-sites/kavaksite/sections/BlogNewsletter.tsx",
               "deco-sites/kavaksite/sections/BlogPostDetail.tsx",
               "deco-sites/kavaksite/sections/BlogPosts.tsx",
@@ -8156,6 +8158,218 @@
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogCategoryMenu.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dIZWxwLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "iconText": {
+          "type": "string",
+          "title": "Icon Text"
+        },
+        "helpOptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "NoIcon",
+                    "default": "NoIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Search",
+                    "default": "Search"
+                  },
+                  {
+                    "type": "string",
+                    "const": "InfoIcon",
+                    "default": "InfoIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "QuestionMark",
+                    "default": "QuestionMark"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChatIcon",
+                    "default": "ChatIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "XIcon",
+                    "default": "XIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronLeft",
+                    "default": "ChevronLeft"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronRight",
+                    "default": "ChevronRight"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronUp",
+                    "default": "ChevronUp"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronDown",
+                    "default": "ChevronDown"
+                  },
+                  {
+                    "type": "string",
+                    "const": "User",
+                    "default": "User"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Bars3",
+                    "default": "Bars3"
+                  },
+                  {
+                    "type": "string",
+                    "const": "XMark",
+                    "default": "XMark"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Logo",
+                    "default": "Logo"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Brasil",
+                    "default": "Brasil"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Facebook",
+                    "default": "Facebook"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Instagram",
+                    "default": "Instagram"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Youtube",
+                    "default": "Youtube"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Twitter",
+                    "default": "Twitter"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Linkedin",
+                    "default": "Linkedin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "TikTok",
+                    "default": "TikTok"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Pinterest",
+                    "default": "Pinterest"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Share",
+                    "default": "Share"
+                  },
+                  {
+                    "type": "string",
+                    "const": "DoubleChevron",
+                    "default": "DoubleChevron"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Pin",
+                    "default": "Pin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Check",
+                    "default": "Check"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Moeda",
+                    "default": "Moeda"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Carro",
+                    "default": "Carro"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Sale",
+                    "default": "Sale"
+                  },
+                  {
+                    "type": "string",
+                    "const": "instagramIcon",
+                    "default": "instagramIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "facebookIcon",
+                    "default": "facebookIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "linkedinIcon",
+                    "default": "linkedinIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "youtubeIcon",
+                    "default": "youtubeIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "twitterIcon",
+                    "default": "twitterIcon"
+                  }
+                ],
+                "type": "string",
+                "title": "Icon"
+              },
+              "text": {
+                "type": "string",
+                "title": "Text"
+              },
+              "href": {
+                "type": "string",
+                "title": "Href"
+              }
+            },
+            "required": [
+              "icon",
+              "text",
+              "href"
+            ]
+          },
+          "title": "Help Options"
+        }
+      },
+      "required": [
+        "iconText",
+        "helpOptions"
+      ],
+      "title": "deco-sites/kavaksite/components/blog/BlogHelp.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination": {
       "type": "object",
       "properties": {
@@ -8242,6 +8456,26 @@
               "type": "string",
               "const": "Search",
               "default": "Search"
+            },
+            {
+              "type": "string",
+              "const": "InfoIcon",
+              "default": "InfoIcon"
+            },
+            {
+              "type": "string",
+              "const": "QuestionMark",
+              "default": "QuestionMark"
+            },
+            {
+              "type": "string",
+              "const": "ChatIcon",
+              "default": "ChatIcon"
+            },
+            {
+              "type": "string",
+              "const": "XIcon",
+              "default": "XIcon"
             },
             {
               "type": "string",
@@ -8435,6 +8669,26 @@
               "type": "string",
               "const": "Search",
               "default": "Search"
+            },
+            {
+              "type": "string",
+              "const": "InfoIcon",
+              "default": "InfoIcon"
+            },
+            {
+              "type": "string",
+              "const": "QuestionMark",
+              "default": "QuestionMark"
+            },
+            {
+              "type": "string",
+              "const": "ChatIcon",
+              "default": "ChatIcon"
+            },
+            {
+              "type": "string",
+              "const": "XIcon",
+              "default": "XIcon"
             },
             {
               "type": "string",
@@ -9804,6 +10058,26 @@
                     "type": "string",
                     "const": "Search",
                     "default": "Search"
+                  },
+                  {
+                    "type": "string",
+                    "const": "InfoIcon",
+                    "default": "InfoIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "QuestionMark",
+                    "default": "QuestionMark"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChatIcon",
+                    "default": "ChatIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "XIcon",
+                    "default": "XIcon"
                   },
                   {
                     "type": "string",
@@ -13770,6 +14044,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Jsb2dIZWxwLnRzeA==": {
+      "title": "./islands/BlogHelp.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dIZWxwLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/BlogHelp.tsx"
+          ],
+          "default": "./islands/BlogHelp.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA==": {
       "title": "./islands/GalleryPagination.tsx",
       "type": "object",
@@ -14239,6 +14534,27 @@
             "deco-sites/kavaksite/sections/BlogGallerySearch.tsx"
           ],
           "default": "deco-sites/kavaksite/sections/BlogGallerySearch.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ0hlbHAudHN4": {
+      "title": "deco-sites/kavaksite/sections/BlogHelp.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dIZWxwLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kavaksite/sections/BlogHelp.tsx"
+          ],
+          "default": "deco-sites/kavaksite/sections/BlogHelp.tsx"
         }
       }
     },
@@ -15802,6 +16118,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0Jsb2dDYXRlZ29yeU1lbnUudHN4"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Jsb2dIZWxwLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA=="
         },
         {
@@ -15893,6 +16212,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ0dhbGxlcnlTZWFyY2gudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ0hlbHAudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvQmxvZ05ld3NsZXR0ZXIudHN4"
