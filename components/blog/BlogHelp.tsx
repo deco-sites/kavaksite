@@ -38,7 +38,7 @@ function BlogHelp(
                   width={21}
                   height={21}
                   onClick={() => setHelpOpen(false)}
-                  style={{cursor: "pointer"}}
+                  style={{ cursor: "pointer" }}
                 />
               </div>
               <div class="w-full flex flex-col justify-center items-center gap-1">
