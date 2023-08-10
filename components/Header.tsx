@@ -7,6 +7,8 @@ export interface Link {
   href?: string;
   label?: string;
   icon: AvailableIcons;
+  /**@default false */
+  borderBottom?: boolean;
   children?: { href: string; label: string }[];
 }
 
@@ -16,6 +18,16 @@ export interface Country {
   href?: string;
 }
 export interface Props {
+  /**
+   * @description Logo
+   * @default Logo
+   */
+  logo: {
+    icon: AvailableIcons;
+    href: string;
+    /**@default false */
+    openNewTab?: boolean;
+  };
   /** @description label or icon must be declared */
   links: Link[];
   popupIdiomas: {
@@ -94,7 +106,7 @@ export default function Header(props: Props) {
             <a
               href={linkHref}
               target={`${props.popupIdiomas?.abrirEmNovaAba ? "_blank" : ""}`}
-              class={`flex items-center justify-center h-[46px] py-2 bg-primary-dark text-white rounded-lg`}
+              class={`flex items-center justify-center h-[46px] py-2 bg-black text-white rounded-lg`}
             >
               <span>
                 {props.popupIdiomas?.labelButton}
@@ -103,14 +115,26 @@ export default function Header(props: Props) {
           </div>
         </div>
       </div>
-      <div class="h-[56px] lg:h-[84px] flex justify-center bg-primary-light w-full shadow-base">
-        <div class="w-full max-w-[1320px] flex flex-row items-center justify-between px-4">
-          <a href="/" alt="Kavak" title="Kavak" class="hidden lg:block">
-            <Icon id="Logo" width={112} height={30} />
+      <div class="h-[56px] lg:h-[84px] mx-auto flex justify-center bg-primary-light w-full shadow-card">
+        <div class="w-full flex flex-row items-center justify-between 1.5xl:max-w-[1320px] 2lg:max-w-[1180px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-4">
+          <a
+            href={props.logo.href}
+            target={props.logo.openNewTab ? "_blank" : ""}
+            alt="Kavak"
+            title="Kavak"
+            class="hidden lg:block"
+          >
+            <Icon id={props.logo.icon} width={112} height={30} />
           </a>
 
-          <a href="/" alt="Kavak" title="Kavak" class="block lg:hidden">
-            <Icon id="Logo" width={76} height={20} />
+          <a
+            href={props.logo.href}
+            target={props.logo.openNewTab ? "_blank" : ""}
+            alt="Kavak"
+            title="Kavak"
+            class="block lg:hidden"
+          >
+            <Icon id={props.logo.icon} width={76} height={20} />
           </a>
 
           {/** DESKTOP MENU */}
@@ -136,8 +160,6 @@ export default function Header(props: Props) {
                         id={link.icon}
                       />
                     )}
-
-                    {link.label}
                   </a>
                 )}
                 {index != props.links.length - 2 && (
@@ -200,7 +222,9 @@ export default function Header(props: Props) {
             <ul class="flex flex-col gap-7 p-4">
               {props.links.map((link, index) => (
                 <li
-                  class={`flex flex-row gap-2 items-center text-black relative`}
+                  class={`flex flex-row gap-2 items-center text-dark-brown relative ${
+                    link.borderBottom ? "border-b border-gray pb-4" : ""
+                  }`}
                 >
                   {index == props.links.length - 2 && (
                     <a
@@ -211,13 +235,16 @@ export default function Header(props: Props) {
                           togglePopup();
                         }
                       }}
-                      class="flex flex-row gap-2 items-center text-red"
+                      class={`flex flex-row-reverse justify-between gap-2 items-center text-red ${
+                        link.href == "" ? "pointer-events-none" : ""
+                      } ${index == props.links.length - 2 ? "w-full" : ""}`}
                     >
                       {link.icon != "NoIcon" && (
                         <Icon
                           width={20}
                           height={20}
                           id={link.icon}
+                          class={"text-dark-brown"}
                         />
                       )}
                       {link.label}
@@ -233,6 +260,7 @@ export default function Header(props: Props) {
                           width={20}
                           height={20}
                           id={link.icon}
+                          class={"text-dark-brown"}
                         />
                       )}
 
