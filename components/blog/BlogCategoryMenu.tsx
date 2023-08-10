@@ -44,7 +44,7 @@ const handleKeyPress = (event: any) => {
 function BlogCategoryMenu(
   { categories, page, hideTitle, searchPlaceholder }: Props,
 ) {
-  const categoriesList = [{ name: "Tudo", slug: "" }, ...categories];
+  const categoriesList = [{ name: "Todo", slug: "" }, ...categories];
 
   const [searchOpen, setSearchOpen] = useState(false);
 
