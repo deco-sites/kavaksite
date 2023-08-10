@@ -10,6 +10,7 @@ export default {
         primary: "#3374db",
         "gray-light": "#5B5B5B",
         gray: "#c7c7c7",
+        "dark-brown": "#333333"
       },
       screens: {
         "xs": "490px",
