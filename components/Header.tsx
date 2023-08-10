@@ -151,7 +151,7 @@ export default function Header(props: Props) {
                   <a
                     href={link.href}
                     onClick={togglePopup}
-                    class="flex flex-row gap-2 items-center"
+                    class="flex flex-row gap-2 items-center cursor-pointer"
                   >
                     {link.icon && (
                       <Icon
