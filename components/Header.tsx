@@ -7,7 +7,7 @@ export interface Link {
   href?: string;
   label?: string;
   icon: AvailableIcons;
-    /**@default false */
+  /**@default false */
   borderBottom?: boolean;
   children?: { href: string; label: string }[];
 }
@@ -22,7 +22,7 @@ export interface Props {
    * @description Logo
    * @default Logo
    */
-  logo:{
+  logo: {
     icon: AvailableIcons;
     href: string;
     /**@default false */
@@ -117,11 +117,23 @@ export default function Header(props: Props) {
       </div>
       <div class="h-[56px] lg:h-[84px] mx-auto flex justify-center bg-primary-light w-full shadow-card">
         <div class="w-full flex flex-row items-center justify-between 1.5xl:max-w-[1320px] 2lg:max-w-[1180px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-4">
-          <a href={props.logo.href} target={props.logo.openNewTab ? "_blank" : ""} alt="Kavak" title="Kavak" class="hidden lg:block">
+          <a
+            href={props.logo.href}
+            target={props.logo.openNewTab ? "_blank" : ""}
+            alt="Kavak"
+            title="Kavak"
+            class="hidden lg:block"
+          >
             <Icon id={props.logo.icon} width={112} height={30} />
           </a>
 
-          <a href={props.logo.href} target={props.logo.openNewTab ? "_blank" : ""} alt="Kavak" title="Kavak" class="block lg:hidden">
+          <a
+            href={props.logo.href}
+            target={props.logo.openNewTab ? "_blank" : ""}
+            alt="Kavak"
+            title="Kavak"
+            class="block lg:hidden"
+          >
             <Icon id={props.logo.icon} width={76} height={20} />
           </a>
 
@@ -210,7 +222,9 @@ export default function Header(props: Props) {
             <ul class="flex flex-col gap-7 p-4">
               {props.links.map((link, index) => (
                 <li
-                  class={`flex flex-row gap-2 items-center text-dark-brown relative ${link.borderBottom ? "border-b border-gray pb-4" : ""}`}
+                  class={`flex flex-row gap-2 items-center text-dark-brown relative ${
+                    link.borderBottom ? "border-b border-gray pb-4" : ""
+                  }`}
                 >
                   {index == props.links.length - 2 && (
                     <a
@@ -221,7 +235,9 @@ export default function Header(props: Props) {
                           togglePopup();
                         }
                       }}
-                      class={`flex flex-row-reverse justify-between gap-2 items-center text-red ${link.href == "" ? "pointer-events-none" : ""} ${index == props.links.length - 2 ? "w-full" : ""}`}
+                      class={`flex flex-row-reverse justify-between gap-2 items-center text-red ${
+                        link.href == "" ? "pointer-events-none" : ""
+                      } ${index == props.links.length - 2 ? "w-full" : ""}`}
                     >
                       {link.icon != "NoIcon" && (
                         <Icon
