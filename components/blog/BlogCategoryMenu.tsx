@@ -54,7 +54,9 @@ function BlogCategoryMenu(
         <div class={`w-full flex justify-between items-center`}>
           {!hideTitle
             ? (
-              <h1 class={`text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}>
+              <h1
+                class={`text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
+              >
                 {page?.title}
               </h1>
             )
