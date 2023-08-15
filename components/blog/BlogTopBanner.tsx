@@ -36,7 +36,7 @@ function BlogTopBanner(
           />
         </div>
       </div>
-      <div class="w-[50%] sm: w-[25%] lg:max-w-[150px]">
+      <div class="w-[50%] sm:w-[25%] lg:max-w-[150px] z-[-1]">
         <Image
           src={imageMobile}
           width={150}
