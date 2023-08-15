@@ -63,7 +63,8 @@ function BlogTopBanner(
         />
       </div>
       <div class="w-[30%] flex items-center justify-center sm:w-[25%] lg:w-[50%] lg:justify-start">
-        <button class="w-[106px] h-[46px] rounded-[8px] bg-black text-white text-sm font-semibold lg:w-[200px]">
+        <button class="w-[106px] h-[46px] rounded-[8px] bg-black text-white text-sm font-semibold lg:w-[200px]
+        hover:bg-white hover:text-black hover:border-black hover:border">
           {buttonText}
         </button>
       </div>

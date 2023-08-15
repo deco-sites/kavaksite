@@ -11,6 +11,8 @@ export default {
         "gray-light": "#5B5B5B",
         gray: "#c7c7c7",
         "dark-brown": "#333333",
+        "primary-dark": "#000000",
+        "primary-light": "#FFFFFF",
       },
       screens: {
         "xs": "490px",
