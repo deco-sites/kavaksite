@@ -55,21 +55,23 @@ function BlogCategoryMenu(
           {!hideTitle
             ? (
               <h1
-                class={`text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
+                class={`w-full text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
               >
                 {page?.title}
               </h1>
             )
             : null}
-          <Icon
-            size={24}
-            id="Search"
-            class={`text-[#5b5b5b] mb-4 cursor-pointer ${
-              searchOpen ? "hidden" : "block"
-            }`}
-            strokeWidth={3}
-            onClick={() => setSearchOpen(true)}
-          />
+          <div class={`w-full flex justify-end`}>
+            <Icon
+              size={24}
+              id="Search"
+              class={`text-[#5b5b5b] mb-4 cursor-pointer justify-self-end ${
+                searchOpen ? "hidden" : "block"
+              }`}
+              strokeWidth={3}
+              onClick={() => setSearchOpen(true)}
+            />
+          </div>
         </div>
         <div
           class={`w-full h-0 flex justify-end items-center gap-4 mb-4 px-1 overflow-hidden ${
