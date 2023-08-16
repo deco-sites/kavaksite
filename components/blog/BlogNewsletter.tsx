@@ -37,7 +37,9 @@ function BlogNewsletter(
               value={textButton}
               class={`w-full h-[46px] bg-black rounded-[8px] text-white lg:w-[160px] 
               hover:bg-white hover:text-black hover:border-black hover:border hover:cursor-pointer`}
-              onSubmit={(e)=> {e.preventDefault()}}
+              onSubmit={(e) => {
+                e.preventDefault();
+              }}
             />
           </form>
         </div>
