@@ -22,7 +22,6 @@ const categoriesLoader: LoaderFunction<
   const client = createClient(configButterCMS);
 
   const { data } = await client.categories();
-  console.log("teste");
   return { data };
 };
 
