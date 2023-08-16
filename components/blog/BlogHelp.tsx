@@ -16,7 +16,7 @@ function BlogHelp(
   const [helpOpen, setHelpOpen] = useState(false);
 
   return (
-    <div class="w-auto min-h-[40px] fixed bottom-7 right-4 z-50">
+    <div class="w-auto min-h-[40px] fixed bottom-7 right-4 z-40">
       {!helpOpen
         ? (
           <>

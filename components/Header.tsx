@@ -7,13 +7,17 @@ export interface Link {
   href?: string;
   label?: string;
   icon: AvailableIcons;
+  /**@description Emoji flag */
+  emojiIcon?: string;
   /**@default false */
   borderBottom?: boolean;
+  /**@default false */
+  hiddenMobile?: boolean;
   children?: { href: string; label: string }[];
 }
 
 export interface Country {
-  icon?: AvailableIcons;
+  icon?: string;
   label?: string;
   href?: string;
 }
@@ -42,6 +46,7 @@ export interface Props {
 export default function Header(props: Props) {
   const [linkHref, setLinkHref] = useState("#");
   const [checkValidate, setCheckValidate] = useState("");
+  const [menuChildren, setMenuChildren] = useState(false);
 
   const isMenuOpen = useSignal(false);
   const toggleMenu = () => (isMenuOpen.value = !isMenuOpen.value);
@@ -81,11 +86,7 @@ export default function Header(props: Props) {
                   onClick={setHref}
                 >
                   {Country.icon && (
-                    <Icon
-                      width={20}
-                      height={20}
-                      id={Country.icon}
-                    />
+                    <span>{Country.icon}</span>
                   )}
                   <span
                     data-href={Country.href}
@@ -153,12 +154,8 @@ export default function Header(props: Props) {
                     onClick={togglePopup}
                     class="flex flex-row gap-2 items-center cursor-pointer opacity-90"
                   >
-                    {link.icon && (
-                      <Icon
-                        width={20}
-                        height={20}
-                        id={link.icon}
-                      />
+                    {link.emojiIcon && (
+                      <span>{link.emojiIcon}</span>
                     )}
                   </a>
                 )}
@@ -221,13 +218,16 @@ export default function Header(props: Props) {
         </div>
 
         {isMenuOpen.value && (
-          <div class="block lg:hidden h-[calc(100vh-56px)] bg-white w-full fixed z-50 bottom-0">
+          <div class="block lg:hidden h-[calc(100vh-56px)] bg-white w-full fixed z-30 bottom-0">
             <ul class="flex flex-col gap-7 p-4">
               {props.links.map((link, index) => (
                 <li
-                  class={`flex flex-row gap-2 items-center text-dark-brown relative ${
+                  class={`${link.hiddenMobile ? "hidden" : ""} flex flex-row flex-wrap gap-2 items-center justify-between text-dark-brown relative ${
                     link.borderBottom ? "border-b border-gray pb-4" : ""
                   }`}
+                  onClick={() => {
+                    link.children?.length ? menuChildren ? setMenuChildren(false) : setMenuChildren(true) : ""
+                  }}
                 >
                   {index == props.links.length - 2 && (
                     <a
@@ -242,13 +242,8 @@ export default function Header(props: Props) {
                         link.href == "" ? "pointer-events-none" : ""
                       } ${index == props.links.length - 2 ? "w-full" : ""}`}
                     >
-                      {link.icon != "NoIcon" && (
-                        <Icon
-                          width={20}
-                          height={20}
-                          id={link.icon}
-                          class={"text-dark-brown"}
-                        />
+                      {link.emojiIcon != "NoIcon" && (
+                        <span>{link.emojiIcon}</span>
                       )}
                       {link.label}
                     </a>
@@ -256,12 +251,12 @@ export default function Header(props: Props) {
                   {index != props.links.length - 2 && (
                     <a
                       href={link.href}
-                      class="flex flex-row gap-2 items-center"
+                      class="flex flex-row gap-2 items-center opacity-90"
                     >
                       {link.icon != "NoIcon" && (
                         <Icon
-                          width={20}
-                          height={20}
+                          width={24}
+                          height={24}
                           id={link.icon}
                           class={"text-dark-brown"}
                         />
@@ -278,15 +273,18 @@ export default function Header(props: Props) {
                         height={16}
                         strokeWidth={3}
                         id="ChevronDown"
-                        class="text-primary group-hover:rotate-180"
+                        class={`${menuChildren ? "rotate-180" : ""} text-primary`}
+                        onClick={() => {
+                          menuChildren ? setMenuChildren(false) : setMenuChildren(true)
+                        }}
                       />
                     )
                     : <></>}
 
-                  {link.children && (
-                    <ul class="hidden group-hover:block absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg shadow-md">
+                  {link.children && link.children.length > 0 &&(
+                    <ul class={`${menuChildren ? "flex flex-col w-full " : "hidden"} lg:group-hover:block lg:absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg lg:shadow-md`}>
                       {link.children.map((child) => (
-                        <li>
+                        <li class={"last:text-primary last:font-black"}>
                           <a
                             href={child.href}
                             class="block px-2 py-1 whitespace-nowrap hover:bg-primary hover:text-primary-light rounded-lg"

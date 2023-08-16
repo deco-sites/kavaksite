@@ -8621,6 +8621,14 @@
           "type": "string",
           "title": "Icon"
         },
+        "emojiIcon": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Emoji flag",
+          "title": "Emoji Icon"
+        },
         "borderBottom": {
           "type": [
             "boolean",
@@ -8628,6 +8636,14 @@
           ],
           "default": "false",
           "title": "Border Bottom"
+        },
+        "hiddenMobile": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "default": "false",
+          "title": "Hidden Mobile"
         },
         "children": {
           "type": "array",
@@ -8667,179 +8683,10 @@
       "type": "object",
       "properties": {
         "icon": {
-          "anyOf": [
-            {
-              "type": "string",
-              "const": "NoIcon",
-              "default": "NoIcon"
-            },
-            {
-              "type": "string",
-              "const": "Search",
-              "default": "Search"
-            },
-            {
-              "type": "string",
-              "const": "InfoIcon",
-              "default": "InfoIcon"
-            },
-            {
-              "type": "string",
-              "const": "QuestionMark",
-              "default": "QuestionMark"
-            },
-            {
-              "type": "string",
-              "const": "ChatIcon",
-              "default": "ChatIcon"
-            },
-            {
-              "type": "string",
-              "const": "XIcon",
-              "default": "XIcon"
-            },
-            {
-              "type": "string",
-              "const": "ChevronLeft",
-              "default": "ChevronLeft"
-            },
-            {
-              "type": "string",
-              "const": "ChevronRight",
-              "default": "ChevronRight"
-            },
-            {
-              "type": "string",
-              "const": "ChevronUp",
-              "default": "ChevronUp"
-            },
-            {
-              "type": "string",
-              "const": "ChevronDown",
-              "default": "ChevronDown"
-            },
-            {
-              "type": "string",
-              "const": "User",
-              "default": "User"
-            },
-            {
-              "type": "string",
-              "const": "Bars3",
-              "default": "Bars3"
-            },
-            {
-              "type": "string",
-              "const": "XMark",
-              "default": "XMark"
-            },
-            {
-              "type": "string",
-              "const": "Logo",
-              "default": "Logo"
-            },
-            {
-              "type": "string",
-              "const": "Brasil",
-              "default": "Brasil"
-            },
-            {
-              "type": "string",
-              "const": "Facebook",
-              "default": "Facebook"
-            },
-            {
-              "type": "string",
-              "const": "Instagram",
-              "default": "Instagram"
-            },
-            {
-              "type": "string",
-              "const": "Youtube",
-              "default": "Youtube"
-            },
-            {
-              "type": "string",
-              "const": "Twitter",
-              "default": "Twitter"
-            },
-            {
-              "type": "string",
-              "const": "Linkedin",
-              "default": "Linkedin"
-            },
-            {
-              "type": "string",
-              "const": "TikTok",
-              "default": "TikTok"
-            },
-            {
-              "type": "string",
-              "const": "Pinterest",
-              "default": "Pinterest"
-            },
-            {
-              "type": "string",
-              "const": "Share",
-              "default": "Share"
-            },
-            {
-              "type": "string",
-              "const": "DoubleChevron",
-              "default": "DoubleChevron"
-            },
-            {
-              "type": "string",
-              "const": "Pin",
-              "default": "Pin"
-            },
-            {
-              "type": "string",
-              "const": "Check",
-              "default": "Check"
-            },
-            {
-              "type": "string",
-              "const": "Moeda",
-              "default": "Moeda"
-            },
-            {
-              "type": "string",
-              "const": "Carro",
-              "default": "Carro"
-            },
-            {
-              "type": "string",
-              "const": "Sale",
-              "default": "Sale"
-            },
-            {
-              "type": "string",
-              "const": "instagramIcon",
-              "default": "instagramIcon"
-            },
-            {
-              "type": "string",
-              "const": "facebookIcon",
-              "default": "facebookIcon"
-            },
-            {
-              "type": "string",
-              "const": "linkedinIcon",
-              "default": "linkedinIcon"
-            },
-            {
-              "type": "string",
-              "const": "youtubeIcon",
-              "default": "youtubeIcon"
-            },
-            {
-              "type": "string",
-              "const": "twitterIcon",
-              "default": "twitterIcon"
-            }
+          "type": [
+            "string",
+            "null"
           ],
-          "type": "string",
           "title": "Icon"
         },
         "label": {
