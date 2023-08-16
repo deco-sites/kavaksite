@@ -49,13 +49,13 @@ function BlogCategoryMenu(
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
-    <Container class="mb-6 mt-7">
+    <Container class="mb-6 mt-[56px] 2lg:mt-[46px]">
       <div class={`w-full flex flex-col justify-center items-center`}>
         <div class={`w-full flex justify-between items-center`}>
           {!hideTitle
             ? (
               <h1
-                class={`text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
+                class={`text-dark-brown text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
               >
                 {page?.title}
               </h1>
@@ -110,7 +110,7 @@ function BlogCategoryMenu(
                 href={index === 0 ? "/blog" : `/blog-category/${category.slug}`}
                 class={`${
                   page?.title === category.name ? "text-primary" : ""
-                } py-1 block whitespace-nowrap text-base-lighter`}
+                } py-1 block whitespace-nowrap text-gray-light`}
               >
                 {category.name}
               </a>

@@ -138,10 +138,10 @@ export default function Header(props: Props) {
           </a>
 
           {/** DESKTOP MENU */}
-          <ul class="hidden lg:flex flex-row gap-7">
+          <ul class="hidden lg:flex flex-row gap-8">
             {props.links.map((link, index) => (
               <li
-                class={`flex flex-row gap-2 items-center ${
+                class={`flex flex-row gap-2 items-center 2lg:last:ml-4 ${
                   link.children?.length ? "group" : ""
                 } hover:text-black relative ${
                   index != props.links.length - 2 ? "svg-none" : ""
@@ -151,7 +151,7 @@ export default function Header(props: Props) {
                   <a
                     href={link.href}
                     onClick={togglePopup}
-                    class="flex flex-row gap-2 items-center cursor-pointer"
+                    class="flex flex-row gap-2 items-center cursor-pointer opacity-90"
                   >
                     {link.icon && (
                       <Icon
@@ -163,7 +163,10 @@ export default function Header(props: Props) {
                   </a>
                 )}
                 {index != props.links.length - 2 && (
-                  <a href={link.href} class="flex flex-row gap-2 items-center">
+                  <a
+                    href={link.href}
+                    class="flex flex-row gap-2 items-center opacity-90"
+                  >
                     {link.icon && (
                       <Icon
                         width={20}
