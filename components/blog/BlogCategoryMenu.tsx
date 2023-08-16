@@ -110,7 +110,7 @@ function BlogCategoryMenu(
                 href={index === 0 ? "/blog" : `/blog-category/${category.slug}`}
                 class={`${
                   page?.title === category.name ? "text-primary" : ""
-                } py-1 block whitespace-nowrap text-gray-light`}
+                } py-1 block whitespace-nowrap text-gray-light hover:underline`}
               >
                 {category.name}
               </a>
