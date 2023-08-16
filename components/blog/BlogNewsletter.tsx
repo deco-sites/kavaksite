@@ -18,7 +18,7 @@ function BlogNewsletter(
           backgroundColor ? `bg-[${backgroundColor}]` : "bg-primary"
         } lg:flex-row`}
       >
-        <div class={`w-full`}>
+        <div class={`w-full lg:max-w-[35%]`}>
           <div dangerouslySetInnerHTML={{ __html: title }} class={`text-white`}>
           </div>
         </div>
@@ -35,7 +35,9 @@ function BlogNewsletter(
             <input
               type="submit"
               value={textButton}
-              class={`w-full h-[46px] bg-black rounded-[8px] text-white lg:min-w-[160px]`}
+              class={`w-full h-[46px] bg-black rounded-[8px] text-white lg:w-[160px] 
+              hover:bg-white hover:text-black hover:border-black hover:border hover:cursor-pointer`}
+              onSubmit={(e)=> {e.preventDefault()}}
             />
           </form>
         </div>
