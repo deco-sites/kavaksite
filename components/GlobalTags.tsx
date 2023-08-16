@@ -17,11 +17,13 @@ function GlobalTags() {
           __html: `
                 @font-face {
                   font-family: "title";
-                  src: url(${asset("/fonts/noka-semibold.woff2")}) format('woff2');
+                  src: url(${
+            asset("/fonts/noka-semibold.woff2")
+          }) format('woff2');
                   font-weight: normal;
                   font-style: normal;
                   font-display: block;
-                }`
+                }`,
         }}
       />
     </Head>
