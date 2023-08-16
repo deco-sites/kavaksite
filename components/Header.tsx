@@ -85,9 +85,7 @@ export default function Header(props: Props) {
                   class="items-center h-[52px] flex gap-2 border-b border-gray relative"
                   onClick={setHref}
                 >
-                  {Country.icon && (
-                    <span>{Country.icon}</span>
-                  )}
+                  {Country.icon && <span>{Country.icon}</span>}
                   <span
                     data-href={Country.href}
                     class={`w-full py-4 flex items-center mb-[-5px] text-base-light`}
@@ -154,9 +152,7 @@ export default function Header(props: Props) {
                     onClick={togglePopup}
                     class="flex flex-row gap-2 items-center cursor-pointer opacity-90"
                   >
-                    {link.emojiIcon && (
-                      <span>{link.emojiIcon}</span>
-                    )}
+                    {link.emojiIcon && <span>{link.emojiIcon}</span>}
                   </a>
                 )}
                 {index != props.links.length - 2 && (
@@ -222,11 +218,17 @@ export default function Header(props: Props) {
             <ul class="flex flex-col gap-7 p-4">
               {props.links.map((link, index) => (
                 <li
-                  class={`${link.hiddenMobile ? "hidden" : ""} flex flex-row flex-wrap gap-2 items-center justify-between text-dark-brown relative ${
+                  class={`${
+                    link.hiddenMobile ? "hidden" : ""
+                  } flex flex-row flex-wrap gap-2 items-center justify-between text-dark-brown relative ${
                     link.borderBottom ? "border-b border-gray pb-4" : ""
                   }`}
                   onClick={() => {
-                    link.children?.length ? menuChildren ? setMenuChildren(false) : setMenuChildren(true) : ""
+                    link.children?.length
+                      ? menuChildren
+                        ? setMenuChildren(false)
+                        : setMenuChildren(true)
+                      : "";
                   }}
                 >
                   {index == props.links.length - 2 && (
@@ -273,16 +275,24 @@ export default function Header(props: Props) {
                         height={16}
                         strokeWidth={3}
                         id="ChevronDown"
-                        class={`${menuChildren ? "rotate-180" : ""} text-primary`}
+                        class={`${
+                          menuChildren ? "rotate-180" : ""
+                        } text-primary`}
                         onClick={() => {
-                          menuChildren ? setMenuChildren(false) : setMenuChildren(true)
+                          menuChildren
+                            ? setMenuChildren(false)
+                            : setMenuChildren(true);
                         }}
                       />
                     )
                     : <></>}
 
-                  {link.children && link.children.length > 0 &&(
-                    <ul class={`${menuChildren ? "flex flex-col w-full " : "hidden"} lg:group-hover:block lg:absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg lg:shadow-md`}>
+                  {link.children && link.children.length > 0 && (
+                    <ul
+                      class={`${
+                        menuChildren ? "flex flex-col w-full " : "hidden"
+                      } lg:group-hover:block lg:absolute top-[100%] right-0 z-20 bg-primary-light p-3 rounded-lg lg:shadow-md`}
+                    >
                       {link.children.map((child) => (
                         <li class={"last:text-primary last:font-black"}>
                           <a
