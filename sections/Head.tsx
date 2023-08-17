@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import type { LoaderReturnType } from "$live/types.ts";
-import type { BlogPage } from "deco-sites/kavaksite/butterCMS/types.ts";
+import type { BlogPage } from "deco-sites/std/commerce/butterCMS/types.ts";
 
 export interface Props {
   page?: LoaderReturnType<BlogPage>;
@@ -33,7 +33,7 @@ export default function HeadComponent({
       {page?.title
         ? (
           <title>
-            {page.title} | Índice de referência na Indústria Automotiva.
+            {page.title} | Contenido de referencia en la Industria Automotriz.
           </title>
         )
         : <title>{title}</title>}
