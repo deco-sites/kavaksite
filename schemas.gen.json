@@ -80,6 +80,7 @@
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/BlogCategoryMenu.tsx",
               "./islands/BlogHelp.tsx",
+              "./islands/BlogNewsletter.tsx",
               "./islands/GalleryPagination.tsx",
               "./islands/Header.tsx",
               "./islands/ShareLinkButton.tsx",
@@ -8299,6 +8300,11 @@
                   },
                   {
                     "type": "string",
+                    "const": "SuccessIcon",
+                    "default": "SuccessIcon"
+                  },
+                  {
+                    "type": "string",
                     "const": "Check",
                     "default": "Check"
                   },
@@ -8369,6 +8375,48 @@
         "helpOptions"
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogHelp.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dOZXdzbGV0dGVyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "title": "Title"
+        },
+        "inputPlaceholder": {
+          "type": "string",
+          "title": "Input Placeholder"
+        },
+        "textButton": {
+          "type": "string",
+          "title": "Text Button"
+        },
+        "backgroundColor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Background Color"
+        },
+        "registerSuccessText": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Register Success Text"
+        }
+      },
+      "required": [
+        "title",
+        "inputPlaceholder",
+        "textButton"
+      ],
+      "title": "deco-sites/kavaksite/components/blog/BlogNewsletter.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination": {
       "type": "object",
@@ -8571,6 +8619,11 @@
               "type": "string",
               "const": "Pin",
               "default": "Pin"
+            },
+            {
+              "type": "string",
+              "const": "SuccessIcon",
+              "default": "SuccessIcon"
             },
             {
               "type": "string",
@@ -8795,6 +8848,11 @@
             },
             {
               "type": "string",
+              "const": "SuccessIcon",
+              "default": "SuccessIcon"
+            },
+            {
+              "type": "string",
               "const": "Check",
               "default": "Check"
             },
@@ -8999,6 +9057,11 @@
                   "type": "string",
                   "const": "Pin",
                   "default": "Pin"
+                },
+                {
+                  "type": "string",
+                  "const": "SuccessIcon",
+                  "default": "SuccessIcon"
                 },
                 {
                   "type": "string",
@@ -9515,11 +9578,6 @@
       ],
       "title": "deco-cx/deco/sections/UseSlot.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
-      "type": "string",
-      "format": "html",
-      "title": "HTML"
-    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9CYW5uZXJJbmZvLnRzeA==@CallToAction": {
       "type": "object",
       "properties": {
@@ -9697,36 +9755,6 @@
         "list"
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogGallerySearch.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dOZXdzbGV0dGVyLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
-          "title": "Title"
-        },
-        "inputPlaceholder": {
-          "type": "string",
-          "title": "Input Placeholder"
-        },
-        "textButton": {
-          "type": "string",
-          "title": "Text Button"
-        },
-        "backgroundColor": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Background Color"
-        }
-      },
-      "required": [
-        "title",
-        "inputPlaceholder",
-        "textButton"
-      ],
-      "title": "deco-sites/kavaksite/components/blog/BlogNewsletter.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dQb3N0RGV0YWlsLnRzeA==@Props": {
       "type": "object",
@@ -10381,6 +10409,11 @@
                     "type": "string",
                     "const": "Pin",
                     "default": "Pin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "SuccessIcon",
+                    "default": "SuccessIcon"
                   },
                   {
                     "type": "string",
@@ -14273,6 +14306,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Jsb2dOZXdzbGV0dGVyLnRzeA==": {
+      "title": "./islands/BlogNewsletter.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dOZXdzbGV0dGVyLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/BlogNewsletter.tsx"
+          ],
+          "default": "./islands/BlogNewsletter.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA==": {
       "title": "./islands/GalleryPagination.tsx",
       "type": "object",
@@ -16327,6 +16381,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0Jsb2dIZWxwLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Jsb2dOZXdzbGV0dGVyLnRzeA=="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA=="

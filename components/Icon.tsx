@@ -27,6 +27,7 @@ export type AvailableIcons =
   | "Share"
   | "DoubleChevron"
   | "Pin"
+  | "SuccessIcon"
   | "Check"
   | "Moeda"
   | "Carro"
