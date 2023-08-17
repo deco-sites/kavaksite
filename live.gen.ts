@@ -19,10 +19,11 @@ import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/BlogCategoryMenu.tsx";
 import * as $$$$$1 from "./islands/BlogHelp.tsx";
-import * as $$$$$2 from "./islands/GalleryPagination.tsx";
-import * as $$$$$3 from "./islands/Header.tsx";
-import * as $$$$$4 from "./islands/ShareLinkButton.tsx";
-import * as $$$$$5 from "./islands/SliderJS.tsx";
+import * as $$$$$2 from "./islands/BlogNewsletter.tsx";
+import * as $$$$$3 from "./islands/GalleryPagination.tsx";
+import * as $$$$$4 from "./islands/Header.tsx";
+import * as $$$$$5 from "./islands/ShareLinkButton.tsx";
+import * as $$$$$6 from "./islands/SliderJS.tsx";
 import * as $$$$$$$$0 from "./sections/BannerInfo.tsx";
 import * as $$$$$$$$1 from "./sections/BlogCategoryMenu.tsx";
 import * as $$$$$$$$2 from "./sections/BlogGallery.tsx";
@@ -235,10 +236,11 @@ const manifest = {
   "islands": {
     "./islands/BlogCategoryMenu.tsx": $$$$$0,
     "./islands/BlogHelp.tsx": $$$$$1,
-    "./islands/GalleryPagination.tsx": $$$$$2,
-    "./islands/Header.tsx": $$$$$3,
-    "./islands/ShareLinkButton.tsx": $$$$$4,
-    "./islands/SliderJS.tsx": $$$$$5,
+    "./islands/BlogNewsletter.tsx": $$$$$2,
+    "./islands/GalleryPagination.tsx": $$$$$3,
+    "./islands/Header.tsx": $$$$$4,
+    "./islands/ShareLinkButton.tsx": $$$$$5,
+    "./islands/SliderJS.tsx": $$$$$6,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i2$$$$$0,
