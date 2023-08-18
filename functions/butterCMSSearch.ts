@@ -33,7 +33,7 @@ const postsLoader: LoaderFunction<
   const { data, meta } = await client.search(
     page,
     pageSize,
-    req?.url?.split("?")[1]?.split("=")[1],
+    decodeURIComponent(req?.url?.split("?")[1]?.split("=")[1]),
   );
 
   return {
