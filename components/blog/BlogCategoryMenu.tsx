@@ -47,6 +47,10 @@ function BlogCategoryMenu(
   const categoriesList = [{ name: "Todo", slug: "" }, ...categories];
 
   const [searchOpen, setSearchOpen] = useState(false);
+  const url = window?.location?.href
+  if (url?.includes("query=")) { 
+    setSearchOpen(true)
+  }
 
   return (
     <Container class="mb-6 mt-[56px] 2lg:mt-[46px]">
