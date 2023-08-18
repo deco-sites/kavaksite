@@ -92,14 +92,14 @@ export const createClient = (
     query: string,
   ) => {
     const params = new URLSearchParams({
-      auth_token: authToken,
       page: page.toString(),
       page_size: pageSize.toString(),
       query: query ?? "",
+      auth_token: authToken,
     });
 
     const url = new URL(
-      `/${apiVersion}/search?${params.toString()}`,
+      `/${apiVersion}/search?${decodeURIComponent(params.toString()).replaceAll("+", "%20")}`,
       BASE_URL,
     );
 
