@@ -99,7 +99,9 @@ export const createClient = (
     });
 
     const url = new URL(
-      `/${apiVersion}/search?${decodeURIComponent(params.toString()).replaceAll("+", "%20")}`,
+      `/${apiVersion}/search?${
+        decodeURIComponent(params.toString()).replaceAll("+", "%20")
+      }`,
       BASE_URL,
     );
 
