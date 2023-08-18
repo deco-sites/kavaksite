@@ -23,7 +23,7 @@ export default function Footer(props: Props) {
   const { links, copyLinks, address, socialLinks, mobileStoreLinks } = props;
 
   return (
-    <footer class="leading-4 text-white bg-black w-full p-8">
+    <footer class="leading-4 text-white bg-black w-full p-0 pt-8">
       <div class="w-full text-white max-w-[1340px] p-4 m-auto">
         <div class="flex flex-wrap -m-4 sm:flex-nowrap">
           <div class="relative w-full lg: p-4 sm:w-[200px]">
@@ -52,7 +52,7 @@ export default function Footer(props: Props) {
         </div>
 
         <div class="flex flex-wrap -m-4 mb-6">
-          <div class="flex items-center flex-row flex-wrap mx-4 my-4 gap-5">
+          <div class="flex items-center flex-row flex-wrap mx-4 my-4 gap-4">
             {socialLinks.map(({ href, icon, openNewTab }) => (
               <a
                 href={href}
