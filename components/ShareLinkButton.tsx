@@ -67,11 +67,27 @@ function ShareLinkButton(
             modalOpen ? "flex" : "hidden"
           }`}
         >
-          <p
-            class={`w-[80vw] max-w-[960px] h-[60px] flex justify-center items-center bg-white text-base text-center font-semibold rounded-lg shadow-card`}
+          <div
+            class={`w-[80vw] max-w-[960px] min-h-[60px] flex flex-col justify-center items-center py-2 px-4 bg-white rounded-lg shadow-card relative lg:flex-row`}
           >
-            Copiado al portapapeles
-          </p>
+            <Icon
+              size={50}
+              id="SuccessIcon"
+              strokeWidth={3}
+            />
+            <p
+              class={`text-base text-start font-semibold lg:text-center`}
+            >
+              Copiado al portapapeles
+            </p>
+            <Icon
+              class={`absolute top-2 right-2`}
+              onClick={() => setModalOpen(false)}
+              size={16}
+              id="XIcon"
+              strokeWidth={3}
+            />
+          </div>
         </div>
       </button>
     </>
