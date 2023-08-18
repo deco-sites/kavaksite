@@ -9,7 +9,7 @@ interface Props {
 
 const typeClasses: Record<Props["type"], string> = {
   primary:
-    "bg-[#000] text-[#fff] border-transparent hover:bg-[#fff] hover:text-[#000] hover:border-[#000]",
+    "bg-black text-white border-transparent hover:bg-white hover:text-black hover:border-black",
   secondary:
     "bg-primary-light text-primary-dark border-transparent hover:bg-primary-dark hover:text-primary-light",
   tertiary:
@@ -19,7 +19,7 @@ const typeClasses: Record<Props["type"], string> = {
 export default function Button(props: Props) {
   const { href, type, children, style } = props;
   const baseClasses =
-    "text-md px-4 md:px-20 py-2.5 inline-block rounded-lg border-1 border-solid text-center";
+    "text-md px-4 md:px-20 py-2.5 inline-block rounded-lg border border-solid text-center";
   const classes = `${style ?? ""} ${baseClasses} ${typeClasses[type]}`;
 
   return (

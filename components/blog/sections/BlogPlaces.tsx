@@ -1,12 +1,11 @@
 import { BlogSectionPlaces } from "deco-sites/kavaksite/butterCMS/types.ts";
-import { SectionTitle } from "deco-sites/kavaksite/components/ui/SectionTitle.tsx";
 
 export function BlogPlaces({ title, places }: BlogSectionPlaces) {
   return (
     <>
-      <SectionTitle class="text-xl text-black leading-[1]">
+      <h2 class="text-xl text-black font-black leading-[1] mb-4 text-[calc(1.325rem+0.9vw)] text-base-light">
         {title}
-      </SectionTitle>
+      </h2>
       <ul class="flex flex-wrap gap-1">
         {places.map((place, index) => (
           <li class="" key={index}>

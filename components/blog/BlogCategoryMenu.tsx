@@ -47,29 +47,43 @@ function BlogCategoryMenu(
   const categoriesList = [{ name: "Todo", slug: "" }, ...categories];
 
   const [searchOpen, setSearchOpen] = useState(false);
+  const [closeSearch, setCloseSearch] = useState(false);
+  const urlSearch = window?.location?.search;
+
+  if (
+    urlSearch?.split("=")[0].includes("?query") &&
+    urlSearch?.split("=")[1] != "" && closeSearch == false
+  ) {
+    setSearchOpen(true);
+  }
 
   return (
-    <Container class="mb-6 mt-7">
+    <Container class="mb-6 mt-[56px] 2lg:mt-[46px]">
       <div class={`w-full flex flex-col justify-center items-center`}>
         <div class={`w-full flex justify-between items-center`}>
           {!hideTitle
             ? (
               <h1
-                class={`text-black text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
+                class={`w-full text-dark-brown text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
               >
                 {page?.title}
               </h1>
             )
             : null}
-          <Icon
-            size={24}
-            id="Search"
-            class={`text-[#5b5b5b] mb-4 cursor-pointer ${
-              searchOpen ? "hidden" : "block"
-            }`}
-            strokeWidth={3}
-            onClick={() => setSearchOpen(true)}
-          />
+          <div class={`w-full flex justify-end`}>
+            <Icon
+              size={24}
+              id="Search"
+              class={`text-[#5b5b5b] mb-4 cursor-pointer justify-self-end ${
+                searchOpen ? "hidden" : "block"
+              }`}
+              strokeWidth={3}
+              onClick={() => {
+                setSearchOpen(true);
+                setCloseSearch(false);
+              }}
+            />
+          </div>
         </div>
         <div
           class={`w-full h-0 flex justify-end items-center gap-4 mb-4 px-1 overflow-hidden ${
@@ -98,7 +112,10 @@ function BlogCategoryMenu(
             id="XMark"
             class="text-[#5b5b5b] cursor-pointer"
             strokeWidth={3}
-            onClick={() => setSearchOpen(false)}
+            onClick={() => {
+              setSearchOpen(false);
+              setCloseSearch(true);
+            }}
           />
         </div>
       </div>
@@ -110,7 +127,7 @@ function BlogCategoryMenu(
                 href={index === 0 ? "/blog" : `/blog-category/${category.slug}`}
                 class={`${
                   page?.title === category.name ? "text-primary" : ""
-                } py-1 block whitespace-nowrap text-base-lighter`}
+                } py-1 block whitespace-nowrap text-gray-light hover:underline`}
               >
                 {category.name}
               </a>

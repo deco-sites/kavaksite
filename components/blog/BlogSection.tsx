@@ -37,7 +37,7 @@ export function SectionContent(
 function BlogSection({ section, variant }: Props) {
   return (
     <Container>
-      <SectionTitle class="text-black leading-[1] 2lg:text-[2rem]">
+      <SectionTitle class="text-dark-brown leading-[1] 2lg:text-[2rem]">
         {section.title}
       </SectionTitle>
       <SectionContent type={variant} posts={section.posts} />

@@ -69,7 +69,9 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-
+  .font-title{
+    font-family: "title";
+  }
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }

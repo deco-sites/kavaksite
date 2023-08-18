@@ -11,7 +11,7 @@ export interface Props {
 function FeaturedAds({ posts, direction = "row" }: Props) {
   const directionClasses = direction === "column"
     ? "flex flex-col overflow-visible gap-5 flex-nowrap w-full pb-4"
-    : "flex flex-col overflow-visible gap-5 flex-nowrap w-full pb-4 md:flex-row md:overflow-x-scroll lg:overflow-hidden";
+    : "flex flex-col overflow-visible gap-5 flex-nowrap w-full py-4 px-1 md:flex-row md:overflow-x-scroll lg:overflow-hidden";
 
   return (
     <section

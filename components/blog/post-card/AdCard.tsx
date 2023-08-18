@@ -10,7 +10,7 @@ function AdCard({ post }: Props) {
   return (
     <article class="shadow-card md:w-full md:min-w-[328px] md:(first:ml-1 last:mr-1) lg:(flex-value-[auto] mx-0 max-w-[33%]) flex-value-[0_0_50%] overflow-hidden rounded-md shadow-base flex w-full">
       <div href={`/blog/${post.slug}`} class="flex flex-col">
-        <div class="hidden md:flex items-center justify-center relative border-b-1 border-base-gray">
+        <div class="flex items-center justify-center relative border-b-1 border-base-gray">
           <CardImage
             image={post.image}
             alt={post.imageAlt}

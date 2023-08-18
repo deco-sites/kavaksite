@@ -21,7 +21,9 @@ function BlogGallery({ title, list: { posts, pagination } }: Props) {
   return (
     <Container id={id} class="my-8">
       <section>
-        <SectionTitle class="text-black 2lg:text-[2rem]">{title}</SectionTitle>
+        <SectionTitle class="text-dark-brown 2lg:text-[2rem]">
+          {title}
+        </SectionTitle>
         <div class="flex flex-row flex-wrap gap-y-10 -mx-4 2lg:gap-y-8">
           {posts.map((post) => <PostCard post={post} />)}
         </div>
