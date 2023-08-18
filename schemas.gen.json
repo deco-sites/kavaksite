@@ -13,6 +13,7 @@
           "not": {
             "enum": [
               "deco-sites/kavaksite/functions/butterCMSAds.ts",
+              "deco-sites/kavaksite/functions/butterCMSArticlePosts.ts",
               "deco-sites/kavaksite/functions/butterCMSBrands.ts",
               "deco-sites/kavaksite/functions/butterCMSCategories.ts",
               "deco-sites/kavaksite/functions/butterCMSFeaturedPosts.ts",
@@ -396,6 +397,228 @@
         }
       ]
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination": {
+      "type": "object",
+      "properties": {
+        "currentPage": {
+          "type": "number",
+          "title": "Current Page"
+        },
+        "nextPage": {
+          "type": "number",
+          "title": "Next Page"
+        },
+        "previousPage": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Previous Page"
+        },
+        "count": {
+          "type": "number",
+          "title": "Count"
+        },
+        "pageSize": {
+          "type": "number",
+          "title": "Page Size"
+        }
+      },
+      "required": [
+        "currentPage",
+        "nextPage",
+        "previousPage",
+        "count",
+        "pageSize"
+      ],
+      "title": "Pagination"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Pagination|null"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogPostList": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "posts": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@9a2995a069d16968ece72775e2605f51&omitYm9keSxzZW8sdGFncw==BlogPost[]",
+              "title": "Posts"
+            },
+            "pagination": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination|null",
+              "title": "Pagination"
+            }
+          },
+          "required": [
+            "posts",
+            "pagination"
+          ],
+          "title": "deco-sites/std/commerce/butterCMS/types.ts@BlogPostList"
+        },
+        {
+          "title": "[Local]-Butter CMS Article Posts Loader",
+          "description": "Useful for paginated galleries.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0FydGljbGVQb3N0cy50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/kavaksite/functions/butterCMSArticlePosts.ts"
+              ],
+              "default": "deco-sites/kavaksite/functions/butterCMSArticlePosts.ts"
+            }
+          }
+        },
+        {
+          "title": "[Local]-Butter CMS Posts Loader",
+          "description": "Useful for paginated galleries.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1Bvc3RzLnRz@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/kavaksite/functions/butterCMSPosts.ts"
+              ],
+              "default": "deco-sites/kavaksite/functions/butterCMSPosts.ts"
+            }
+          }
+        },
+        {
+          "title": "[Local]-Butter CMS Related Posts Loader",
+          "description": "Useful for paginated or not galleries. Works on routes of type /blog/:slug",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts"
+              ],
+              "default": "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts"
+            }
+          }
+        },
+        {
+          "title": "[Local]-Butter CMS Search Loader",
+          "description": "Useful for paginated galleries.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1NlYXJjaC50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/kavaksite/functions/butterCMSSearch.ts"
+              ],
+              "default": "deco-sites/kavaksite/functions/butterCMSSearch.ts"
+            }
+          }
+        },
+        {
+          "title": "Butter CMS Posts Loader",
+          "description": "Useful for paginated galleries.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1Bvc3RzLnRz@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/functions/butterCMSPosts.ts"
+              ],
+              "default": "deco-sites/std/functions/butterCMSPosts.ts"
+            }
+          }
+        },
+        {
+          "title": "Butter CMS Related Posts Loader",
+          "description": "Useful for paginated or not galleries. Works on routes of type /blog/:slug",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/functions/butterCMSRelatedPosts.ts"
+              ],
+              "default": "deco-sites/std/functions/butterCMSRelatedPosts.ts"
+            }
+          }
+        }
+      ]
+    },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0FydGljbGVQb3N0cy50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "pageSize": {
+          "type": "number",
+          "description": "Used to declare the size of results",
+          "title": "Page Size"
+        }
+      },
+      "required": [
+        "pageSize"
+      ],
+      "title": "deco-sites/kavaksite/functions/butterCMSArticlePosts.ts@Props"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogPlace": {
       "type": "object",
       "properties": {
@@ -736,192 +959,6 @@
                 "deco-sites/std/functions/butterCMSPostDetail.ts"
               ],
               "default": "deco-sites/std/functions/butterCMSPostDetail.ts"
-            }
-          }
-        }
-      ]
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination": {
-      "type": "object",
-      "properties": {
-        "currentPage": {
-          "type": "number",
-          "title": "Current Page"
-        },
-        "nextPage": {
-          "type": "number",
-          "title": "Next Page"
-        },
-        "previousPage": {
-          "anyOf": [
-            {
-              "type": "number"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "title": "Previous Page"
-        },
-        "count": {
-          "type": "number",
-          "title": "Count"
-        },
-        "pageSize": {
-          "type": "number",
-          "title": "Page Size"
-        }
-      },
-      "required": [
-        "currentPage",
-        "nextPage",
-        "previousPage",
-        "count",
-        "pageSize"
-      ],
-      "title": "Pagination"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination|null": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "title": "Pagination|null"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogPostList": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/Resolvable"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "posts": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@9a2995a069d16968ece72775e2605f51&omitYm9keSxzZW8sdGFncw==BlogPost[]",
-              "title": "Posts"
-            },
-            "pagination": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination|null",
-              "title": "Pagination"
-            }
-          },
-          "required": [
-            "posts",
-            "pagination"
-          ],
-          "title": "deco-sites/std/commerce/butterCMS/types.ts@BlogPostList"
-        },
-        {
-          "title": "[Local]-Butter CMS Posts Loader",
-          "description": "Useful for paginated galleries.",
-          "type": "object",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1Bvc3RzLnRz@Props"
-            }
-          ],
-          "required": [
-            "__resolveType"
-          ],
-          "properties": {
-            "__resolveType": {
-              "type": "string",
-              "enum": [
-                "deco-sites/kavaksite/functions/butterCMSPosts.ts"
-              ],
-              "default": "deco-sites/kavaksite/functions/butterCMSPosts.ts"
-            }
-          }
-        },
-        {
-          "title": "[Local]-Butter CMS Related Posts Loader",
-          "description": "Useful for paginated or not galleries. Works on routes of type /blog/:slug",
-          "type": "object",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw==@Props"
-            }
-          ],
-          "required": [
-            "__resolveType"
-          ],
-          "properties": {
-            "__resolveType": {
-              "type": "string",
-              "enum": [
-                "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts"
-              ],
-              "default": "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts"
-            }
-          }
-        },
-        {
-          "title": "[Local]-Butter CMS Search Loader",
-          "description": "Useful for paginated galleries.",
-          "type": "object",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU1NlYXJjaC50cw==@Props"
-            }
-          ],
-          "required": [
-            "__resolveType"
-          ],
-          "properties": {
-            "__resolveType": {
-              "type": "string",
-              "enum": [
-                "deco-sites/kavaksite/functions/butterCMSSearch.ts"
-              ],
-              "default": "deco-sites/kavaksite/functions/butterCMSSearch.ts"
-            }
-          }
-        },
-        {
-          "title": "Butter CMS Posts Loader",
-          "description": "Useful for paginated galleries.",
-          "type": "object",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1Bvc3RzLnRz@Props"
-            }
-          ],
-          "required": [
-            "__resolveType"
-          ],
-          "properties": {
-            "__resolveType": {
-              "type": "string",
-              "enum": [
-                "deco-sites/std/functions/butterCMSPosts.ts"
-              ],
-              "default": "deco-sites/std/functions/butterCMSPosts.ts"
-            }
-          }
-        },
-        {
-          "title": "Butter CMS Related Posts Loader",
-          "description": "Useful for paginated or not galleries. Works on routes of type /blog/:slug",
-          "type": "object",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw==@Props"
-            }
-          ],
-          "required": [
-            "__resolveType"
-          ],
-          "properties": {
-            "__resolveType": {
-              "type": "string",
-              "enum": [
-                "deco-sites/std/functions/butterCMSRelatedPosts.ts"
-              ],
-              "default": "deco-sites/std/functions/butterCMSRelatedPosts.ts"
             }
           }
         }
@@ -12751,6 +12788,28 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0FydGljbGVQb3N0cy50cw==": {
+      "title": "[Local]-Butter CMS Article Posts Loader",
+      "description": "Useful for paginated galleries.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0FydGljbGVQb3N0cy50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kavaksite/functions/butterCMSArticlePosts.ts"
+          ],
+          "default": "deco-sites/kavaksite/functions/butterCMSArticlePosts.ts"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0JyYW5kcy50cw==": {
       "title": "[Local]-Butter CMS Featured Brands Loader",
       "description": "Useful for list featured blog's brands.",
@@ -15973,6 +16032,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0Fkcy50cw=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0FydGljbGVQb3N0cy50cw=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvZnVuY3Rpb25zL2J1dHRlckNNU0JyYW5kcy50cw=="

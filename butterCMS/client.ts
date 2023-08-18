@@ -108,6 +108,28 @@ export const createClient = (
     return fetchAPI<PostsData>(url);
   };
 
+  const article = (
+    page: number,
+    pageSize: number,
+    excludeBody = true,
+    tagSlug?: string,
+  ) => {
+    const params = new URLSearchParams({
+      auth_token: authToken,
+      page: page.toString(),
+      page_size: pageSize.toString(),
+      exclude_body: excludeBody.toString(),
+      tag_slug: tagSlug ?? "",
+    });
+
+    const url = new URL(
+      `/${apiVersion}/posts?${params.toString()}`,
+      BASE_URL,
+    );
+
+    return fetchAPI<PostsData>(url);
+  };
+
   const pages = (locale = defaultLocale) => {
     const params = new URLSearchParams({
       auth_token: authToken,
@@ -131,5 +153,6 @@ export const createClient = (
     post,
     pages,
     search,
+    article,
   };
 };
