@@ -76,12 +76,12 @@ function BlogNewsletter(
             {registerSuccessText}
           </p>
           <Icon
-              class={`absolute top-2 right-2`}
-              onClick={() => setModalOpen(false)}
-              size={16}
-              id="XIcon"
-              strokeWidth={3}
-            />
+            class={`absolute top-2 right-2`}
+            onClick={() => setModalOpen(false)}
+            size={16}
+            id="XIcon"
+            strokeWidth={3}
+          />
         </div>
       </div>
     </Container>
