@@ -48,9 +48,12 @@ function BlogCategoryMenu(
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [closeSearch, setCloseSearch] = useState(false);
-  const urlSearch = window?.location?.search
-  
-  if (urlSearch?.split("=")[0].includes("?query") && urlSearch?.split("=")[1] != "" && closeSearch == false) {
+  const urlSearch = window?.location?.search;
+
+  if (
+    urlSearch?.split("=")[0].includes("?query") &&
+    urlSearch?.split("=")[1] != "" && closeSearch == false
+  ) {
     setSearchOpen(true);
   }
 
@@ -75,7 +78,10 @@ function BlogCategoryMenu(
                 searchOpen ? "hidden" : "block"
               }`}
               strokeWidth={3}
-              onClick={() => {setSearchOpen(true); setCloseSearch(false);}}
+              onClick={() => {
+                setSearchOpen(true);
+                setCloseSearch(false);
+              }}
             />
           </div>
         </div>
@@ -106,7 +112,10 @@ function BlogCategoryMenu(
             id="XMark"
             class="text-[#5b5b5b] cursor-pointer"
             strokeWidth={3}
-            onClick={() => {setSearchOpen(false); setCloseSearch(true);}}
+            onClick={() => {
+              setSearchOpen(false);
+              setCloseSearch(true);
+            }}
           />
         </div>
       </div>
