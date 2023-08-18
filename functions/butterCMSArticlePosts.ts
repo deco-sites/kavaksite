@@ -17,7 +17,7 @@ export interface Props {
  * @title [Local]-Butter CMS Article Posts Loader
  * @description Useful for paginated galleries.
  */
-const postsLoader: LoaderFunction<Props,BlogPostList,StateButterCMS> = async (
+const postsLoader: LoaderFunction<Props, BlogPostList, StateButterCMS> = async (
   req,
   ctx,
   { pageSize = 3 },
@@ -27,7 +27,7 @@ const postsLoader: LoaderFunction<Props,BlogPostList,StateButterCMS> = async (
   const url = new URL(req.url);
   const page = Number(url.searchParams.get("page")) || 1;
 
-  const  dataArticle  = await client.post(ctx.params.slug);
+  const dataArticle = await client.post(ctx.params.slug);
 
   const { data, meta } = await client.article(
     page,
