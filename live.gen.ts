@@ -4,17 +4,18 @@
 
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/butterCMSAds.ts";
-import * as $1 from "./functions/butterCMSBrands.ts";
-import * as $2 from "./functions/butterCMSCategories.ts";
-import * as $3 from "./functions/butterCMSFeaturedPosts.ts";
-import * as $4 from "./functions/butterCMSFeaturedSocial.ts";
-import * as $5 from "./functions/butterCMSPage.ts";
-import * as $6 from "./functions/butterCMSPlaces.ts";
-import * as $7 from "./functions/butterCMSPostDetail.ts";
-import * as $8 from "./functions/butterCMSPosts.ts";
-import * as $9 from "./functions/butterCMSRelatedPosts.ts";
-import * as $10 from "./functions/butterCMSSearch.ts";
-import * as $11 from "./functions/butterCMSTestimonials.ts";
+import * as $1 from "./functions/butterCMSArticlePosts.ts";
+import * as $2 from "./functions/butterCMSBrands.ts";
+import * as $3 from "./functions/butterCMSCategories.ts";
+import * as $4 from "./functions/butterCMSFeaturedPosts.ts";
+import * as $5 from "./functions/butterCMSFeaturedSocial.ts";
+import * as $6 from "./functions/butterCMSPage.ts";
+import * as $7 from "./functions/butterCMSPlaces.ts";
+import * as $8 from "./functions/butterCMSPostDetail.ts";
+import * as $9 from "./functions/butterCMSPosts.ts";
+import * as $10 from "./functions/butterCMSRelatedPosts.ts";
+import * as $11 from "./functions/butterCMSSearch.ts";
+import * as $12 from "./functions/butterCMSTestimonials.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/BlogCategoryMenu.tsx";
@@ -178,17 +179,18 @@ import * as i2$$$$$$19 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts"
 const manifest = {
   "functions": {
     "deco-sites/kavaksite/functions/butterCMSAds.ts": $0,
-    "deco-sites/kavaksite/functions/butterCMSBrands.ts": $1,
-    "deco-sites/kavaksite/functions/butterCMSCategories.ts": $2,
-    "deco-sites/kavaksite/functions/butterCMSFeaturedPosts.ts": $3,
-    "deco-sites/kavaksite/functions/butterCMSFeaturedSocial.ts": $4,
-    "deco-sites/kavaksite/functions/butterCMSPage.ts": $5,
-    "deco-sites/kavaksite/functions/butterCMSPlaces.ts": $6,
-    "deco-sites/kavaksite/functions/butterCMSPostDetail.ts": $7,
-    "deco-sites/kavaksite/functions/butterCMSPosts.ts": $8,
-    "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts": $9,
-    "deco-sites/kavaksite/functions/butterCMSSearch.ts": $10,
-    "deco-sites/kavaksite/functions/butterCMSTestimonials.ts": $11,
+    "deco-sites/kavaksite/functions/butterCMSArticlePosts.ts": $1,
+    "deco-sites/kavaksite/functions/butterCMSBrands.ts": $2,
+    "deco-sites/kavaksite/functions/butterCMSCategories.ts": $3,
+    "deco-sites/kavaksite/functions/butterCMSFeaturedPosts.ts": $4,
+    "deco-sites/kavaksite/functions/butterCMSFeaturedSocial.ts": $5,
+    "deco-sites/kavaksite/functions/butterCMSPage.ts": $6,
+    "deco-sites/kavaksite/functions/butterCMSPlaces.ts": $7,
+    "deco-sites/kavaksite/functions/butterCMSPostDetail.ts": $8,
+    "deco-sites/kavaksite/functions/butterCMSPosts.ts": $9,
+    "deco-sites/kavaksite/functions/butterCMSRelatedPosts.ts": $10,
+    "deco-sites/kavaksite/functions/butterCMSSearch.ts": $11,
+    "deco-sites/kavaksite/functions/butterCMSTestimonials.ts": $12,
     "deco-sites/std/functions/butterCMSAds.ts": i2$0,
     "deco-sites/std/functions/butterCMSBrands.ts": i2$1,
     "deco-sites/std/functions/butterCMSCategories.ts": i2$2,
