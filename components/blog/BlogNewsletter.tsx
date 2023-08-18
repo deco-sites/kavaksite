@@ -63,7 +63,7 @@ function BlogNewsletter(
         }`}
       >
         <div
-          class={`w-[80vw] max-w-[960px] min-h-[60px] flex flex-col justify-center items-center py-2 px-4 bg-white rounded-lg shadow-card lg:flex-row`}
+          class={`w-[80vw] max-w-[960px] min-h-[60px] flex flex-col justify-center items-center py-2 px-4 bg-white rounded-lg shadow-card relative lg:flex-row`}
         >
           <Icon
             size={50}
@@ -75,6 +75,13 @@ function BlogNewsletter(
           >
             {registerSuccessText}
           </p>
+          <Icon
+            class={`absolute top-2 right-2`}
+            onClick={() => setModalOpen(false)}
+            size={16}
+            id="XIcon"
+            strokeWidth={3}
+          />
         </div>
       </div>
     </Container>
