@@ -47,8 +47,10 @@ function BlogCategoryMenu(
   const categoriesList = [{ name: "Todo", slug: "" }, ...categories];
 
   const [searchOpen, setSearchOpen] = useState(false);
-  const url = window?.location?.href;
-  if (url?.includes("query=")) {
+  const [closeSearch, setCloseSearch] = useState(false);
+  const urlSearch = window?.location?.search
+  
+  if (urlSearch?.split("=")[0].includes("?query") && urlSearch?.split("=")[1] != "" && closeSearch == false) {
     setSearchOpen(true);
   }
 
@@ -73,7 +75,7 @@ function BlogCategoryMenu(
                 searchOpen ? "hidden" : "block"
               }`}
               strokeWidth={3}
-              onClick={() => setSearchOpen(true)}
+              onClick={() => {setSearchOpen(true); setCloseSearch(false);}}
             />
           </div>
         </div>
@@ -104,7 +106,7 @@ function BlogCategoryMenu(
             id="XMark"
             class="text-[#5b5b5b] cursor-pointer"
             strokeWidth={3}
-            onClick={() => setSearchOpen(false)}
+            onClick={() => {setSearchOpen(false); setCloseSearch(true);}}
           />
         </div>
       </div>
