@@ -76,6 +76,20 @@
     display: none;
   }
 
+  .scrollbar-display::-webkit-scrollbar {
+    width: 4px;
+    display: block;
+  }
+  
+  .scrollbar-display::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-display::-webkit-scrollbar-thumb {
+    background-color: #c7c7c7;
+    border-radius: 8px;   
+  }
+
   @keyframes slide-left-frame {
     0% {
       transform: translateX(100%);

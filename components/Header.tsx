@@ -45,7 +45,7 @@ export interface Props {
 
 export default function Header(props: Props) {
   const [linkHref, setLinkHref] = useState("#");
-  const [checkValidate, setCheckValidate] = useState("");
+  const [checkValidate, setCheckValidate] = useState("México");
   const [menuChildren, setMenuChildren] = useState(false);
 
   const isMenuOpen = useSignal(false);
@@ -78,11 +78,11 @@ export default function Header(props: Props) {
               {props.popupIdiomas?.titlePopup}
             </h2>
             <ul
-              class={`h-[210px] overflow-y-scroll flex flex-col px-4 mt-[22px] mb-[14px]`}
+              class={`h-[210px] overflow-y-scroll flex flex-col px-4 mt-[22px] mb-[14px] scrollbar-none hover:scrollbar-display`}
             >
               {props.popupIdiomas?.Countries.map((Country) => (
                 <li
-                  class="items-center h-[52px] flex gap-2 border-b border-gray relative"
+                  class="items-center h-[52px] flex gap-2 border-b border-gray relative cursor-pointer"
                   onClick={setHref}
                 >
                   {Country.icon && <span>{Country.icon}</span>}
@@ -316,7 +316,6 @@ export default function Header(props: Props) {
   function setHref(event: Event) {
     event.stopPropagation();
     const href = (event?.target as HTMLAnchorElement).getAttribute("data-href");
-    console.log("href:", href);
 
     if (href) {
       setLinkHref(href);
