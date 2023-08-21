@@ -240,14 +240,13 @@ export default function Header(props: Props) {
                           togglePopup();
                         }
                       }}
-                      class={`flex flex-row-reverse justify-between gap-2 items-center text-red ${
+                      class={`flex flex-row justify-start gap-2 items-center text-red ${
                         link.href == "" ? "pointer-events-none" : ""
                       } ${index == props.links.length - 2 ? "w-full" : ""}`}
                     >
                       {link.emojiIcon != "NoIcon" && (
                         <span>{link.emojiIcon}</span>
                       )}
-                      {link.label}
                     </a>
                   )}
                   {index != props.links.length - 2 && (
@@ -277,7 +276,7 @@ export default function Header(props: Props) {
                         id="ChevronDown"
                         class={`${
                           menuChildren ? "rotate-180" : ""
-                        } text-primary`}
+                        } text-primary pointer-events-none`}
                         onClick={() => {
                           menuChildren
                             ? setMenuChildren(false)
