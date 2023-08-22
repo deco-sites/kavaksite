@@ -148,6 +148,7 @@ export default function Header(props: Props) {
               >
                 {index == props.links.length - 2 && (
                   <a
+                    id="popupCountry"
                     href={link.href}
                     onClick={togglePopup}
                     class="flex flex-row gap-2 items-center cursor-pointer opacity-90"

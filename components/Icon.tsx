@@ -36,7 +36,8 @@ export type AvailableIcons =
   | "facebookIcon"
   | "linkedinIcon"
   | "youtubeIcon"
-  | "twitterIcon";
+  | "twitterIcon"
+  | "LogoWhite";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

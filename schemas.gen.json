@@ -82,6 +82,7 @@
               "./islands/BlogCategoryMenu.tsx",
               "./islands/BlogHelp.tsx",
               "./islands/BlogNewsletter.tsx",
+              "./islands/Footer.tsx",
               "./islands/GalleryPagination.tsx",
               "./islands/Head.tsx",
               "./islands/Header.tsx",
@@ -8386,6 +8387,11 @@
                     "type": "string",
                     "const": "twitterIcon",
                     "default": "twitterIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "LogoWhite",
+                    "default": "LogoWhite"
                   }
                 ],
                 "type": "string",
@@ -8456,6 +8462,338 @@
         "textButton"
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogNewsletter.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9Gb290ZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "icon": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Icon"
+              },
+              "href": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Href"
+              },
+              "openNewTab": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "title": "Open New Tab"
+              }
+            },
+            "required": [
+              "label"
+            ]
+          },
+          "title": "Links"
+        },
+        "socialLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "NoIcon",
+                    "default": "NoIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Search",
+                    "default": "Search"
+                  },
+                  {
+                    "type": "string",
+                    "const": "InfoIcon",
+                    "default": "InfoIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "QuestionMark",
+                    "default": "QuestionMark"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChatIcon",
+                    "default": "ChatIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "XIcon",
+                    "default": "XIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronLeft",
+                    "default": "ChevronLeft"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronRight",
+                    "default": "ChevronRight"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronUp",
+                    "default": "ChevronUp"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronDown",
+                    "default": "ChevronDown"
+                  },
+                  {
+                    "type": "string",
+                    "const": "User",
+                    "default": "User"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Bars3",
+                    "default": "Bars3"
+                  },
+                  {
+                    "type": "string",
+                    "const": "XMark",
+                    "default": "XMark"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Logo",
+                    "default": "Logo"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Brasil",
+                    "default": "Brasil"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Facebook",
+                    "default": "Facebook"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Instagram",
+                    "default": "Instagram"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Youtube",
+                    "default": "Youtube"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Twitter",
+                    "default": "Twitter"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Linkedin",
+                    "default": "Linkedin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "TikTok",
+                    "default": "TikTok"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Pinterest",
+                    "default": "Pinterest"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Share",
+                    "default": "Share"
+                  },
+                  {
+                    "type": "string",
+                    "const": "DoubleChevron",
+                    "default": "DoubleChevron"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Pin",
+                    "default": "Pin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "SuccessIcon",
+                    "default": "SuccessIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Check",
+                    "default": "Check"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Moeda",
+                    "default": "Moeda"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Carro",
+                    "default": "Carro"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Sale",
+                    "default": "Sale"
+                  },
+                  {
+                    "type": "string",
+                    "const": "instagramIcon",
+                    "default": "instagramIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "facebookIcon",
+                    "default": "facebookIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "linkedinIcon",
+                    "default": "linkedinIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "youtubeIcon",
+                    "default": "youtubeIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "twitterIcon",
+                    "default": "twitterIcon"
+                  },
+                  {
+                    "type": "string",
+                    "const": "LogoWhite",
+                    "default": "LogoWhite"
+                  }
+                ],
+                "type": "string",
+                "title": "Icon"
+              },
+              "href": {
+                "type": "string",
+                "title": "Href"
+              },
+              "openNewTab": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "title": "Open New Tab"
+              }
+            },
+            "required": [
+              "icon",
+              "href"
+            ]
+          },
+          "title": "Social Links"
+        },
+        "mobileStoreLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "imageUrl": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Image Url"
+              },
+              "imageTitle": {
+                "type": "string",
+                "title": "Image Title"
+              },
+              "href": {
+                "type": "string",
+                "title": "Href"
+              },
+              "openNewTab": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "title": "Open New Tab"
+              }
+            },
+            "required": [
+              "imageUrl",
+              "imageTitle",
+              "href"
+            ]
+          },
+          "title": "Mobile Store Links"
+        },
+        "copyLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "href": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Href"
+              },
+              "openNewTab": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "title": "Open New Tab"
+              }
+            },
+            "required": [
+              "label"
+            ]
+          },
+          "title": "Copy Links"
+        },
+        "address": {
+          "type": "string",
+          "title": "Address"
+        }
+      },
+      "required": [
+        "links",
+        "socialLinks",
+        "mobileStoreLinks",
+        "copyLinks",
+        "address"
+      ],
+      "title": "deco-sites/kavaksite/components/Footer.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvYnV0dGVyQ01TL3R5cGVzLnRz@Pagination": {
       "type": "object",
@@ -8756,6 +9094,11 @@
               "type": "string",
               "const": "twitterIcon",
               "default": "twitterIcon"
+            },
+            {
+              "type": "string",
+              "const": "LogoWhite",
+              "default": "LogoWhite"
             }
           ],
           "type": "string",
@@ -9036,6 +9379,11 @@
                   "type": "string",
                   "const": "twitterIcon",
                   "default": "twitterIcon"
+                },
+                {
+                  "type": "string",
+                  "const": "LogoWhite",
+                  "default": "LogoWhite"
                 }
               ],
               "type": "string",
@@ -9534,11 +9882,6 @@
         "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9CYW5uZXJJbmZvLnRzeA==@CallToAction"
       },
       "title": "CallToAction[]"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
-      "type": "string",
-      "format": "image-uri",
-      "title": "Image"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9CYW5uZXJJbmZvLnRzeA==@Banner": {
       "type": "object",
@@ -10193,319 +10536,6 @@
         "action"
       ],
       "title": "deco-sites/kavaksite/components/Features.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9Gb290ZXIudHN4@Props": {
-      "type": "object",
-      "properties": {
-        "links": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "label": {
-                "type": "string",
-                "title": "Label"
-              },
-              "href": {
-                "type": "string",
-                "title": "Href"
-              },
-              "openNewTab": {
-                "type": [
-                  "boolean",
-                  "null"
-                ],
-                "title": "Open New Tab"
-              }
-            },
-            "required": [
-              "label",
-              "href"
-            ]
-          },
-          "title": "Links"
-        },
-        "socialLinks": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "icon": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "const": "NoIcon",
-                    "default": "NoIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Search",
-                    "default": "Search"
-                  },
-                  {
-                    "type": "string",
-                    "const": "InfoIcon",
-                    "default": "InfoIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "QuestionMark",
-                    "default": "QuestionMark"
-                  },
-                  {
-                    "type": "string",
-                    "const": "ChatIcon",
-                    "default": "ChatIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "XIcon",
-                    "default": "XIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "ChevronLeft",
-                    "default": "ChevronLeft"
-                  },
-                  {
-                    "type": "string",
-                    "const": "ChevronRight",
-                    "default": "ChevronRight"
-                  },
-                  {
-                    "type": "string",
-                    "const": "ChevronUp",
-                    "default": "ChevronUp"
-                  },
-                  {
-                    "type": "string",
-                    "const": "ChevronDown",
-                    "default": "ChevronDown"
-                  },
-                  {
-                    "type": "string",
-                    "const": "User",
-                    "default": "User"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Bars3",
-                    "default": "Bars3"
-                  },
-                  {
-                    "type": "string",
-                    "const": "XMark",
-                    "default": "XMark"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Logo",
-                    "default": "Logo"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Brasil",
-                    "default": "Brasil"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Facebook",
-                    "default": "Facebook"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Instagram",
-                    "default": "Instagram"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Youtube",
-                    "default": "Youtube"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Twitter",
-                    "default": "Twitter"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Linkedin",
-                    "default": "Linkedin"
-                  },
-                  {
-                    "type": "string",
-                    "const": "TikTok",
-                    "default": "TikTok"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Pinterest",
-                    "default": "Pinterest"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Share",
-                    "default": "Share"
-                  },
-                  {
-                    "type": "string",
-                    "const": "DoubleChevron",
-                    "default": "DoubleChevron"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Pin",
-                    "default": "Pin"
-                  },
-                  {
-                    "type": "string",
-                    "const": "SuccessIcon",
-                    "default": "SuccessIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Check",
-                    "default": "Check"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Moeda",
-                    "default": "Moeda"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Carro",
-                    "default": "Carro"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Sale",
-                    "default": "Sale"
-                  },
-                  {
-                    "type": "string",
-                    "const": "instagramIcon",
-                    "default": "instagramIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "facebookIcon",
-                    "default": "facebookIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "linkedinIcon",
-                    "default": "linkedinIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "youtubeIcon",
-                    "default": "youtubeIcon"
-                  },
-                  {
-                    "type": "string",
-                    "const": "twitterIcon",
-                    "default": "twitterIcon"
-                  }
-                ],
-                "type": "string",
-                "title": "Icon"
-              },
-              "href": {
-                "type": "string",
-                "title": "Href"
-              },
-              "openNewTab": {
-                "type": [
-                  "boolean",
-                  "null"
-                ],
-                "title": "Open New Tab"
-              }
-            },
-            "required": [
-              "icon",
-              "href"
-            ]
-          },
-          "title": "Social Links"
-        },
-        "mobileStoreLinks": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "imageUrl": {
-                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-                "title": "Image Url"
-              },
-              "imageTitle": {
-                "type": "string",
-                "title": "Image Title"
-              },
-              "href": {
-                "type": "string",
-                "title": "Href"
-              },
-              "openNewTab": {
-                "type": [
-                  "boolean",
-                  "null"
-                ],
-                "title": "Open New Tab"
-              }
-            },
-            "required": [
-              "imageUrl",
-              "imageTitle",
-              "href"
-            ]
-          },
-          "title": "Mobile Store Links"
-        },
-        "copyLinks": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "label": {
-                "type": "string",
-                "title": "Label"
-              },
-              "href": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "title": "Href"
-              },
-              "openNewTab": {
-                "type": [
-                  "boolean",
-                  "null"
-                ],
-                "title": "Open New Tab"
-              }
-            },
-            "required": [
-              "label"
-            ]
-          },
-          "title": "Copy Links"
-        },
-        "address": {
-          "type": "string",
-          "title": "Address"
-        }
-      },
-      "required": [
-        "links",
-        "socialLinks",
-        "mobileStoreLinks",
-        "copyLinks",
-        "address"
-      ],
-      "title": "deco-sites/kavaksite/components/Footer.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9IZXJvLnRzeA==@Props": {
       "type": "object",
@@ -14205,6 +14235,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Zvb3Rlci50c3g=": {
+      "title": "./islands/Footer.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9Gb290ZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Footer.tsx"
+          ],
+          "default": "./islands/Footer.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA==": {
       "title": "./islands/GalleryPagination.tsx",
       "type": "object",
@@ -16307,6 +16358,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0Jsb2dOZXdzbGV0dGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Zvb3Rlci50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA=="
