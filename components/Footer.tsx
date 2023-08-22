@@ -46,7 +46,7 @@ export default function Footer(props: Props) {
                     {index == links.length - 1
                       ? (
                         <li
-                          class="mb-6"
+                          class="mb-6 cursor-pointer"
                           onClick={() => {
                             document.getElementById("popupCountry")?.click();
                           }}
