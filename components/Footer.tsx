@@ -3,7 +3,9 @@ import Image from "deco-sites/std/components/Image.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 export interface Props {
-  links: Array<{ label: string; icon?: string; href?: string; openNewTab?: boolean }>;
+  links: Array<
+    { label: string; icon?: string; href?: string; openNewTab?: boolean }
+  >;
   socialLinks: Array<
     { icon: AvailableIcons; href: string; openNewTab?: boolean }
   >;
@@ -38,25 +40,37 @@ export default function Footer(props: Props) {
 
           <div class="relative w-full lg: p-4">
             <ul class="flex flex-col flex-wrap content-between text-sm font-light leading-3 sm:max-h-80 sm:content-around md:max-h-44 lg:text-sm">
-              {links.map(( link, index ) => {
+              {links.map((link, index) => {
                 return (
                   <>
-                    {index == links.length - 1 ? 
-                      <li class="mb-6" onClick={() => {document.getElementById("popupCountry")?.click()}}>
-                        {link.icon && 
-                          <span class={`mr-1`}>{link.icon}</span>
-                        }
-                        <a href={link.href} class="font-medium hover:text-underline leading-[1]">
-                          {link.label}
-                        </a>
-                      </li>
-                    : 
-                      <li class="mb-6">
-                        <a href={link.href} class="font-medium hover:text-underline leading-[1]">
-                          {link.label}
-                        </a>
-                      </li>
-                    }
+                    {index == links.length - 1
+                      ? (
+                        <li
+                          class="mb-6"
+                          onClick={() => {
+                            document.getElementById("popupCountry")?.click();
+                          }}
+                        >
+                          {link.icon &&
+                            <span class={`mr-1`}>{link.icon}</span>}
+                          <a
+                            href={link.href}
+                            class="font-medium hover:text-underline leading-[1]"
+                          >
+                            {link.label}
+                          </a>
+                        </li>
+                      )
+                      : (
+                        <li class="mb-6">
+                          <a
+                            href={link.href}
+                            class="font-medium hover:text-underline leading-[1]"
+                          >
+                            {link.label}
+                          </a>
+                        </li>
+                      )}
                   </>
                 );
               })}
@@ -107,7 +121,11 @@ export default function Footer(props: Props) {
         <div class="text-sm font-light border-t border-white border-solid lg:text-sm pt-6 pb-[48px] px-2">
           <ul class="mt-0 mb-4 not-italic leading-8 flex flex-col md:flex-row gap-2 md:gap-6">
             {copyLinks.map((copyLink, index) => (
-              <li class={`max-w-[200px] lg:max-w-none leading-[1.8] ${index == 0 ? "mb-4" : ""}`}>
+              <li
+                class={`max-w-[200px] lg:max-w-none leading-[1.8] ${
+                  index == 0 ? "mb-4" : ""
+                }`}
+              >
                 {copyLink.href
                   ? (
                     <a
