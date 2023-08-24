@@ -1,7 +1,6 @@
 import type { LoaderReturnType } from "$live/types.ts";
 import { useState } from "preact/hooks";
 import { Container } from "deco-sites/kavaksite/components/ui/Container.tsx";
-import { SectionTitle } from "deco-sites/kavaksite/components/ui/SectionTitle.tsx";
 import Icon from "deco-sites/kavaksite/components/Icon.tsx";
 import type {
   BlogPage,
@@ -58,32 +57,50 @@ function BlogCategoryMenu(
   }
 
   return (
-    <Container class="mb-6 mt-[56px] 2lg:mt-[46px]">
+    <Container class="mb-6 mt-[56px] 2lg:mt-[46px] relative">
       <div class={`w-full flex flex-col justify-center items-center`}>
         <div class={`w-full flex justify-between items-center`}>
           {!hideTitle
             ? (
-              <h1
-                class={`w-full text-dark-brown text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
-              >
-                {page?.title}
-              </h1>
+              <>
+                <h1
+                  class={`w-full text-dark-brown text-[calc(1.425rem+2.1vw)] 2lg:text-[3rem] font-title mb-4 text-base-light`}
+                >
+                  {page?.title}
+                </h1>
+                <div class={`w-full flex justify-end`}>
+                  <Icon
+                    size={24}
+                    id="Search"
+                    class={`text-[#5b5b5b] mb-4 cursor-pointer justify-self-end ${
+                      searchOpen ? "hidden" : "block"
+                    }`}
+                    strokeWidth={3}
+                    onClick={() => {
+                      setSearchOpen(true);
+                      setCloseSearch(false);
+                    }}
+                  />
+                </div>
+              </>
             )
-            : null}
-          <div class={`w-full flex justify-end`}>
-            <Icon
-              size={24}
-              id="Search"
-              class={`text-[#5b5b5b] mb-4 cursor-pointer justify-self-end ${
-                searchOpen ? "hidden" : "block"
-              }`}
-              strokeWidth={3}
-              onClick={() => {
-                setSearchOpen(true);
-                setCloseSearch(false);
-              }}
-            />
-          </div>
+            : 
+              <div class={`w-full flex justify-end h-0 -mb-[33px]`}>
+                <Icon
+                  size={24}
+                  id="Search"
+                  class={`text-[#5b5b5b] mb-4 cursor-pointer justify-self-end ${
+                    searchOpen ? "hidden" : "block"
+                  }`}
+                  strokeWidth={3}
+                  onClick={() => {
+                    setSearchOpen(true);
+                    setCloseSearch(false);
+                  }}
+                />
+              </div>
+            }
+          
         </div>
         <div
           class={`w-full h-0 flex justify-end items-center gap-4 mb-4 px-1 overflow-hidden ${
