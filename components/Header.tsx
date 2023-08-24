@@ -166,6 +166,7 @@ export default function Header(props: Props) {
                         width={20}
                         height={20}
                         id={link.icon}
+                        class={`-mt-[5px]`}
                       />
                     )}
 
@@ -180,7 +181,7 @@ export default function Header(props: Props) {
                       height={16}
                       strokeWidth={3}
                       id="ChevronDown"
-                      class="text-primary group-hover:rotate-180"
+                      class="text-primary group-hover:rotate-180 -mt-[5px]"
                     />
                   )
                   : <></>}
