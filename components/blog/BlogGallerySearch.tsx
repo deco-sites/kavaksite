@@ -13,6 +13,18 @@ function BlogGallery({ title, list: { posts } }: Props) {
   const id = useId();
 
   if (!posts?.length) {
+    if (window?.location?.search.includes("?query=")) {
+      return (
+        <>
+          <Container id={id} class="my-8">
+            <h3 class="text-black text-[1.17em] font-title mb-2 text-base-light">
+              {title}
+            </h3>
+            <span>No se han encontrado resultados para tu búsqueda</span>
+          </Container>
+        </>
+      );
+    }
     return <div class="hidden" aria-hidden="true" />;
   }
 

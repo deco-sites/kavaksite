@@ -84,7 +84,7 @@ function BlogCategoryMenu(
                 </div>
               </>
             )
-            : 
+            : (
               <div class={`w-full flex justify-end h-0 -mb-[33px]`}>
                 <Icon
                   size={24}
@@ -99,8 +99,7 @@ function BlogCategoryMenu(
                   }}
                 />
               </div>
-            }
-          
+            )}
         </div>
         <div
           class={`w-full h-0 flex justify-end items-center gap-4 mb-4 px-1 overflow-hidden ${

@@ -28,12 +28,13 @@ const postsLoader: LoaderFunction<
 ) => {
   const { global: { configButterCMS } } = ctx.state;
   const client = createClient(configButterCMS);
-  const url = new URL(req.url);
-  const page = Number(url.searchParams.get("page")) || 1;
+  const page = 1;
   const { data, meta } = await client.search(
     page,
     pageSize,
-    decodeURIComponent(req?.url?.split("?")[1]?.split("=")[1]),
+    decodeURIComponent(
+      req.url.includes("?query=") ? req?.url?.split("?")[1]?.split("=")[1] : "",
+    ),
   );
 
   return {

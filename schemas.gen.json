@@ -84,6 +84,7 @@
               "./islands/BlogNewsletter.tsx",
               "./islands/Footer.tsx",
               "./islands/GalleryPagination.tsx",
+              "./islands/GallerySearch.tsx",
               "./islands/Head.tsx",
               "./islands/Header.tsx",
               "./islands/ShareLinkButton.tsx",
@@ -8853,6 +8854,24 @@
       ],
       "title": "deco-sites/kavaksite/components/blog/gallery/GalleryPagination.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dHYWxsZXJ5U2VhcmNoLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "list": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogPostList",
+          "title": "List"
+        }
+      },
+      "required": [
+        "title",
+        "list"
+      ],
+      "title": "deco-sites/kavaksite/components/blog/BlogGallerySearch.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvc2VjdGlvbnMvSGVhZC50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -10027,24 +10046,6 @@
         "list"
       ],
       "title": "deco-sites/kavaksite/components/blog/BlogGalleryCategory.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dHYWxsZXJ5U2VhcmNoLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "title": "Title"
-        },
-        "list": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@BlogPostList",
-          "title": "List"
-        }
-      },
-      "required": [
-        "title",
-        "list"
-      ],
-      "title": "deco-sites/kavaksite/components/blog/BlogGallerySearch.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dQb3N0RGV0YWlsLnRzeA==@Props": {
       "type": "object",
@@ -14277,6 +14278,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0dhbGxlcnlTZWFyY2gudHN4": {
+      "title": "./islands/GallerySearch.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvY29tcG9uZW50cy9ibG9nL0Jsb2dHYWxsZXJ5U2VhcmNoLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/GallerySearch.tsx"
+          ],
+          "default": "./islands/GallerySearch.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWQudHN4": {
       "title": "./islands/Head.tsx",
       "type": "object",
@@ -16364,6 +16386,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0dhbGxlcnlQYWdpbmF0aW9uLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0dhbGxlcnlTZWFyY2gudHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWQudHN4"

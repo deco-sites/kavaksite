@@ -91,12 +91,19 @@ export const createClient = (
     pageSize: number,
     query: string,
   ) => {
-    const params = new URLSearchParams({
+    let params = new URLSearchParams({
       page: page.toString(),
       page_size: pageSize.toString(),
       query: query ?? "",
       auth_token: authToken,
     });
+    if (query == "") {
+      params = new URLSearchParams({
+        page: page.toString(),
+        page_size: pageSize.toString(),
+        auth_token: authToken,
+      });
+    }
 
     const url = new URL(
       `/${apiVersion}/search?${
