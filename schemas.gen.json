@@ -156,6 +156,7 @@
               "$live/actions/workflows/cancel.ts",
               "$live/actions/workflows/signal.ts",
               "$live/actions/workflows/start.ts",
+              "deco-sites/kavaksite/actions/subscribe.ts",
               "deco-sites/std/actions/vtex/analytics/sendEvent.ts",
               "deco-sites/std/actions/vtex/cart/addItems.ts",
               "deco-sites/std/actions/vtex/cart/getInstallment.ts",
@@ -15781,6 +15782,22 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXZha3NpdGUvYWN0aW9ucy9zdWJzY3JpYmUudHM=": {
+      "title": "deco-sites/kavaksite/actions/subscribe.ts",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kavaksite/actions/subscribe.ts"
+          ],
+          "default": "deco-sites/kavaksite/actions/subscribe.ts"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L2FuYWx5dGljcy9zZW5kRXZlbnQudHM=": {
       "title": "deco-sites/std/actions/vtex/analytics/sendEvent.ts",
       "docs": "https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items",
@@ -16650,6 +16667,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvYWN0aW9ucy93b3JrZmxvd3Mvc3RhcnQudHM="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXZha3NpdGUvYWN0aW9ucy9zdWJzY3JpYmUudHM="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L2FuYWx5dGljcy9zZW5kRXZlbnQudHM="

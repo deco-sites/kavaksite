@@ -2,6 +2,8 @@ import { Account } from "$live/blocks/account.ts";
 import { fetchAPI } from "deco-sites/std/utils/fetch.ts";
 import { CategoriesData, Page, PostData, PostsData } from "./types.ts";
 
+// const gql = (x: TemplateStringsArray) => x.toString().trim();
+
 export interface Locale {
   /**
    * @title Locale
@@ -154,6 +156,52 @@ export const createClient = (
     return fetchAPI<Page>(url);
   };
 
+  const fetchGraphQL = async <T>(
+    variables: Record<string, unknown> = {},
+  ) => {
+    const { data, errors } = await fetchAPI<{ data?: T; errors: unknown[] }>(
+      `https://olimpo.kavak.services/`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          operationName: "subscribeBlog",
+          query:
+            "mutation subscribeBlog($email:String!$path:String){subscribeBlog(email:$email path:$path){id userEmail articlePath}}",
+          variables,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Token":
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbm9ueW1vdXMiOnRydWUsInVzZXJBZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMTUuMC4wLjAgU2FmYXJpLzUzNy4zNiIsImlwQWRkcmVzcyI6IjEzMS4yNTUuMjAzLjQzIiwidXNlcklkIjpudWxsLCJ1c2VyRW1haWwiOm51bGwsInVzZXJVbmlxdWVJZCI6bnVsbCwiYWxsb3dVc2VyU3Vic3RpdHV0aW9uIjpmYWxzZSwiZXBvY2giOjE2OTIyMzk2NTYzMDAsImp0aSI6IjdjMmIxOWMxLTkyZjUtNDRmNC04YjZhLTk0Y2NmY2Q0ZTk5OCIsImlhdCI6MTY5MjIzOTY1NiwiZXhwIjoxNjk0ODMxNjU2LCJpc3MiOiJrYXZhay5jb20ifQ.aPx82ZgIYAwpjsJZXJ8h_oIFVnz6UueRocurV9ymey8",
+        },
+      },
+    );
+
+    if (Array.isArray(errors) && errors.length > 0) {
+      console.error(Deno.inspect(errors, { depth: 100, colors: true }));
+
+      throw new Error(
+        `Error while running query:\n${JSON.stringify(variables)}`,
+      );
+    }
+
+    return data;
+  };
+
+  const newsletterRegister = (email: string) => {
+    console.log(email);
+    fetchGraphQL(
+      {
+        email: email,
+        path: "https://www.kavak.com/mx/blog",
+      },
+    );
+
+    return {
+      data: "Test",
+    };
+  };
+
   return {
     categories,
     posts,
@@ -161,5 +209,6 @@ export const createClient = (
     pages,
     search,
     article,
+    newsletterRegister,
   };
 };

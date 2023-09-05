@@ -1,7 +1,8 @@
-import { useEffect, useState } from "preact/hooks";
+import { useCallback, useEffect, useState } from "preact/hooks";
 import Icon from "deco-sites/kavaksite/components/Icon.tsx";
 import { Container } from "deco-sites/kavaksite/components/ui/Container.tsx";
 import type { HTML } from "deco-sites/std/components/types.ts";
+import { Runtime } from "../../runtime.ts";
 
 export interface Props {
   title: HTML;
@@ -10,6 +11,10 @@ export interface Props {
   backgroundColor?: string;
   registerSuccessText?: string;
 }
+
+const subscribe = Runtime.create(
+  "deco-sites/kavaksite/actions/subscribe.ts",
+);
 
 function BlogNewsletter(
   { title, inputPlaceholder, textButton, backgroundColor, registerSuccessText }:
@@ -24,6 +29,21 @@ function BlogNewsletter(
       }, 2000);
     }
   }, [modalOpen]);
+
+  function getValueEmail() {
+    const inputElement = document.getElementById(
+      "input-email",
+    ) as HTMLInputElement;
+
+    const valorDoInput = inputElement ? inputElement.value : "";
+    console.log(valorDoInput);
+    newsletterPost(valorDoInput);
+  }
+
+  const newsletterPost = useCallback(async (email: string) => {
+    console.log(email);
+    const data = await subscribe({ email: email });
+  }, []);
 
   return (
     <Container class={` mb-6 mt-7`}>
@@ -40,12 +60,14 @@ function BlogNewsletter(
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              setModalOpen(true);
+              // setModalOpen(true);
+              getValueEmail();
             }}
             class={`w-full flex flex-col justify-center items-center gap-2 lg:flex-row`}
           >
             <input
               type="email"
+              id="input-email"
               placeholder={inputPlaceholder}
               class={`w-full h-[46px] p-4 rounded-[8px] lg:min-w-[400px]`}
             />

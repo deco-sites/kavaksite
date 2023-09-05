@@ -52,6 +52,7 @@ import * as $$$$$$$$20 from "./sections/Hero.tsx";
 import * as $$$$$$$$21 from "./sections/HeroSellCar.tsx";
 import * as $$$$$$$$22 from "./sections/StoreCards.tsx";
 import * as $$$$$$$$23 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$$$$$$0 from "./actions/subscribe.ts";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -293,6 +294,29 @@ const manifest = {
     "deco-sites/std/sections/SEOPLP.tsx": i2$$$$$14,
     "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx": i2$$$$$15,
   },
+  "actions": {
+    "$live/actions/workflows/cancel.ts": i2$$$$$$0,
+    "$live/actions/workflows/signal.ts": i2$$$$$$1,
+    "$live/actions/workflows/start.ts": i2$$$$$$2,
+    "deco-sites/kavaksite/actions/subscribe.ts": $$$$$$$$$$$0,
+    "deco-sites/std/actions/vtex/analytics/sendEvent.ts": i2$$$$$$3,
+    "deco-sites/std/actions/vtex/cart/addItems.ts": i2$$$$$$4,
+    "deco-sites/std/actions/vtex/cart/getInstallment.ts": i2$$$$$$5,
+    "deco-sites/std/actions/vtex/cart/removeItemAttachment.ts": i2$$$$$$6,
+    "deco-sites/std/actions/vtex/cart/removeItems.ts": i2$$$$$$7,
+    "deco-sites/std/actions/vtex/cart/simulation.ts": i2$$$$$$8,
+    "deco-sites/std/actions/vtex/cart/updateAttachment.ts": i2$$$$$$9,
+    "deco-sites/std/actions/vtex/cart/updateCoupons.ts": i2$$$$$$10,
+    "deco-sites/std/actions/vtex/cart/updateItemAttachment.ts": i2$$$$$$11,
+    "deco-sites/std/actions/vtex/cart/updateItemPrice.ts": i2$$$$$$12,
+    "deco-sites/std/actions/vtex/cart/updateItems.ts": i2$$$$$$13,
+    "deco-sites/std/actions/vtex/cart/updateProfile.ts": i2$$$$$$14,
+    "deco-sites/std/actions/vtex/cart/updateUser.ts": i2$$$$$$15,
+    "deco-sites/std/actions/vtex/newsletter/subscribe.ts": i2$$$$$$16,
+    "deco-sites/std/actions/vtex/notifyme.ts": i2$$$$$$17,
+    "deco-sites/std/actions/vtex/wishlist/addItem.ts": i2$$$$$$18,
+    "deco-sites/std/actions/vtex/wishlist/removeItem.ts": i2$$$$$$19,
+  },
   "loaders": {
     "$live/loaders/state.ts": i2$$$0,
     "$live/loaders/workflows/events.ts": i2$$$1,
@@ -348,28 +372,6 @@ const manifest = {
     "$live/flags/everyone.ts": i2$$$$$$$$$1,
     "$live/flags/flag.ts": i2$$$$$$$$$2,
     "$live/flags/multivariate.ts": i2$$$$$$$$$3,
-  },
-  "actions": {
-    "$live/actions/workflows/cancel.ts": i2$$$$$$0,
-    "$live/actions/workflows/signal.ts": i2$$$$$$1,
-    "$live/actions/workflows/start.ts": i2$$$$$$2,
-    "deco-sites/std/actions/vtex/analytics/sendEvent.ts": i2$$$$$$3,
-    "deco-sites/std/actions/vtex/cart/addItems.ts": i2$$$$$$4,
-    "deco-sites/std/actions/vtex/cart/getInstallment.ts": i2$$$$$$5,
-    "deco-sites/std/actions/vtex/cart/removeItemAttachment.ts": i2$$$$$$6,
-    "deco-sites/std/actions/vtex/cart/removeItems.ts": i2$$$$$$7,
-    "deco-sites/std/actions/vtex/cart/simulation.ts": i2$$$$$$8,
-    "deco-sites/std/actions/vtex/cart/updateAttachment.ts": i2$$$$$$9,
-    "deco-sites/std/actions/vtex/cart/updateCoupons.ts": i2$$$$$$10,
-    "deco-sites/std/actions/vtex/cart/updateItemAttachment.ts": i2$$$$$$11,
-    "deco-sites/std/actions/vtex/cart/updateItemPrice.ts": i2$$$$$$12,
-    "deco-sites/std/actions/vtex/cart/updateItems.ts": i2$$$$$$13,
-    "deco-sites/std/actions/vtex/cart/updateProfile.ts": i2$$$$$$14,
-    "deco-sites/std/actions/vtex/cart/updateUser.ts": i2$$$$$$15,
-    "deco-sites/std/actions/vtex/newsletter/subscribe.ts": i2$$$$$$16,
-    "deco-sites/std/actions/vtex/notifyme.ts": i2$$$$$$17,
-    "deco-sites/std/actions/vtex/wishlist/addItem.ts": i2$$$$$$18,
-    "deco-sites/std/actions/vtex/wishlist/removeItem.ts": i2$$$$$$19,
   },
   "accounts": {
     "deco-sites/std/accounts/butterCMS.ts": i2$$0,
